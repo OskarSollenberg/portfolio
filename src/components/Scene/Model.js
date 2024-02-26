@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import { MeshTransmissionMaterial, useGLTF, Text } from "@react-three/drei";
 import { useFrame, useThree } from "@react-three/fiber";
+
 // import { useControls } from "leva";
 
 export default function Model() {
@@ -13,13 +14,13 @@ export default function Model() {
   });
 
   const materialProps = {
-    thickness: 0.2,
+    thickness: 0,
     roughness: 0,
     transmission: 1,
-    ior: 1,
+    ior: 0.9,
     chromaticAberration: 1,
     backside: true,
-    color: "#F97315",
+    color: "#FF9D18",
   };
 
   // const materialProps = {
@@ -40,9 +41,9 @@ export default function Model() {
         color="white"
         anchorX="center"
         anchorY="middle"
-        letterSpacing={1}
+        letterSpacing={0}
       >
-        OSKAR
+        Oskar herman
       </Text>
       <mesh ref={torus} {...nodes.Torus002}>
         <MeshTransmissionMaterial {...materialProps} />
