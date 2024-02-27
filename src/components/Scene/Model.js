@@ -36,11 +36,7 @@ export default function Model() {
 
   const { x, y } = useWindowMouseMove();
   const distanceFromCenter = calculateDistanceFromCenter(x, y);
-  const maxDistance = calculateDistanceFromCenter(
-    window.innerWidth,
-    window.innerHeight
-  );
-  const isCloseToCenter = distanceFromCenter < window.innerWidth / 4;
+  const isCloseToCenter = distanceFromCenter < window.innerWidth / 8;
   const scaleValue = isCloseToCenter ? [1, 1, 1] : [0.8, 0.8, 0.8];
 
   useFrame(() => {
