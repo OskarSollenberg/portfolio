@@ -32,35 +32,47 @@ export default function Model() {
 
   useFrame(() => {
     if (circleLoaded.current) {
-      circleLoaded.current.rotation.x += isHovered ? 0.06 : 0.015;
+      circleLoaded.current.rotation.x += isHovered ? 0.05 : 0.015;
     }
   });
 
   const circlePosition = useSpring({
     position: isHovered ? [-1.2, -0.01, 0] : [0, 0, 0],
-    config: { mass: 5, tension: 300, friction: 50 },
+    config: { mass: 5, tension: 400, friction: 50 },
   });
+
+  //   const startingMeshValues = useSpring({
+  //     scale: isHovered ? [1, 1, 1] : [0.8, 0.8, 0.8],
+  //     color: "white",
+  //     thickness: 1,
+  //     roughness: isHovered ? 2 : 0,
+  //     transmission: 1,
+  //     ior: 0.9,
+  //     chromaticAberration: 1,
+  //     backside: true,
+  //     config: { tension: 100, friction: 20 },
+  //   });
 
   const startingMeshValues = useSpring({
     scale: isHovered ? [1, 1, 1] : [0.8, 0.8, 0.8],
-    color: "white",
-    thickness: 1,
+    color: "#F97315",
+    thickness: 0.2,
     roughness: isHovered ? 2 : 0,
     transmission: 1,
-    ior: 0.9,
+    ior: 1,
     chromaticAberration: 1,
     backside: true,
-    config: { tension: 100, friction: 20 },
+    config: { tension: 80, friction: 10 },
   });
 
   const dynamicMeshValues = useSpring({
     scale: isHovered ? [0.4, 0.4, 0.4] : [1, 1, 1],
-    config: { tension: 70, friction: 7 },
+    config: { tension: 70, friction: 6 },
   });
 
   const letterSpacingSpring = useSpring({
     letterSpacing: isHovered ? 0.5 : 0.2,
-    config: { tension: 70, friction: 20 },
+    config: { tension: 100, friction: 10 },
   });
 
   const debouncedSetIsHovered = debounce(setIsHovered, 25);
@@ -72,7 +84,7 @@ export default function Model() {
     anchorY: "middle",
     letterSpacing: letterSpacingSpring.letterSpacing,
     opacity: 0,
-    color: isHovered ? "black" : "white",
+    color: isHovered ? "black" : "#FDF9EF",
     scale: isHovered ? [1, 1, 1] : [0.8, 0.8, 0.8],
     onPointerOver: () => debouncedSetIsHovered(true),
     onPointerOut: () => debouncedSetIsHovered(false),
