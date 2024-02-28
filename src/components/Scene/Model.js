@@ -73,7 +73,7 @@ export default function Model() {
     clearTimeout(hoverTimeout);
     hoverTimeout = setTimeout(() => {
       setIsHovered(newHoverState);
-    }, 25);
+    }, 40); // Increase delay to 100ms
   };
 
   // Styling for the text
