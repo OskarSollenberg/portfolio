@@ -2,25 +2,37 @@ import React, { useRef, useState, useEffect } from "react";
 import { useGLTF, Text as DreiText } from "@react-three/drei";
 import { useThree, useFrame } from "@react-three/fiber";
 import { MeshTransmissionMaterial } from "@react-three/drei";
-import { debounce } from "lodash";
 import { gsap } from "gsap";
 import { useSpring, animated } from "react-spring";
 
+// Create animated versions of Text and MeshTransmissionMaterial
 const AnimatedText = animated(DreiText);
 const AnimatedMesh = animated(MeshTransmissionMaterial);
 
 export default function Model() {
+  // Load the 3D model
   const { nodes } = useGLTF("/medias/torrus.glb");
+
+  // Get the viewport from the current Three.js context
   const { viewport } = useThree();
+
+  // Create refs for the mesh and text
   const meshRef = useRef();
   const textRef = useRef();
+
+  // State for whether the model is being hovered over
   const [isHovered, setIsHovered] = useState(false);
 
+  // Timeout for hover state
+  let hoverTimeout;
+
+  // Spring animation for letter spacing
   const letterSpacingSpring = useSpring({
     letterSpacing: isHovered ? 0.5 : 0.2,
     config: { tension: 100, friction: 10 },
   });
 
+  // Spring animation for mesh values
   const startingMeshValues = useSpring({
     scale: isHovered ? [1, 1, 1] : [0.8, 0.8, 0.8],
     color: "#F97315",
@@ -33,12 +45,14 @@ export default function Model() {
     config: { tension: 80, friction: 10 },
   });
 
+  // Rotate the mesh on each frame
   useFrame(() => {
     if (meshRef.current) {
       meshRef.current.rotation.x += isHovered ? 0.05 : 0.015;
     }
   });
 
+  // Animate the mesh position and scale when the hover state changes
   useEffect(() => {
     gsap.to(meshRef.current.position, {
       x: isHovered ? -1.2 : 0,
@@ -54,10 +68,15 @@ export default function Model() {
     });
   }, [isHovered]);
 
-  const debouncedSetIsHovered = debounce((newHoverState) => {
-    setIsHovered(newHoverState);
-  }, 25);
+  // Handle hover state with a delay to prevent rapid state changes
+  const handleHover = (newHoverState) => {
+    clearTimeout(hoverTimeout);
+    hoverTimeout = setTimeout(() => {
+      setIsHovered(newHoverState);
+    }, 25);
+  };
 
+  // Styling for the text
   const lettersStyling = {
     font: "/fonts/PPNeueMontreal-Bold.otf",
     fontSize: 0.5,
@@ -66,10 +85,11 @@ export default function Model() {
     letterSpacing: letterSpacingSpring.letterSpacing,
     color: isHovered ? "black" : "#FDF9EF",
     scale: isHovered ? [1, 1, 1] : [0.8, 0.8, 0.8],
-    onPointerOver: () => debouncedSetIsHovered(true),
-    onPointerOut: () => debouncedSetIsHovered(false),
+    onPointerOver: () => handleHover(true),
+    onPointerOut: () => handleHover(false),
   };
 
+  // Render the model and text
   return (
     <group scale={viewport.width / 3.75}>
       <mesh ref={meshRef} geometry={nodes.Torus002.geometry}>
