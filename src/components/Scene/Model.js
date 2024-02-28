@@ -1,58 +1,38 @@
 import React, { useRef, useState, useEffect } from "react";
-import {
-  MeshTransmissionMaterial,
-  useGLTF,
-  Text as DreiText,
-} from "@react-three/drei";
-import { useFrame, useThree } from "@react-three/fiber";
-import { useSpring, animated } from "@react-spring/three";
-import { debounce } from "lodash";
+import { useGLTF, Text as DreiText } from "@react-three/drei";
+import { useThree, useFrame } from "@react-three/fiber";
+import { MeshTransmissionMaterial } from "@react-three/drei";
+import { gsap } from "gsap";
+import { useSpring, animated } from "react-spring";
 
-const AnimatedMeshTransmissionMaterial = animated(MeshTransmissionMaterial);
+// Create animated versions of Text and MeshTransmissionMaterial
 const AnimatedText = animated(DreiText);
-
-function useWindowMouseMove() {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  useEffect(() => {
-    function handleMouseMove(event) {
-      setMousePosition({ x: event.clientX, y: event.clientY });
-    }
-    window.addEventListener("mousemove", handleMouseMove);
-    return () => window.removeEventListener("mousemove", handleMouseMove);
-  }, []);
-  return mousePosition;
-}
+const AnimatedMesh = animated(MeshTransmissionMaterial);
 
 export default function Model() {
+  // Load the 3D model
   const { nodes } = useGLTF("/medias/torrus.glb");
-  const { viewport } = useThree();
-  const circleLoaded = useRef();
 
+  // Get the viewport from the current Three.js context
+  const { viewport } = useThree();
+
+  // Create refs for the mesh and text
+  const meshRef = useRef();
+  const textRef = useRef();
+
+  // State for whether the model is being hovered over
   const [isHovered, setIsHovered] = useState(false);
 
-  useFrame(() => {
-    if (circleLoaded.current) {
-      circleLoaded.current.rotation.x += isHovered ? 0.05 : 0.015;
-    }
+  // Timeout for hover state
+  let hoverTimeout;
+
+  // Spring animation for letter spacing
+  const letterSpacingSpring = useSpring({
+    letterSpacing: isHovered ? 0.5 : 0.2,
+    config: { tension: 100, friction: 10 },
   });
 
-  const circlePosition = useSpring({
-    position: isHovered ? [-1.2, -0.01, 0] : [0, 0, 0],
-    config: { mass: 5, tension: 400, friction: 50 },
-  });
-
-  //   const startingMeshValues = useSpring({
-  //     scale: isHovered ? [1, 1, 1] : [0.8, 0.8, 0.8],
-  //     color: "white",
-  //     thickness: 1,
-  //     roughness: isHovered ? 2 : 0,
-  //     transmission: 1,
-  //     ior: 0.9,
-  //     chromaticAberration: 1,
-  //     backside: true,
-  //     config: { tension: 100, friction: 20 },
-  //   });
-
+  // Spring animation for mesh values
   const startingMeshValues = useSpring({
     scale: isHovered ? [1, 1, 1] : [0.8, 0.8, 0.8],
     color: "#F97315",
@@ -65,44 +45,62 @@ export default function Model() {
     config: { tension: 80, friction: 10 },
   });
 
-  const dynamicMeshValues = useSpring({
-    scale: isHovered ? [0.4, 0.4, 0.4] : [1, 1, 1],
-    config: { tension: 70, friction: 6 },
+  // Rotate the mesh on each frame
+  useFrame(() => {
+    if (meshRef.current) {
+      meshRef.current.rotation.x += isHovered ? 0.05 : 0.015;
+    }
   });
 
-  const letterSpacingSpring = useSpring({
-    letterSpacing: isHovered ? 0.5 : 0.2,
-    config: { tension: 100, friction: 10 },
-  });
+  // Animate the mesh position and scale when the hover state changes
+  useEffect(() => {
+    gsap.to(meshRef.current.position, {
+      x: isHovered ? -1.2 : 0,
+      duration: 1.5,
+      ease: "elastic.out(0.1, 0.1)",
+    });
+    gsap.to(meshRef.current.scale, {
+      x: isHovered ? 0.4 : 1,
+      y: isHovered ? 0.4 : 1,
+      z: isHovered ? 0.4 : 1,
+      duration: 1.5,
+      ease: "elastic.out(0.1, 0.1)",
+    });
+  }, [isHovered]);
 
-  const debouncedSetIsHovered = debounce(setIsHovered, 25);
+  // Handle hover state with a delay to prevent rapid state changes
+  const handleHover = (newHoverState) => {
+    clearTimeout(hoverTimeout);
+    hoverTimeout = setTimeout(() => {
+      setIsHovered(newHoverState);
+    }, 25);
+  };
 
+  // Styling for the text
   const lettersStyling = {
     font: "/fonts/PPNeueMontreal-Bold.otf",
     fontSize: 0.5,
     anchorX: "center",
     anchorY: "middle",
     letterSpacing: letterSpacingSpring.letterSpacing,
-    opacity: 0,
     color: isHovered ? "black" : "#FDF9EF",
     scale: isHovered ? [1, 1, 1] : [0.8, 0.8, 0.8],
-    onPointerOver: () => debouncedSetIsHovered(true),
-    onPointerOut: () => debouncedSetIsHovered(false),
+    onPointerOver: () => handleHover(true),
+    onPointerOut: () => handleHover(false),
   };
 
+  // Render the model and text
   return (
     <group scale={viewport.width / 3.75}>
-      <animated.mesh
-        ref={circleLoaded}
-        {...nodes.Torus002}
-        position={circlePosition.position}
-        {...startingMeshValues}
-        {...dynamicMeshValues}
+      <mesh ref={meshRef} geometry={nodes.Torus002.geometry}>
+        <AnimatedMesh {...startingMeshValues} />
+      </mesh>
+      <AnimatedText
+        ref={textRef}
+        style={letterSpacingSpring}
+        {...lettersStyling}
       >
-        <AnimatedMeshTransmissionMaterial {...startingMeshValues} />
-      </animated.mesh>
-      <AnimatedText {...lettersStyling}>
-        {isHovered ? `  SKAR` : "Herman"}
+        {isHovered ? "  SKAR" : "Herman"}
       </AnimatedText>
     </group>
   );
