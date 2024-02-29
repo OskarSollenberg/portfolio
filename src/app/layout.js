@@ -1,7 +1,8 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-import SiteNav from "@/components/SiteNav";
 
+import SiteHeader from "@/src/components/SiteHeader";
+import MainNav from "@/src/components/MainNav";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -13,8 +14,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <SiteNav />
+        <SiteHeader />
         {children}
+        <div className="flex justify-center items-center">
+          <MainNav />
+        </div>
       </body>
     </html>
   );

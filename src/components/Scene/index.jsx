@@ -3,11 +3,12 @@ import { Canvas } from "@react-three/fiber";
 import Model from "./Model";
 import { Environment } from "@react-three/drei";
 
-// bg-[#FDF9EF]
+//  #FDF9EF
+//  #E43B13
 
 export default function Index() {
   return (
-    <Canvas className="bg-[#E43B13]">
+    <Canvas>
       <Model />
       <directionalLight intensity={2} position={[0, 2, 3]} />
       <Environment preset="city" />

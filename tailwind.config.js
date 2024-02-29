@@ -4,12 +4,17 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
-
-    // Or if using `src` directory:
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    colors: {
+      "transparent-black": "rgba(0, 0, 0, 0.8)",
+    },
+  },
+  variants: {
+    extend: {
+      opacity: ["group-hover"],
+    },
   },
   plugins: [],
 };

@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect, use } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { useGLTF, Text as DreiText } from "@react-three/drei";
 import { useThree, useFrame } from "@react-three/fiber";
 import { MeshTransmissionMaterial } from "@react-three/drei";
@@ -78,8 +78,8 @@ export default function Model() {
     font: "/fonts/PPNeueMontreal-Bold.otf",
     fontSize: 0.5,
     letterSpacing: letterSpacingSpring.letterSpacing,
-    color: isHovered ? "yellow" : "white",
-    scale: isHovered ? [1, 1, 1] : [0.8, 0.8, 0.8],
+    color: isHovered ? "#E43B13" : "white",
+    // scale: isHovered ? [1, 1, 1] : [0.8, 0.8, 0.8],
     onPointerOver: () => handleHover(true),
     onPointerOut: () => handleHover(false),
     isVisible: true,
