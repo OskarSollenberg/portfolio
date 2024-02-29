@@ -13,41 +13,30 @@ export default function Model() {
   const { viewport } = useThree();
   const { nodes } = useGLTF("/medias/torrus.glb");
 
-  const [isHovered, setIsHovered] = useState(false);
+  const [isHovered, setIsHovered] = useState(true);
 
   useEffect(() => {
-    setIsHovered(true);
     const timeoutId = setTimeout(() => {
       setIsHovered(false);
-    }, 900);
+    }, 4000);
 
     return () => {
       clearTimeout(timeoutId);
     };
   }, []);
 
-  const [initialStyling, setInitialStyling] = useState(true);
-  const [afterStyling, setAfterStyling] = useState(false);
-
-  useEffect(() => {
-    const timeoutId = setTimeout(() => {
-      setInitialStyling(false);
-      setAfterStyling(true);
-    }, 1800);
-
-    return () => clearTimeout(timeoutId);
-  }, []);
-
   // maby use white
   const meshValues = useSpring({
-    color: initialStyling ? "white" : afterStyling ? "#F97315" : "black",
-    thickness: initialStyling ? 4 : afterStyling ? 0.2 : 0.1,
-    roughness: initialStyling ? 0 : afterStyling ? (isHovered ? 2 : 0) : 0.5,
-    transmission: initialStyling ? 1 : afterStyling ? 1 : 0.5,
-    ior: initialStyling ? 2 : afterStyling ? 1 : 0.5,
-    chromaticAberration: initialStyling ? 0 : afterStyling ? 1 : 0.5,
-    backside: initialStyling ? false : afterStyling ? true : false,
-    config: { tension: 80, friction: 10 },
+    //F97315
+    //white
+    color: isHovered ? "yellow" : "#F97315",
+    thickness: isHovered ? 4 : 0.2,
+    roughness: 0,
+    transmission: 1,
+    ior: isHovered ? 2 : 1,
+    chromaticAberration: isHovered ? 0 : 1,
+    backside: true,
+    config: { tension: 50, friction: 10 },
   });
 
   useFrame(() => {
@@ -82,22 +71,14 @@ export default function Model() {
 
   // Letters
   const letterSpacingSpring = useSpring({
-    letterSpacing: isHovered ? 0.5 : initialStyling ? 0.8 : 0.2,
+    letterSpacing: isHovered ? 0.5 : 0.2,
     config: { tension: 100, friction: 10 },
   });
   const lettersStyling = {
     font: "/fonts/PPNeueMontreal-Bold.otf",
     fontSize: 0.5,
     letterSpacing: letterSpacingSpring.letterSpacing,
-    color: initialStyling
-      ? isHovered
-        ? "yellow"
-        : "purple"
-      : afterStyling
-      ? isHovered
-        ? "black"
-        : "white"
-      : "black",
+    color: isHovered ? "yellow" : "white",
     scale: isHovered ? [1, 1, 1] : [0.8, 0.8, 0.8],
     onPointerOver: () => handleHover(true),
     onPointerOut: () => handleHover(false),
@@ -115,11 +96,7 @@ export default function Model() {
         {...lettersStyling}
         visible={lettersStyling.isVisible}
       >
-        {isHovered
-          ? ["  ", "S", "K", "A", "R"]
-          : initialStyling
-          ? "HERMAN"
-          : "Herman"}
+        {isHovered ? ["  ", "S", "K", "A", "R"] : "Herman"}
       </AnimatedText>
     </group>
   );
