@@ -14,10 +14,12 @@ export default function Model() {
   const { nodes } = useGLTF("/medias/torrus.glb");
 
   const [isHovered, setIsHovered] = useState(true);
+  const [canHover, setCanHover] = useState(false);
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       setIsHovered(false);
+      setCanHover(true);
     }, 4000);
 
     return () => {
@@ -46,6 +48,7 @@ export default function Model() {
   // Hover
   let hoverTimeout;
   const handleHover = (newHoverState) => {
+    if (!canHover) return;
     clearTimeout(hoverTimeout);
     hoverTimeout = setTimeout(() => {
       setIsHovered(newHoverState);
