@@ -1,5 +1,5 @@
 import dynamic from "next/dynamic";
-import About from "@/components/About";
+import About from "@/src/components/About";
 
 const Scene = dynamic(() => import("@/src/components/Scene"), {
   ssr: false,
