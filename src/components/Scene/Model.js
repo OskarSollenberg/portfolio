@@ -5,11 +5,32 @@ import { MeshTransmissionMaterial } from "@react-three/drei";
 import { gsap } from "gsap";
 import { useSpring, animated } from "react-spring";
 
+const HOVER_TIMEOUT = 4000;
+const ROTATION_SPEED_HOVERED = 0.05;
+const ROTATION_SPEED_NOT_HOVERED = 0.015;
+
+const AnimatedText = animated(DreiText);
+const AnimatedMesh = animated(MeshTransmissionMaterial);
+
+function animateMesh(mesh, isHovered) {
+  gsap.to(mesh.position, {
+    x: isHovered ? -1.2 : 0,
+    duration: 1.5,
+    ease: "elastic.out(0.1, 0.1)",
+  });
+  gsap.to(mesh.scale, {
+    x: isHovered ? 0.4 : 1,
+    y: isHovered ? 0.4 : 1,
+    z: isHovered ? 0.4 : 1,
+    duration: 1.5,
+    ease: "elastic.out(0.1, 0.1)",
+  });
+}
+
 export default function Model() {
-  const AnimatedText = animated(DreiText);
-  const AnimatedMesh = animated(MeshTransmissionMaterial);
   const meshRef = useRef();
-  const textRef = useRef();
+  const textRefOskar = useRef();
+  const textRefHerman = useRef();
   const { viewport } = useThree();
   const { nodes } = useGLTF("/medias/torrus.glb");
 
@@ -20,17 +41,14 @@ export default function Model() {
     const timeoutId = setTimeout(() => {
       setIsHovered(false);
       setCanHover(true);
-    }, 4000);
+    }, HOVER_TIMEOUT);
 
     return () => {
       clearTimeout(timeoutId);
     };
   }, []);
 
-  // maby use white
   const meshValues = useSpring({
-    //F97315
-    //white
     color: isHovered ? "yellow" : "#F97315",
     thickness: isHovered ? 4 : 0.2,
     roughness: 0,
@@ -42,10 +60,11 @@ export default function Model() {
   });
 
   useFrame(() => {
-    meshRef.current.rotation.x += isHovered ? 0.05 : 0.015;
+    meshRef.current.rotation.x += isHovered
+      ? ROTATION_SPEED_HOVERED
+      : ROTATION_SPEED_NOT_HOVERED;
   });
 
-  // Hover
   let hoverTimeout;
   const handleHover = (newHoverState) => {
     if (!canHover) return;
@@ -57,22 +76,10 @@ export default function Model() {
 
   useEffect(() => {
     if (meshRef.current) {
-      gsap.to(meshRef.current.position, {
-        x: isHovered ? -1.2 : 0,
-        duration: 1.5,
-        ease: "elastic.out(0.1, 0.1)",
-      });
-      gsap.to(meshRef.current.scale, {
-        x: isHovered ? 0.4 : 1,
-        y: isHovered ? 0.4 : 1,
-        z: isHovered ? 0.4 : 1,
-        duration: 1.5,
-        ease: "elastic.out(0.1, 0.1)",
-      });
+      animateMesh(meshRef.current, isHovered);
     }
   }, [isHovered]);
 
-  // Letters
   const letterSpacingSpring = useSpring({
     letterSpacing: isHovered ? 0.5 : 0.2,
     config: { tension: 100, friction: 10 },
@@ -82,11 +89,20 @@ export default function Model() {
     fontSize: 0.5,
     letterSpacing: letterSpacingSpring.letterSpacing,
     color: isHovered ? "#E43B13" : "white",
-    // scale: isHovered ? [1, 1, 1] : [0.8, 0.8, 0.8],
     onPointerOver: () => handleHover(true),
     onPointerOut: () => handleHover(false),
     isVisible: true,
   };
+
+  const textTransitionOskar = useSpring({
+    opacity: isHovered ? 1 : 0,
+    config: { tension: 50, friction: 20 },
+  });
+
+  const textTransitionHerman = useSpring({
+    opacity: isHovered ? 0 : 1,
+    config: { tension: 50, friction: 20 },
+  });
 
   return (
     <group scale={viewport.width / 3.75}>
@@ -94,12 +110,20 @@ export default function Model() {
         <AnimatedMesh {...meshValues} />
       </mesh>
       <AnimatedText
-        ref={textRef}
-        style={letterSpacingSpring}
+        ref={textRefOskar}
+        style={{ ...letterSpacingSpring, ...textTransitionOskar }}
         {...lettersStyling}
-        visible={lettersStyling.isVisible}
+        visible={isHovered}
       >
-        {isHovered ? ["  ", "S", "K", "A", "R"] : "Herman"}
+        {"  SKAR"}
+      </AnimatedText>
+      <AnimatedText
+        ref={textRefHerman}
+        style={{ ...letterSpacingSpring, ...textTransitionHerman }}
+        {...lettersStyling}
+        visible={!isHovered}
+      >
+        Herman
       </AnimatedText>
     </group>
   );
