@@ -20,11 +20,11 @@ export default function AnimatedCircle({ isHovered }) {
   // white
 
   const circleStyles = useSpring({
-    color: isHovered ? "yellow" : "#F97315",
+    color: isHovered ? "black" : "#F97315",
     thickness: isHovered ? 4 : 0.2,
-    roughness: 0,
+    roughness: isHovered ? 2 : 0,
     transmission: 1,
-    ior: isHovered ? 2 : 1,
+    ior: isHovered ? 1 : 0.9,
     chromaticAberration: isHovered ? 0 : 1,
     backside: true,
     config: { tension: 50, friction: 10 },
@@ -37,9 +37,9 @@ export default function AnimatedCircle({ isHovered }) {
       ease: "elastic.out(0.1, 0.1)",
     });
     gsap.to(circle.scale, {
-      x: isHovered ? 0.4 : 1,
-      y: isHovered ? 0.4 : 1,
-      z: isHovered ? 0.4 : 1,
+      x: isHovered ? 0.36 : 1,
+      y: isHovered ? 0.36 : 1,
+      z: isHovered ? 0.36 : 1,
       duration: 1.5,
       ease: "elastic.out(0.1, 0.1)",
     });

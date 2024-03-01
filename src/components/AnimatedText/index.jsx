@@ -28,7 +28,7 @@ export default function AnimatedTextComponent({
     font: FONT_PATH,
     fontSize: 0.5,
     letterSpacing: letterSpacingSpring.letterSpacing,
-    color: isHovered ? "#E43B13" : "white",
+    color: isHovered ? "black" : "#FFFFFF",
     onPointerOver: () => handleHover(true),
     onPointerOut: () => handleHover(false),
     // isVisible: true,

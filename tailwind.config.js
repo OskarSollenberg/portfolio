@@ -8,7 +8,18 @@ module.exports = {
   ],
   theme: {
     colors: {
-      "transparent-black": "rgba(0, 0, 0, 0.8)",
+      "transparent-black": "rgba(0, 0, 0, 0.4)",
+    },
+    extend: {
+      animation: {
+        slide: "slide 4s forwards",
+      },
+      keyframes: {
+        slide: {
+          "0%": { transform: "translateX(-100%)" },
+          "100%": { transform: "translateX(100%)" },
+        },
+      },
     },
   },
   variants: {
