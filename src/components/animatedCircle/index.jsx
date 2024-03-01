@@ -1,10 +1,8 @@
-// AnimatedCircle.js
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { animated, useSpring } from "react-spring";
 import { MeshTransmissionMaterial } from "@react-three/drei";
 import { useGLTF } from "@react-three/drei";
-
 import { useFrame } from "@react-three/fiber";
 
 const ROTATION_SPEED_HOVERED = 0.05;

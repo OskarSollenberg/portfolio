@@ -1,12 +1,12 @@
-// Model.js
 import React, { useState, useEffect } from "react";
 import { useThree } from "@react-three/fiber";
 import AnimatedTextComponent from "../AnimatedText";
 import AnimatedCircle from "../AnimatedCircle";
 
+const HOVER_ENABLE_DELAY_MS = 4000;
+
 export default function Model() {
   const { viewport } = useThree();
-
   const [isHovered, setIsHovered] = useState(true);
   const [canHover, setCanHover] = useState(false);
 
@@ -14,7 +14,7 @@ export default function Model() {
     const timeoutId = setTimeout(() => {
       setIsHovered(false);
       setCanHover(true);
-    }, 4000);
+    }, HOVER_ENABLE_DELAY_MS);
 
     return () => {
       clearTimeout(timeoutId);
