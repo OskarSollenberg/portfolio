@@ -12,7 +12,6 @@ export default function Home() {
   return (
     <main className="bg-[#E43B13]">
       <section className="h-screen">
-        <Loading />
         <Scene />
       </section>
       <About />
