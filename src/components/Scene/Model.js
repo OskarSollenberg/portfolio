@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useThree } from "@react-three/fiber";
 import AnimatedTextComponent from "../AnimatedText";
-
-import AnimatedCircle from "../AnimatedCircle";
+import AnimatedCircle from "../AnimatedCircle/";
 
 const HOVER_ENABLE_DELAY_MS = 4000;
 
