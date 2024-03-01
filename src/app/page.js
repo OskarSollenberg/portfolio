@@ -6,8 +6,6 @@ const Scene = dynamic(() => import("@/src/components/Scene"), {
   ssr: false,
 });
 
-// FDF9EF;
-
 export default function Home() {
   return (
     <main className="bg-[#E43B13]">
