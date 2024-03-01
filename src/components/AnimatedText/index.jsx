@@ -22,6 +22,8 @@ export default function AnimatedTextComponent({
     config: { tension: 50, friction: 20 },
   });
 
+  // #E43B13
+
   const lettersStyling = {
     font: FONT_PATH,
     fontSize: 0.5,
@@ -29,7 +31,7 @@ export default function AnimatedTextComponent({
     color: isHovered ? "#E43B13" : "white",
     onPointerOver: () => handleHover(true),
     onPointerOut: () => handleHover(false),
-    isVisible: true,
+    // isVisible: true,
   };
 
   return (

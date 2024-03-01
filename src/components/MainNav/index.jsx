@@ -6,7 +6,7 @@ export default function MainNav() {
 
   return (
     <>
-      <div className="group bg-[#E43B13] hover:bg-transparent-black fixed bottom-4 hover:p-8 min-w-[5rem] min-h-[5rem] delay-100 rounded-full flex justify-center items-center transition-all duration-500 ease-in-out">
+      <div className="group bg-[#D0521A] hover:bg-transparent-black fixed bottom-4 hover:p-8 min-w-[5rem] min-h-[5rem] delay-100 rounded-full flex justify-center items-center transition-all duration-500 ease-in-out">
         <div className="absolute text-[2rem] text-[#FDF9EF] group-hover:hidden">
           <Image className="full max-w-14" src={menuIcon} alt="" />
         </div>
@@ -18,7 +18,7 @@ export default function MainNav() {
                 transition:
                   "opacity 0.3s ease-in-out 0.3s, transform 0.15s ease-in-out, color 0.15s ease-in-out",
               }}
-              className={`text-[#E43B13] text-lg group-hover:text-white opacity-0 group-hover:opacity-100 invisible group-hover:visible cursor-pointer hover:scale-110 hover:text-[#FDF9EF]`}
+              className={`text-[#D0521A] text-lg group-hover:text-white opacity-0 group-hover:opacity-100 invisible group-hover:visible cursor-pointer hover:scale-110 hover:text-[#FDF9EF]`}
             >
               {link}
             </a>
