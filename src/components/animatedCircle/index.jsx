@@ -15,10 +15,6 @@ export default function AnimatedCircle({ isHovered }) {
   const meshRef = useRef();
   const { nodes } = useGLTF(MODEL_PATH);
 
-  // yellow
-  // #F97315
-  // white
-
   const circleStyles = useSpring({
     color: isHovered ? "black" : "#F97315",
     thickness: isHovered ? 4 : 0.2,
