@@ -11,7 +11,7 @@ const MODEL_PATH = "/medias/torrus.glb";
 
 const AnimatedMesh = animated(MeshTransmissionMaterial);
 
-export default function AnimatedCircle({ isHovered }) {
+export default function AnimatedCircleComponent({ isHovered }) {
   const meshRef = useRef();
   const { nodes } = useGLTF(MODEL_PATH);
 

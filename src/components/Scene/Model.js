@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useThree } from "@react-three/fiber";
 import AnimatedTextComponent from "../AnimatedText";
-import AnimatedCircle from "../AnimatedCircle/";
+import AnimatedCircleComponent from "../AnimatedCircle/";
 
 const HOVER_ENABLE_DELAY_MS = 4000;
 
@@ -28,7 +28,7 @@ export default function Model() {
 
   return (
     <group scale={viewport.width / 3.75}>
-      <AnimatedCircle isHovered={isHovered} />
+      <AnimatedCircleComponent isHovered={isHovered} />
       <AnimatedTextComponent
         visible={isHovered}
         handleHover={handleHover}
