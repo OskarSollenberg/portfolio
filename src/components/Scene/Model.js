@@ -26,8 +26,11 @@ export default function Model() {
     setIsHovered(newHoverState);
   };
 
+  const scale =
+    window.innerWidth < 600 ? viewport.width / 3 : viewport.width / 4.5;
+
   return (
-    <group scale={viewport.width / 4.5}>
+    <group scale={scale}>
       <AnimatedCircleComponent isHovered={isHovered} />
       <AnimatedTextComponent
         visible={isHovered}
