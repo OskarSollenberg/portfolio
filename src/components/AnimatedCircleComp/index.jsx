@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { animated, useSpring } from "react-spring";
 import { MeshTransmissionMaterial } from "@react-three/drei";
@@ -14,6 +14,7 @@ const AnimatedMesh = animated(MeshTransmissionMaterial);
 export default function AnimatedCircleComponent({ isHovered }) {
   const meshRef = useRef();
   const { nodes } = useGLTF(MODEL_PATH);
+  const [xPos, setXPos] = useState(0);
 
   const circleStyles = useSpring({
     color: isHovered ? "black" : "#F97315",
@@ -28,7 +29,7 @@ export default function AnimatedCircleComponent({ isHovered }) {
 
   function animateCircle(circle, isHovered) {
     gsap.to(circle.position, {
-      x: isHovered ? -1.2 : 0,
+      x: isHovered ? xPos : 0,
       duration: 1.5,
       ease: "elastic.out(0.1, 0.1)",
     });
@@ -45,7 +46,15 @@ export default function AnimatedCircleComponent({ isHovered }) {
     if (meshRef.current) {
       animateCircle(meshRef.current, isHovered);
     }
-  }, [isHovered, meshRef]);
+  }, [isHovered]);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setXPos(-1);
+    }, 4000);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   useFrame(() => {
     if (meshRef.current) {

@@ -27,18 +27,38 @@ export default function Model() {
   };
 
   return (
-    <group scale={viewport.width / 3.75}>
+    <group scale={viewport.width / 4.5}>
       <AnimatedCircleComponent isHovered={isHovered} />
       <AnimatedTextComponent
         visible={isHovered}
         handleHover={handleHover}
         isHovered={isHovered}
-        text={"  SKAR"}
+        canHover={canHover}
+        text={!canHover ? "" : "  SKAR"}
+      />
+      <AnimatedTextComponent
+        visible={isHovered}
+        handleHover={handleHover}
+        isHovered={isHovered}
+        canHover={canHover}
+        text={!canHover ? "" : "Made By"}
+        fontSize={0.05}
+        position={[-1.1, 0.3, 0]}
+      />
+      <AnimatedTextComponent
+        visible={isHovered}
+        handleHover={handleHover}
+        isHovered={isHovered}
+        canHover={canHover}
+        text={!canHover ? "" : "Sollenberg"}
+        fontSize={0.05}
+        position={[0.9, -0.3, 0]}
       />
       <AnimatedTextComponent
         visible={!isHovered}
         handleHover={handleHover}
         isHovered={isHovered}
+        canHover={canHover}
         text={"Herman"}
       />
     </group>
