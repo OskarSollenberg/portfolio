@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 
-export default function index() {
+export default function InitLoading() {
   const [visible, setVisible] = useState(true);
   const [hidden, setHidden] = useState(false);
 

@@ -29,26 +29,26 @@ export default function AnimatedCircleComponent({ isHovered }) {
     config: { tension: 50, friction: 10 },
   });
 
-  function animateCircle(circle, isHovered) {
-    gsap.to(circle.position, {
-      x: isHovered ? xPos : 0,
-      duration: 1.5,
-      ease: "elastic.out(0.1, 0.1)",
-    });
-    gsap.to(circle.scale, {
-      x: isHovered ? 0.36 : 1,
-      y: isHovered ? 0.36 : 1,
-      z: isHovered ? 0.36 : 1,
-      duration: 1.5,
-      ease: "elastic.out(0.1, 0.1)",
-    });
-  }
-
   useEffect(() => {
+    function animateCircle(circle, isHovered) {
+      gsap.to(circle.position, {
+        x: isHovered ? xPos : 0,
+        duration: 1.5,
+        ease: "elastic.out(0.1, 0.1)",
+      });
+      gsap.to(circle.scale, {
+        x: isHovered ? 0.36 : 1,
+        y: isHovered ? 0.36 : 1,
+        z: isHovered ? 0.36 : 1,
+        duration: 1.5,
+        ease: "elastic.out(0.1, 0.1)",
+      });
+    }
+
     if (meshRef.current) {
       animateCircle(meshRef.current, isHovered);
     }
-  }, [isHovered]);
+  }, [isHovered, xPos]);
 
   useEffect(() => {
     const timer = setTimeout(() => {
