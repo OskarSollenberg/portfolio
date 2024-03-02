@@ -1,11 +1,12 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { animated, useSpring } from "react-spring";
 import { MeshTransmissionMaterial } from "@react-three/drei";
 import { useGLTF } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
+import useLoading from "@/src/hooks/useLoading"; // adjust the path based on your project structure
 
 const ROTATION_SPEED_HOVERED = 0.05;
 const ROTATION_SPEED_NOT_HOVERED = 0.015;
@@ -16,7 +17,7 @@ const AnimatedMesh = animated(MeshTransmissionMaterial);
 export default function AnimatedCircleComponent({ isHovered }) {
   const meshRef = useRef();
   const { nodes } = useGLTF(MODEL_PATH);
-  const [xPos, setXPos] = useState(0);
+  const loading = useLoading();
 
   const circleStyles = useSpring({
     color: isHovered ? "black" : "#F97315",
@@ -32,7 +33,7 @@ export default function AnimatedCircleComponent({ isHovered }) {
   useEffect(() => {
     function animateCircle(circle, isHovered) {
       gsap.to(circle.position, {
-        x: isHovered ? xPos : 0,
+        x: isHovered ? (loading ? 0 : -1) : 0,
         duration: 1.5,
         ease: "elastic.out(0.1, 0.1)",
       });
@@ -48,15 +49,7 @@ export default function AnimatedCircleComponent({ isHovered }) {
     if (meshRef.current) {
       animateCircle(meshRef.current, isHovered);
     }
-  }, [isHovered, xPos]);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setXPos(-1);
-    }, 4000);
-
-    return () => clearTimeout(timer);
-  }, []);
+  }, [isHovered, loading]);
 
   useFrame(() => {
     if (meshRef.current) {
