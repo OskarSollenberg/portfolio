@@ -1,6 +1,6 @@
 import dynamic from "next/dynamic";
 import About from "@/src/components/About";
-import Background from "@/src/components/Background";
+import InitLoading from "@/src/components/InitLoading";
 
 const Scene = dynamic(() => import("@/src/components/Scene"), {
   ssr: false,
@@ -9,7 +9,7 @@ const Scene = dynamic(() => import("@/src/components/Scene"), {
 export default function Home() {
   return (
     <main className="bg-[#E43B13]">
-      <Background />
+      <InitLoading />
       <section className="h-screen">
         <Scene />
       </section>
