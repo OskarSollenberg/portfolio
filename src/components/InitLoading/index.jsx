@@ -1,17 +1,24 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import "./styles.css";
 import useLoading from "@/src/hooks/useLoading";
 
 export default function InitLoading() {
   const loading = useLoading();
 
+  useEffect(() => {
+    document.body.style.overflow = loading ? "hidden" : "auto";
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [loading]);
+
   return (
     <div
-      className={`absolute w-screen h-screen transition-all duration-200 z-1 bg-[white] ${
+      className={`absolute  w-screen h-screen transition-all duration-200 z-1 bg-[white] ${
         loading ? "opacity-100" : "opacity-0 pointer-events-none hidden"
       }`}
-      style={{ animation: `${loading ? "" : "bubble 4s forwards"}` }}
     >
       <div className="flex justify-center items-center h-screen">
         <svg
