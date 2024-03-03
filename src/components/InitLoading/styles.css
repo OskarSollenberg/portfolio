@@ -5,9 +5,9 @@
 }
 
 .path {
-  stroke: #ffffff;
   stroke-linecap: round;
-  animation: dash 4.8s ease-in-out infinite;
+  animation: dash 6s ease-in-out infinite;
+  stroke: #f13412;
 }
 
 @keyframes spin {
@@ -44,14 +44,5 @@
 }
 
 .animate-slide {
-  animation: slide 5s linear infinite;
-}
-
-@keyframes bubble {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(0);
-  }
+  animation: slide 7s linear infinite;
 }

@@ -6,18 +6,18 @@ import useLoading from "@/src/hooks/useLoading";
 export default function InitLoading() {
   const loading = useLoading();
 
-  useEffect(() => {
-    document.body.style.overflow = loading ? "hidden" : "auto";
+  //   useEffect(() => {
+  //     document.body.style.overflow = loading ? "hidden" : "auto";
 
-    return () => {
-      document.body.style.overflow = "auto";
-    };
-  }, [loading]);
+  //     return () => {
+  //       document.body.style.overflow = "auto";
+  //     };
+  //   }, [loading]);
 
   return (
     <div
-      className={`absolute  w-screen h-screen transition-all duration-200 z-1 bg-[white] ${
-        loading ? "opacity-100" : "opacity-0 pointer-events-none hidden"
+      className={`absolute w-screen h-screen transition-opacity duration-1000 z-1 bg-[black] ${
+        loading ? "opacity-100" : "opacity-0 pointer-events-none"
       }`}
     >
       <div className="flex justify-center items-center h-screen">
@@ -37,8 +37,8 @@ export default function InitLoading() {
         </svg>
       </div>
       <div
-        className="absolute w-screen left-10 right border-t border-white animate-slide"
-        style={{ top: "50%" }}
+        className="absolute w-screen border-[4rem] border-white animate-slide text-[#F13412] rounded-2xl "
+        style={{ top: "42%" }}
       />
     </div>
   );

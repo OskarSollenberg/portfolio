@@ -8,12 +8,12 @@ const Scene = dynamic(() => import("@/src/components/Scene"), {
 
 export default function Home() {
   return (
-    <main className="bg-[#E43B13]">
+    <main className="">
       <InitLoading />
       <section className="h-screen">
         <Scene />
       </section>
-      <About />
+      {/* <About /> */}
     </main>
   );
 }
