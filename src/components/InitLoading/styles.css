@@ -7,7 +7,7 @@
 .path {
   stroke-linecap: round;
   animation: dash 6s ease-in-out infinite;
-  stroke: #f13412;
+  stroke: #000;
 }
 
 @keyframes spin {
@@ -21,16 +21,20 @@
 
 @keyframes dash {
   0% {
-    stroke-dasharray: 1, 150;
+    stroke-dasharray: 1, 200;
     stroke-dashoffset: 0;
   }
   50% {
-    stroke-dasharray: 90, 150;
-    stroke-dashoffset: -35;
+    stroke-dasharray: 100, 200;
+    stroke-dashoffset: -100; /* Adjust this value */
+  }
+  75% {
+    stroke-dasharray: 150, 200;
+    stroke-dashoffset: -150; /* Adjust this value */
   }
   100% {
-    stroke-dasharray: 150, 150;
-    stroke-dashoffset: -150;
+    stroke-dasharray: 200, 200;
+    stroke-dashoffset: -200; /* Adjust this value */
   }
 }
 

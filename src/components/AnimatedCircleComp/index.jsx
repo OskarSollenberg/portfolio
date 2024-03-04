@@ -30,10 +30,11 @@ export default function AnimatedCircleComponent({ isHovered }) {
     config: { tension: 50, friction: 10 },
   });
 
+  // useEffect for handling hover state
   useEffect(() => {
     function animateCircle(circle, isHovered) {
       gsap.to(circle.position, {
-        x: isHovered ? (loading ? 0 : -1) : 0,
+        x: isHovered ? -1 : 0, // Set x position based on isHovered
         duration: 1.5,
         ease: "elastic.out(0.1, 0.1)",
       });
@@ -49,7 +50,28 @@ export default function AnimatedCircleComponent({ isHovered }) {
     if (meshRef.current) {
       animateCircle(meshRef.current, isHovered);
     }
-  }, [isHovered, loading]);
+  }, [isHovered]);
+
+  useEffect(() => {
+    function animateCircle(circle) {
+      gsap.to(circle.position, {
+        x: 0, // Set initial x position to 0
+        duration: 1.5,
+        ease: "elastic.out(0.1, 0.1)",
+      });
+      gsap.to(circle.scale, {
+        x: 0.35,
+        y: 0.35,
+        z: 0.35,
+        duration: 1.5,
+        ease: "elastic.out(0.1, 0.1)",
+      });
+    }
+
+    if (meshRef.current && loading) {
+      animateCircle(meshRef.current);
+    }
+  }, [loading]);
 
   useFrame(() => {
     if (meshRef.current) {

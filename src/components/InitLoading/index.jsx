@@ -15,13 +15,11 @@ export default function InitLoading() {
       gsap.to(circleRef.current, {
         duration: 1,
         opacity: 0,
-        ease: "power1.in",
       });
 
       gsap.to(divRef.current, {
         duration: 1,
         opacity: 0,
-        ease: "power1.in",
       });
     }
   }, [loading]);
@@ -29,15 +27,11 @@ export default function InitLoading() {
   return (
     <div
       ref={divRef}
-      className="absolute w-screen h-screen z-1 bg-[black]"
+      className="absolute w-screen h-screen z-1 bg-[white]"
       style={{ opacity: 1 }}
     >
       <div className="flex justify-center items-center h-screen">
-        <svg
-          className="loader z-50"
-          viewBox="0 0 50 50"
-          style={{ mixBlendMode: "difference" }}
-        >
+        <svg className="loader z-50" viewBox="0 0 50 50">
           <circle
             ref={circleRef}
             className="path"
@@ -50,10 +44,6 @@ export default function InitLoading() {
           ></circle>
         </svg>
       </div>
-      <div
-        className="absolute w-screen border-[4rem] border-white animate-slide text-[#F13412] rounded-2xl "
-        style={{ top: "42%" }}
-      />
     </div>
   );
 }
