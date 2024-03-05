@@ -25,18 +25,38 @@ export default function Model() {
   const texts = [
     { text: "SKAR", fontSize: 0.5, position: [0.2, 0, 0], visible: true },
     {
-      text: "Made By",
+      text: "Portfolio by and for",
       fontSize: 0.05,
-      position: [-1.1, 0.3, 0],
+      position: [-0.9, 0.3, 0],
       visible: true,
     },
+    // {
+    //   text: "_________________", // Add as many underscores as needed
+    //   fontSize: 0.05,
+    //   position: [-0.9, 0.27, 0],
+    //   visible: true,
+    // },
     {
-      text: "Sollenberg",
+      text: "Herman Sollenberg",
       fontSize: 0.05,
-      position: [0.9, -0.3, 0],
+      position: [0.75, -0.3, 0],
       visible: true,
+      textDecoration: "underline",
     },
+    // {
+    //   text: "________________", // Add as many underscores as needed
+    //   fontSize: 0.05,
+    //   position: [0.75, -0.33, 0], // Adjust the position to be under the text
+    //   visible: true,
+    // },
+
     { text: "Herman", visible: false },
+    {
+      text: "Hover me →",
+      fontSize: 0.05,
+      position: [-1.5, -0, 0], // Adjust the position as needed
+      visible: false,
+    },
   ];
 
   return (

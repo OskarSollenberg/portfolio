@@ -24,15 +24,15 @@ export default function AnimatedTextComponent({
     config: { tension: 50, friction: 20 },
   });
 
-  const lettersStyling = {
-    font: FONT_PATH,
-    fontSize,
-    letterSpacing: letterSpacingSpring.letterSpacing,
-    color: isHovered ? "black" : "#FFFFFF",
-    onPointerOver: () => handleHover(true),
-    onPointerOut: () => handleHover(false),
-    position,
-  };
+  //   const lettersStyling = {
+  //     font: FONT_PATH,
+  //     fontSize,
+  //     letterSpacing: letterSpacingSpring.letterSpacing,
+  //     color: isHovered ? "black" : "#FFFFFF",
+  //     onPointerOver: () => handleHover(true),
+  //     onPointerOut: () => handleHover(false),
+  //     position,
+  //   };
 
   return (
     <AnimatedText
@@ -41,7 +41,7 @@ export default function AnimatedTextComponent({
       font={FONT_PATH}
       fontSize={fontSize}
       letterSpacing={letterSpacingSpring.letterSpacing}
-      color={isHovered ? "black" : "#FFFFFF"}
+      color={isHovered ? "black" : "#F36720"}
       onPointerOver={() => handleHover(true)}
       onPointerOut={() => handleHover(false)}
       position={position}

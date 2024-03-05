@@ -8,12 +8,14 @@ import { Environment } from "@react-three/drei";
 
 export default function Index() {
   return (
-    <Canvas>
-      <Model />
-      <directionalLight />
-      <Environment preset="city" />
-      {/* <PerspectiveCamera makeDefault position={[2, 2, 10]} /> */}
-    </Canvas>
+    <div className="overflow-hidden h-screen">
+      <Canvas>
+        <Model />
+        <directionalLight />
+        <Environment preset="city" />
+        {/* <PerspectiveCamera makeDefault position={[2, 2, 10]} /> */}
+      </Canvas>
+    </div>
   );
 }
 

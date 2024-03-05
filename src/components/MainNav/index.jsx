@@ -3,7 +3,7 @@ export default function MainNav() {
 
   return (
     <>
-      <div className="group bg-transparent-black hover:bg-[black] p-2 fixed bottom-4 hover:bottom-8 hover:p-6 min-w-[3rem] min-h-[3rem] delay-100 rounded-md flex justify-center items-center transition-all duration-500 ease-in-out">
+      <div className="group bg-transparent-black hover:bg-[black] p-5 px-6 fixed bottom-4 hover:bottom-8 hover:p-6 delay-100 rounded-full flex justify-center items-center transition-all duration-500 ease-in-out">
         <div className="absolute text-[1rem] text-[white] group-hover:hidden">
           M
         </div>
