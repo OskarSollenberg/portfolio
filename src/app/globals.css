@@ -6,8 +6,10 @@ body {
   margin: 0px;
   padding: 0px;
   overflow: hidden;
+  overflow-x: hidden;
   background-color: #f46821;
   background-color: #a9cbce;
+  background-color: #f16721;
 }
 
 img {

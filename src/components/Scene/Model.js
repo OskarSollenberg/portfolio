@@ -9,8 +9,8 @@ export default function Model() {
   const isLoading = useLoading();
   const [isHovered, setIsHovered] = useState(true);
 
-  const handleHover = (newHoverState) => {
-    if (isLoading) return;
+  const handleHover = (newHoverState, text) => {
+    if (isLoading || (text !== "SKAR" && text !== "Herman")) return;
     setIsHovered(newHoverState);
   };
 
@@ -30,12 +30,6 @@ export default function Model() {
       position: [-0.9, 0.3, 0],
       visible: true,
     },
-    // {
-    //   text: "_________________", // Add as many underscores as needed
-    //   fontSize: 0.05,
-    //   position: [-0.9, 0.27, 0],
-    //   visible: true,
-    // },
     {
       text: "Herman Sollenberg",
       fontSize: 0.05,
@@ -43,31 +37,18 @@ export default function Model() {
       visible: true,
       textDecoration: "underline",
     },
-    // {
-    //   text: "________________", // Add as many underscores as needed
-    //   fontSize: 0.05,
-    //   position: [0.75, -0.33, 0], // Adjust the position to be under the text
-    //   visible: true,
-    // },
-
     { text: "Herman", visible: false },
-    {
-      text: "Hover me →",
-      fontSize: 0.05,
-      position: [-1.5, -0, 0], // Adjust the position as needed
-      visible: false,
-    },
   ];
 
   return (
     <group scale={scale}>
-      <AnimatedCircleComponent isHovered={isHovered} />
+      <AnimatedCircleComponent isHovered={!isHovered} />
       {texts.map(({ text, fontSize, position, visible }, index) => (
         <AnimatedTextComponent
           key={index}
-          visible={visible ? isHovered : !isHovered}
-          handleHover={handleHover}
-          isHovered={isHovered}
+          visible={visible ? !isHovered : isHovered}
+          handleHover={(newHoverState) => handleHover(newHoverState, text)}
+          isHovered={!isHovered}
           text={isLoading ? "" : text}
           fontSize={fontSize}
           position={position}

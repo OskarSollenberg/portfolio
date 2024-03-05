@@ -4,7 +4,7 @@ import About from "@/src/components/About";
 import InitLoading from "@/src/components/InitLoading";
 import { useState, useEffect } from "react";
 import SocialMedia from "../components/SocialMedia";
-import HoverMe from "../components/hoverMe";
+import ProgressBar from "../components/progressBar";
 
 const Scene = dynamic(() => import("@/src/components/Scene"), {
   ssr: false,
@@ -19,19 +19,13 @@ export default function Home() {
       window.scrollTo(0, 0);
     };
 
-    // Prevent scrolling
-    document.body.style.overflow = "hidden";
-
     const timer = setTimeout(() => {
       setIsLoaded(true);
-      // Allow scrolling
-      document.body.style.overflow = "auto";
+      document.body.style.overflowY = "auto";
     }, 4000);
 
     return () => {
       clearTimeout(timer);
-      // Allow scrolling when component unmounts
-      document.body.style.overflow = "auto";
     };
   }, []);
 
@@ -39,13 +33,13 @@ export default function Home() {
     <main>
       <InitLoading />
       <section className="h-screen">
-        {/* <HoverMe /> */}
         <Scene />
         <SocialMedia />
       </section>
       <section className={`h-screen ${isLoaded ? " " : "overflow-hidden"}`}>
         <About />
       </section>
+      <ProgressBar />
     </main>
   );
 }

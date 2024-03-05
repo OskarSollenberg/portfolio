@@ -1,29 +1,79 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 export default function SocialMedia() {
-  const [isHovered, setIsHovered] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [textcolor, setTextcolor] = useState("white");
+
+  useEffect(() => {
+    let timer1 = setTimeout(() => {
+      setIsOpen(true);
+    }, 3500);
+
+    let timer2 = setTimeout(() => {
+      setIsOpen(false);
+    }, 5000);
+
+    return () => {
+      clearTimeout(timer1);
+      clearTimeout(timer2);
+    };
+  }, []);
+
+  useEffect(() => {
+    const onScroll = () => {
+      if (window.scrollY >= 10) {
+        setTextcolor("#F16721");
+        setIsOpen(false);
+      } else {
+        setTextcolor("white");
+        setIsOpen(true);
+      }
+    };
+
+    window.addEventListener("scroll", onScroll);
+
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+    };
+  }, []);
 
   return (
     <div
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-      className={`group socialMediaMenu absolute top-[50%] transform -translate-y-[50%] pt-[10rem] w-20 bg-transparent-black rounded-l-md h-20 transition-all duration-200 left-[99%] ${
-        isHovered
-          ? "transition-transform transform -translate-x-10"
-          : "transform translate-x-0"
+      onMouseEnter={() => setIsOpen(true)}
+      onMouseLeave={() => setIsOpen(false)}
+      className={`group absolute bottom-[2rem] transform -translate-y-[50%] h-[12rem] w-20  gap-5 transition-all duration-500 left-[99%] flex flex-col items-center justify-center ${
+        isOpen
+          ? "bg-transparent-black transform -translate-x-16"
+          : "transform translate-x-0 "
       } `}
     >
-      <div className=" absolute flex justify-center items-center right-[100%] top-[25%] w-10 rounded-l-lg h-[50%] bg-transparent-black">
-        <div className="group-hover:hidden text-[black]">
-          / / /<br />
-          / / /<br />
-          / / /<br />
+      <div className=" absolute rounded-l-md flex p-4 justify-center items-center right-[100%] h-full w-8 bg-[black]">
+        <div
+          className="group-hover:hidden flex flex-col items-center justify-center"
+          style={{ color: textcolor }}
+        >
+          <p>S</p>
+          <p>O</p>
+          <p>C</p>
+          <p>I</p>
+          <p>A</p>
+          <p>L</p>
+          <p>S</p>
         </div>
-        <div className="hidden group-hover:block">
-          \ \ \<br />
-          \ \ \<br />
-          \ \ \<br />
+        <div className="hidden group-hover:block" style={{ color: textcolor }}>
+          \ \<br />
+          \ \<br />
+          \ \<br />
         </div>
+      </div>
+      <div className="group-hover:block hidden" style={{ color: textcolor }}>
+        L
+      </div>
+      <div className="group-hover:block hidden" style={{ color: textcolor }}>
+        F
+      </div>
+      <div className="group-hover:block hidden" style={{ color: textcolor }}>
+        I
       </div>
     </div>
   );

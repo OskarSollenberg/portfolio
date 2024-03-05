@@ -2,7 +2,7 @@ import React from "react";
 
 function page() {
   return (
-    <div className="h-screen w-screen text-[white] bg-[white] text-center"></div>
+    <div className="h-screen w-screen text-[white] bg-[#F16721] text-center"></div>
   );
 }
 

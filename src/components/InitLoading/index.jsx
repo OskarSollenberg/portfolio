@@ -27,7 +27,7 @@ export default function InitLoading() {
   return (
     <div
       ref={divRef}
-      className="absolute w-screen h-screen z-1 bg-[white]"
+      className="absolute w-screen h-screen z-1 bg-[#ABCBCF]"
       style={{ opacity: 1 }}
     >
       <div className="flex justify-center items-center h-screen">

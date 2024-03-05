@@ -6,7 +6,7 @@ import { animated, useSpring } from "react-spring";
 import { MeshTransmissionMaterial } from "@react-three/drei";
 import { useGLTF } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
-import useLoading from "@/src/hooks/useLoading"; // adjust the path based on your project structure
+import useLoading from "@/src/hooks/useLoading";
 
 const ROTATION_SPEED_HOVERED = 0.05;
 const ROTATION_SPEED_NOT_HOVERED = 0.015;
@@ -20,7 +20,7 @@ export default function AnimatedCircleComponent({ isHovered }) {
   const loading = useLoading();
 
   const circleStyles = useSpring({
-    color: isHovered ? "black" : "white",
+    color: isHovered ? "black" : "#F16721",
     thickness: isHovered ? 4 : 0.2,
     roughness: isHovered ? 2 : 0,
     transmission: 1,
@@ -60,9 +60,9 @@ export default function AnimatedCircleComponent({ isHovered }) {
         ease: "elastic.out(0.1, 0.1)",
       });
       gsap.to(circle.scale, {
-        x: 0.35,
-        y: 0.35,
-        z: 0.35,
+        x: 0.5,
+        y: 0.5,
+        z: 0.5,
         duration: 1.5,
         ease: "elastic.out(0.1, 0.1)",
       });

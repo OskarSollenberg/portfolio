@@ -1,13 +1,56 @@
+"use client";
+
+import React, { useState, useEffect } from "react";
+
 export default function MainNav() {
-  const links = ["About", "Work", "Education"];
+  const links = ["About", "Work", "Contact"];
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [textColor, setTextColor] = useState("white");
+
+  setTimeout(() => {
+    setMenuOpen(true);
+  }, 4000);
+
+  const checkScroll = () => {
+    if (window.scrollY > 10) {
+      setMenuOpen(false);
+
+      setTextColor("#F16721");
+    } else {
+      setMenuOpen(true);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", checkScroll);
+    return () => {
+      window.removeEventListener("scroll", checkScroll);
+    };
+  }, []);
 
   return (
     <>
-      <div className="group bg-transparent-black hover:bg-[black] p-5 px-6 fixed bottom-4 hover:bottom-8 hover:p-6 delay-100 rounded-full flex justify-center items-center transition-all duration-500 ease-in-out">
-        <div className="absolute text-[1rem] text-[white] group-hover:hidden">
+      <div
+        onMouseLeave={() => window.scrollY > 10 && setMenuOpen(false)}
+        onMouseEnter={() => setMenuOpen(true)}
+        className={`group bg-[black] p-5 px-6 fixed bottom-4 ${
+          menuOpen ? " bottom-8 p-6 " : ""
+        } delay-100 rounded-full  flex justify-center items-center transition-all duration-500 ease-in-out`}
+      >
+        <div
+          className={`absolute text-[1rem] text-[${textColor}] ${
+            menuOpen ? "hidden" : ""
+          }`}
+        >
           M
         </div>
-        <div className="gap-10 h-full flex max-w-[1rem] opacity-0 group-hover:opacity-100 invisible group-hover:visible group-hover:max-w-[20rem] transition-all duration-500 ease-in-out transition-visibility ">
+        <div
+          className={`gap-10 h-full flex max-w-[1rem] ${
+            menuOpen
+              ? "opacity-100 visible max-w-[20rem]"
+              : "opacity-0 invisible"
+          } transition-all duration-500 ease-in-out transition-visibility `}
+        >
           {links.map((link) => (
             <a
               key={link}
@@ -15,7 +58,10 @@ export default function MainNav() {
                 transition:
                   "opacity 0.3s ease-in-out 0.3s, transform 0.15s ease-in-out, color 0.15s ease-in-out",
               }}
-              className={`text-[white] text-md hover:text-[#E43B13] opacity-0 group-hover:opacity-100 invisible group-hover:visible cursor-pointer hover:scale-110`}
+              className={`text-[white] text-md hover:text-[#E43B13] ${
+                menuOpen ? "opacity-100 visible" : `opacity-0 invisible `
+              }
+              } cursor-pointer hover:scale-110`}
             >
               {link}
             </a>
