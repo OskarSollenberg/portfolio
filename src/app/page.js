@@ -5,6 +5,7 @@ import InitLoading from "@/src/components/InitLoading";
 import { useState, useEffect } from "react";
 import SocialMedia from "../components/SocialMedia";
 import ProgressBar from "../components/progressBar";
+import Timeline from "../components/Timeline";
 
 const Scene = dynamic(() => import("@/src/components/Scene"), {
   ssr: false,
@@ -30,16 +31,21 @@ export default function Home() {
   }, []);
 
   return (
-    <main>
-      <InitLoading />
-      <section className="h-screen">
-        <Scene />
-        <SocialMedia />
-      </section>
-      <section className={`h-screen ${isLoaded ? " " : "overflow-hidden"}`}>
-        <About />
-      </section>
+    <>
+      <main>
+        <InitLoading />
+        <section className="h-screen">
+          <Scene />
+          <SocialMedia />
+        </section>
+        <section>
+          <Timeline />
+        </section>
+        <section>
+          <About />
+        </section>
+      </main>
       <ProgressBar />
-    </main>
+    </>
   );
 }
