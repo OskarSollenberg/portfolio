@@ -35,7 +35,7 @@ export default function AnimatedCircleComponent({ isHovered }) {
     function animateCircle(circle, isHovered) {
       gsap.to(circle.position, {
         x: isHovered ? -1 : 0, // Set x position based on isHovered
-        duration: 1.5,
+        duration: 1.7,
         ease: "elastic.out(0.1, 0.1)",
       });
       gsap.to(circle.scale, {

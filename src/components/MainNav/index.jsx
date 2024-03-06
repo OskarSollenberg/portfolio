@@ -1,20 +1,39 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import { gsap } from "gsap";
 
 export default function MainNav() {
   const links = ["About", "Work", "Contact"];
   const [menuOpen, setMenuOpen] = useState(false);
   const [textColor, setTextColor] = useState("white");
+  const [counter, setCounter] = useState(1);
 
-  setTimeout(() => {
-    setMenuOpen(true);
-  }, 4000);
+  useEffect(() => {
+    const counterAnimation = gsap.to(
+      { counter: 1 },
+      {
+        counter: 100,
+        roundProps: "counter",
+        duration: 4,
+        onUpdate: function () {
+          setCounter(Math.round(this.targets()[0].counter));
+        },
+      }
+    );
+
+    setTimeout(() => {
+      setMenuOpen(true);
+    }, 4000);
+
+    return () => {
+      counterAnimation.kill();
+    };
+  }, []);
 
   const checkScroll = () => {
     if (window.scrollY > 10) {
       setMenuOpen(false);
-
       setTextColor("#F16721");
     } else {
       setMenuOpen(true);
@@ -40,9 +59,9 @@ export default function MainNav() {
         <div
           className={`absolute text-[1rem] text-[${textColor}] ${
             menuOpen ? "hidden" : ""
-          }`}
+          } transition-all duration-300`}
         >
-          M
+          {counter !== 100 ? counter : "M"}
         </div>
         <div
           className={`gap-10 h-full flex max-w-[1rem] ${

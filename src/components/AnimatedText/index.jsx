@@ -16,7 +16,7 @@ export default function AnimatedTextComponent({
 }) {
   const letterSpacingSpring = useSpring({
     letterSpacing: isHovered ? 0.26 : 0.2,
-    config: { tension: 100, friction: 10 },
+    config: { tension: 80, friction: 10 },
   });
 
   const textTransition = useSpring({

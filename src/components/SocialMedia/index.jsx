@@ -7,11 +7,11 @@ export default function SocialMedia() {
   useEffect(() => {
     let timer1 = setTimeout(() => {
       setIsOpen(true);
-    }, 3500);
+    }, 7000);
 
     let timer2 = setTimeout(() => {
       setIsOpen(false);
-    }, 5000);
+    }, 10000);
 
     return () => {
       clearTimeout(timer1);
