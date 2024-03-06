@@ -1,4 +1,7 @@
 import React, { useEffect, useState } from "react";
+import { ImFacebook2 } from "react-icons/im";
+import { AiFillInstagram } from "react-icons/ai";
+import { FaLinkedin } from "react-icons/fa";
 
 export default function SocialMedia() {
   const [isOpen, setIsOpen] = useState(false);
@@ -49,7 +52,9 @@ export default function SocialMedia() {
     >
       <div className=" absolute rounded-l-md flex p-4 justify-center items-center right-[100%] h-full w-8 bg-[black]">
         <div
-          className="group-hover:hidden flex flex-col items-center justify-center"
+          className={`${
+            isOpen ? "hidden" : "flex"
+          } flex-col items-center justify-center`}
           style={{ color: textcolor }}
         >
           <p>S</p>
@@ -60,20 +65,34 @@ export default function SocialMedia() {
           <p>L</p>
           <p>S</p>
         </div>
-        <div className="hidden group-hover:block" style={{ color: textcolor }}>
+        <div className={` text-[#F3691F] ${isOpen ? "flex" : "hidden"}`}>
           \ \<br />
           \ \<br />
           \ \<br />
         </div>
       </div>
-      <div className="group-hover:block hidden" style={{ color: textcolor }}>
-        L
-      </div>
-      <div className="group-hover:block hidden" style={{ color: textcolor }}>
-        F
-      </div>
-      <div className="group-hover:block hidden" style={{ color: textcolor }}>
-        I
+      <div className="flex flex-col items-center justify-center gap-6 ">
+        <a
+          className={` text-[2.5rem] text-[white] hover:scale-110 ${
+            isOpen ? "flex" : "hidden"
+          }`}
+        >
+          <FaLinkedin />
+        </a>
+        <a
+          className={`text-[2rem] text-[white] hover:scale-110 ${
+            isOpen ? "flex" : "hidden"
+          }`}
+        >
+          <ImFacebook2 />
+        </a>
+        <a
+          className={`text-[2.7rem] text-[white] hover:scale-110 ${
+            isOpen ? "flex" : "hidden"
+          }`}
+        >
+          <AiFillInstagram />
+        </a>
       </div>
     </div>
   );
