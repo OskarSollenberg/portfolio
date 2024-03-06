@@ -3,7 +3,6 @@
 import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import "./styles.css";
 
 export default function Timeline() {
   const sectionRef = useRef(null);
