@@ -15,7 +15,7 @@ if (typeof window !== "undefined") {
 
 export default function Home() {
   return (
-    <div className="w-screen mx-auto">
+    <div className="w-screen mx-auto overflow-hidden">
       <InitLoading />
       <main>
         <section className="h-screen z-10 relative">
