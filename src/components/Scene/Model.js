@@ -20,20 +20,22 @@ export default function Model() {
   }, [isLoading]);
 
   const scale =
-    window.innerWidth < 600 ? viewport.width / 3 : viewport.width / 4.5;
+    window.innerWidth < 800 ? viewport.width / 3 : viewport.width / 4.5;
+
+  const isSmallScreen = window.innerWidth < 800;
 
   const texts = [
     { text: "SKAR", fontSize: 0.5, position: [0.2, 0, 0], visible: true },
     {
-      text: "Portfolio by and for",
-      fontSize: 0.05,
-      position: [-0.9, 0.3, 0],
+      text: "PORTFOLIO BY",
+      fontSize: isSmallScreen ? 0.1 : 0.05,
+      position: isSmallScreen ? [-0.65, 0.4, 0] : [-1, 0.3, 0],
       visible: true,
     },
     {
-      text: "Herman Sollenberg",
-      fontSize: 0.05,
-      position: [0.75, -0.3, 0],
+      text: "HERMAN SOLLENBERG",
+      fontSize: isSmallScreen ? 0.1 : 0.05,
+      position: isSmallScreen ? [0.29, -0.4, 0] : [0.69, -0.3, 0],
       visible: true,
       textDecoration: "underline",
     },

@@ -54,19 +54,19 @@ export default function Timeline({ index }) {
     <>
       <div
         style={{ background: background }}
-        className={` w-full transition-all duration-500 text-[white] z-[${index}]`}
+        className={` w-screen transition-all duration-500 text-[white] z-[${index}]`}
       >
         <div ref={triggerRef}>
           <div
             ref={sectionRef}
-            className="h-screen w-[400vw] flex flex-row relative text-center"
+            className="h-screen w-[500vw] flex flex-row relative text-center"
           >
             {projects.map((project, index) => (
               <div
                 key={index}
                 className={`h-screen w-screen flex flex-col justify-center items-center max-w-[100rem]`}
               >
-                <div className={`w-[50vw] `}>
+                <div className={`max-w-[80vw] `}>
                   <Image
                     src="/medias/hinder1.webp"
                     alt="Hinder"
