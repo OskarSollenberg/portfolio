@@ -10,9 +10,8 @@ export default function Timeline() {
   const sectionRef = useRef(null);
   const triggerRef = useRef(null);
 
-  const hinderImage = "/medias/hinder.webp";
   const projects = [
-    { title: "First Project", textSize: "5rem", image: hinderImage },
+    { title: "First Project", textSize: "5rem" },
     { title: "First Project", textSize: "5rem" },
     { title: "Most recent Project", textSize: "5rem" },
   ];
@@ -88,17 +87,15 @@ export default function Timeline() {
                     {project.subtitle}
                   </h3>
                 )} */}
-                {index === 0 && project.image && (
-                  <div className="w-full">
-                    <Image
-                      src={project.image}
-                      alt="Hinder"
-                      layout="responsive"
-                      width={500}
-                      height={300}
-                    />
-                  </div>
-                )}
+                <div className="w-full">
+                  <Image
+                    src="/medias/hinder.webp"
+                    alt="Hinder"
+                    layout="responsive"
+                    width={500}
+                    height={300}
+                  />
+                </div>
                 {index !== 0 && (
                   <p className="max-w-[50rem]">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
