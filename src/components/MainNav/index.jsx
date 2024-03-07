@@ -94,7 +94,7 @@ export default function MainNav() {
 
         {menuOpen && (
           <div
-            className={`p-[1rem] opacity-50 px-[1.3rem] transformO flex items-center justify-center origin-left bg-transparent-black rounded-md gap-10 border-[black] border-[1px] transition-all duration-200 hover:opacity-100 hover:border-[#f3691f] hover:text-[white] hover:-translate-y-[2px] `}
+            className={`p-[1rem] opacity-50 px-[1.3rem] transformO flex items-center justify-center origin-left bg-[transparent-black] rounded-md gap-10 border-[black] border-[1px] transition-all duration-200 hover:opacity-100 hover:border-[#f3691f] hover:text-[white] hover:-translate-y-[2px] `}
           >
             {links.map((link, index) => {
               return (

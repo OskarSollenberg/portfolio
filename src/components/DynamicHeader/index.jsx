@@ -4,7 +4,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 export default function DynamicHeader({ index }) {
-  const [textColor, setTextColor] = useState("#f3691f");
+  const [textColor, setTextColor] = useState("#2f3537");
   const [pin, setPin] = useState(false);
 
   const navLinks = ["ABOUT", "WORK", "CONTACT"];
@@ -33,8 +33,6 @@ export default function DynamicHeader({ index }) {
             end: "2000 top",
             scrub: 1.2,
             pin: pin,
-            onEnter: () => setTextColor("white"),
-            onLeaveBack: () => setTextColor("#f3691f"),
           },
         }
       );
@@ -50,7 +48,7 @@ export default function DynamicHeader({ index }) {
           className={`link-${index} flex top-[1rem] justify-center items-center hover:text-[white]`}
         >
           <a
-            className="transition-all hover:text-[white] duration-200 mx-[1rem] sm:mx-[2rem] md:mx-[5rem] cursor-pointer hover:underline text-lg sm:text-xl md:text-2xl font-semibold"
+            className="transition-all hover:text-[black] duration-200 mx-[1rem] sm:mx-[2rem] md:mx-[5rem] cursor-pointer hover:underline text-lg sm:text-xl md:text-2xl font-semibold"
             href="#"
           >
             {link}

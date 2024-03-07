@@ -36,7 +36,7 @@ export default function Timeline({ index }) {
             end: "2000 top",
             scrub: 0.6,
             pin: true,
-            onEnter: () => setBackground("#f3691f"),
+            onEnter: () => setBackground("black"),
             onLeaveBack: () => setBackground(""),
           },
         }
