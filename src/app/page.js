@@ -15,13 +15,13 @@ if (typeof window !== "undefined") {
 
 export default function Home() {
   return (
-    <div className="max-w-[90rem] w-screen">
+    <div className="w-screen">
       <InitLoading />
       <main>
-        <section className="h-screen">
+        <section className="h-screen z-10 relative">
           <Scene />
         </section>
-        <section>
+        <section className="-z-10">
           <Timeline />
         </section>
       </main>

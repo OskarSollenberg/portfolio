@@ -19,11 +19,11 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <SiteHeader />
         {children}
-        <section className="flex justify-center items-center">
+        <section className="flex justify-center items-center z-50 relative">
           <MainNav />
-          <SocialMedia />
-          <ProgressBar />
         </section>
+        <SocialMedia />
+        <ProgressBar />
       </body>
     </html>
   );

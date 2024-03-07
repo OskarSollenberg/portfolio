@@ -33,7 +33,7 @@ export default function Timeline() {
           duration: 1,
           scrollTrigger: {
             trigger: triggerRef.current,
-            start: "top bottom",
+            start: () => `top ${triggerRef.current.offsetHeight}px bottom`,
             end: "2000 top",
             scrub: 0.6,
             pin: true,
