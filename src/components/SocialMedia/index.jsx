@@ -7,7 +7,7 @@ import { FaLinkedin } from "react-icons/fa";
 
 export default function SocialMedia() {
   const [isOpen, setIsOpen] = useState(false);
-  const [textcolor, setTextcolor] = useState("white");
+  const [textcolor, setTextcolor] = useState("#F16721");
 
   //   useEffect(() => {
   //     let timer1 = setTimeout(() => {
@@ -27,11 +27,11 @@ export default function SocialMedia() {
   useEffect(() => {
     const onScroll = () => {
       if (window.scrollY >= 10) {
-        setTextcolor("#F16721");
-        setIsOpen(false);
-      } else {
         setTextcolor("white");
-        setIsOpen(true);
+        //   setIsOpen(false);
+      } else {
+        setTextcolor("#F16721");
+        //   setIsOpen(true);
       }
     };
 
