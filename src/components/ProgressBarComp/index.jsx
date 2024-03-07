@@ -20,7 +20,7 @@ export default function ProgressBarComp({ index }) {
         onComplete: () => {
           gsap.set(progressBar.current, {
             width: "0%",
-            backgroundColor: "#A5C9CB",
+            backgroundColor: "white",
           });
         },
       }
