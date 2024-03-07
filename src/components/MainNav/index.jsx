@@ -5,6 +5,7 @@ import { gsap } from "gsap";
 import { GiHamburgerMenu } from "react-icons/gi";
 
 export default function MainNav() {
+  const clr = "rgba(105, 105, 105, 0.183)";
   const links = [
     {
       name: "About",
@@ -78,15 +79,17 @@ export default function MainNav() {
       <div
         className={`text-sm text-[white] transition-transform fixed bottom-4 flex gap-2 p-[6px] rounded-md duration-300 ease-in-out hover:-translate-y-2 group ${
           menuOpen
-            ? "border-[2px] border-[black] bg-transparent-black bg-none"
+            ? "border-[2px] border-[black] bg-[#69696934] bg-none"
             : "border-none "
         }  `}
       >
         <div
           onClick={() => setMenuOpen((prev) => !prev)}
-          className={`bg-[black] rounded-full flex justify-center items-center text-[1rem] 
-           hover:text-[#f3691f] transition-all duration-300 hover:text-[1.2rem] cursor-pointer   ${
-             menuOpen ? " h-[3.5rem] w-[3.5rem] " : " h-[4rem] w-[4rem]"
+          className={`bg-[black] text-[white] rounded-full flex justify-center items-center text-[1rem] 
+           hover:text-[white] transition-allg duration-300 hover:text-[1.2rem] cursor-pointer   ${
+             menuOpen
+               ? " h-[3.5rem] w-[3.5rem] "
+               : " h-[4rem] w-[4rem] bg-[#f16621] text-[black]"
            }  `}
         >
           {counter === 100 ? <GiHamburgerMenu /> : counter}
@@ -94,7 +97,7 @@ export default function MainNav() {
 
         {menuOpen && (
           <div
-            className={`p-[1rem] opacity-50 px-[1.3rem] transformO flex items-center justify-center origin-left bg-[transparent-black] rounded-md gap-10 border-[black] border-[1px] transition-all duration-200 hover:opacity-100 hover:border-[#f3691f] hover:text-[white] hover:-translate-y-[2px] `}
+            className={`p-[1rem] opacity-50 px-[1.3rem] transformO flex items-center justify-center origin-left bg-[#69696972] rounded-md gap-10 border-[black] border-[1px] transition-all duration-200 hover:opacity-100  hover:text-[white]  `}
           >
             {links.map((link, index) => {
               return (

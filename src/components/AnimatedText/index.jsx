@@ -3,6 +3,11 @@ import { animated, useSpring } from "react-spring";
 import { Text as DreiText } from "@react-three/drei";
 
 const FONT_PATH = "/fonts/PPNeueMontreal-Bold.otf";
+// const FONT_PATH = "/fonts/Migha-BlackCondensedCNTR.otf";
+// const FONT_PATH = "/fonts/Class-357-Regular.ttf";
+// const FONT_PATH = "/fonts/AkhbarBold.ttf";
+// const FONT_PATH = "/fonts/Mortend-Extra-Bold.otf";
+
 const AnimatedText = animated(DreiText);
 
 export default function AnimatedTextComponent({
@@ -31,7 +36,7 @@ export default function AnimatedTextComponent({
       font={FONT_PATH}
       fontSize={fontSize}
       letterSpacing={letterSpacingSpring.letterSpacing}
-      color={isHovered ? "yellow" : "yellow"}
+      color={isHovered ? "white" : "white"}
       onPointerOver={() => handleHover(true)}
       onPointerOut={() => handleHover(false)}
       position={position}

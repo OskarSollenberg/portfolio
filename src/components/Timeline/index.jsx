@@ -6,7 +6,7 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Image from "next/image";
 
 export default function Timeline({ index }) {
-  const [background, setBackground] = useState("");
+  const [background, setBackground] = useState("black");
   const sectionRef = useRef(null);
   const triggerRef = useRef(null);
 
@@ -36,8 +36,8 @@ export default function Timeline({ index }) {
             end: "2000 top",
             scrub: 0.6,
             pin: true,
-            onEnter: () => setBackground("black"),
-            onLeaveBack: () => setBackground(""),
+            onEnter: () => setBackground("#f3691f"),
+            onLeaveBack: () => setBackground("black"),
           },
         }
       );
@@ -53,7 +53,6 @@ export default function Timeline({ index }) {
   return (
     <>
       <div
-        style={{ background: background }}
         className={` w-screen transition-all duration-500 text-[white] z-[${index}]`}
       >
         <div ref={triggerRef}>
@@ -63,6 +62,10 @@ export default function Timeline({ index }) {
           >
             {projects.map((project, index) => (
               <div
+                style={{
+                  background: background,
+                  transition: "background 0.5s ease",
+                }}
                 key={index}
                 className={`h-screen w-screen flex flex-col justify-center items-center max-w-[100rem]`}
               >
@@ -70,9 +73,9 @@ export default function Timeline({ index }) {
                   <Image
                     src="/medias/hinder1.webp"
                     alt="Hinder"
-                    layout="responsive"
                     width={500}
                     height={300}
+                    style={{ width: "auto", height: "auto" }}
                   />
                 </div>
               </div>

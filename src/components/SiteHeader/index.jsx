@@ -16,7 +16,7 @@ export default function SiteHeader({ index }) {
 
   return (
     <div
-      className={`absolute w-full min-h-16 text-[white]flex items-center justify-center transition-transform duration-70 ease-in-out z-[${index}] ${
+      className={`absolute w-full min-h-16 text-[white] flex bg-[black] items-center justify-center transition-transform duration-70 ease-in-out z-[${index}] ${
         isVisible ? "transform translate-y-0" : "transform -translate-y-full"
       }`}
     >
