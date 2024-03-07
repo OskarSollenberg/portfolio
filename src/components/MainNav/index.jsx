@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import { gsap } from "gsap";
 import { GiHamburgerMenu } from "react-icons/gi";
 
-export default function MainNav({ index }) {
+export default function MainNav() {
   const links = [
     {
       name: "About",
@@ -33,7 +33,9 @@ export default function MainNav({ index }) {
     );
 
     setTimeout(() => {
-      setMenuOpen(true);
+      if (window.innerWidth >= 600) {
+        setMenuOpen(true);
+      }
     }, 2800);
 
     return () => {
@@ -42,16 +44,13 @@ export default function MainNav({ index }) {
   }, []);
 
   const checkScroll = () => {
-    const mediaQuery = window.matchMedia("(max-width: 768px)");
-
-    if (!mediaQuery.matches) {
-      if (window.scrollY > 10) {
-        setMenuOpen(false);
-      } else {
+    if (window.innerWidth >= 600) {
+      if (window.scrollY === 1) {
         setMenuOpen(true);
       }
     }
   };
+
   useEffect(() => {
     window.addEventListener("scroll", checkScroll);
     return () => {
@@ -60,32 +59,31 @@ export default function MainNav({ index }) {
   }, []);
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia("(max-width: 768px)");
-
     const handleResize = () => {
-      if (mediaQuery.matches) {
+      if (window.innerWidth < 600) {
         setMenuOpen(false);
       }
     };
 
-    mediaQuery.addListener(handleResize);
+    window.addEventListener("resize", handleResize);
     handleResize();
 
     return () => {
-      mediaQuery.removeListener(handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
   return (
     <>
       <div
-        className={`text-sm text-[white] transition-transform fixed bottom-4 flex gap-2 p-[6px] rounded-md duration-300 ease-in-out hover:-translate-y-2 group z-[${index}] ${
+        className={`text-sm text-[white] transition-transform fixed bottom-4 flex gap-2 p-[6px] rounded-md duration-300 ease-in-out hover:-translate-y-2 group ${
           menuOpen
             ? "border-[2px] border-[black] bg-transparent-black bg-none"
             : "border-none "
         }  `}
       >
         <div
+          onClick={() => setMenuOpen((prev) => !prev)}
           className={`bg-[black] rounded-full flex justify-center items-center text-[1rem] 
            hover:text-[#f3691f] transition-all duration-300 hover:text-[1.2rem] cursor-pointer   ${
              menuOpen ? " h-[3.5rem] w-[3.5rem] " : " h-[4rem] w-[4rem]"
