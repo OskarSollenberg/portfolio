@@ -4,8 +4,9 @@ import "./globals.css";
 import SiteHeader from "@/src/components/SiteHeader";
 import MainNav from "@/src/components/MainNav";
 import SocialMedia from "../components/SocialMedia";
-import ProgressBar from "../components/ProgressBar";
+
 import DynamicHeader from "../components/DynamicHeader";
+import ProgressBar from "../components/ProgressBar";
 
 const inter = Inter({ subsets: ["latin"] });
 
