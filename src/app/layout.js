@@ -3,7 +3,6 @@ import "./globals.css";
 
 import SiteHeader from "@/src/components/SiteHeader";
 import MainNav from "@/src/components/MainNav";
-import Timeline from "../components/Timeline";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {

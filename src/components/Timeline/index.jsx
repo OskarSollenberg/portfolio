@@ -44,55 +44,48 @@ export default function Timeline() {
   }, []);
 
   return (
-    <section className=" overflow-hidden text-[white]">
-      {/* The section up act just as a wrapper. If the trigger (below) is the
-      first jsx element in the component, you get an error on route change */}
-
-      {/* The div below act just as a trigger. As the doc suggests, the trigger and 
-      the animation should alway be two separated refs */}
-      <div ref={triggerRef}>
-        <div
-          ref={sectionRef}
-          className="h-screen w-[400vw] flex flex-row relative text-center"
-        >
-          <div className="h-screen w-screen flex flex-col justify-center items-center">
-            <h3 className="text-[5rem] ">First Project</h3>
-            <p className="max-w-[50rem]">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
-              tenetur quisquam quaerat! Natus veniam modi quam, eveniet sint
-              sapiente similique illum cupiditate labore beatae vero rerum.
-              Sequi officiis dignissimos id.
-            </p>
-          </div>
-          <div className="h-screen w-screen flex flex-col justify-center items-center">
-            <h3 className="text-[5rem] ">First Project</h3>
-            <p className="max-w-[50rem]">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
-              tenetur quisquam quaerat! Natus veniam modi quam, eveniet sint
-              sapiente similique illum cupiditate labore beatae vero rerum.
-              Sequi officiis dignissimos id.
-            </p>
-          </div>
-          <div className="h-screen w-screen flex flex-col justify-center items-center">
-            <h3 className="text-[5rem] ">First Project</h3>
-            <p className="max-w-[50rem]">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
-              tenetur quisquam quaerat! Natus veniam modi quam, eveniet sint
-              sapiente similique illum cupiditate labore beatae vero rerum.
-              Sequi officiis dignissimos id.
-            </p>
-          </div>
-          <div className="h-screen w-screen flex flex-col justify-center items-center">
-            <h3 className="text-[5rem] ">Most recent Project</h3>
-            <p className="max-w-[50rem]">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
-              tenetur quisquam quaerat! Natus veniam modi quam, eveniet sint
-              sapiente similique illum cupiditate labore beatae vero rerum.
-              Sequi officiis dignissimos id.
-            </p>
+    <>
+      <div></div>
+      <div className="overflow-hidden text-[white]">
+        <div ref={triggerRef}>
+          <div
+            ref={sectionRef}
+            className="h-screen w-[400vw] flex flex-row relative text-center"
+          >
+            <div className="h-screen w-screen flex flex-col justify-center items-center">
+              <h3 className="text-[10rem]">FEATURED</h3>
+              <h3 className="text-[10rem] translate-x-20">PROJECTS</h3>
+            </div>
+            <div className="h-screen w-screen flex flex-col justify-center items-center">
+              <h3 className="text-[5rem] ">First Project</h3>
+              <p className="max-w-[50rem]">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+                tenetur quisquam quaerat! Natus veniam modi quam, eveniet sint
+                sapiente similique illum cupiditate labore beatae vero rerum.
+                Sequi officiis dignissimos id.
+              </p>
+            </div>
+            <div className="h-screen w-screen flex flex-col justify-center items-center">
+              <h3 className="text-[5rem] ">First Project</h3>
+              <p className="max-w-[50rem]">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+                tenetur quisquam quaerat! Natus veniam modi quam, eveniet sint
+                sapiente similique illum cupiditate labore beatae vero rerum.
+                Sequi officiis dignissimos id.
+              </p>
+            </div>
+            <div className="h-screen w-screen flex flex-col justify-center items-center">
+              <h3 className="text-[5rem] ">Most recent Project</h3>
+              <p className="max-w-[50rem]">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+                tenetur quisquam quaerat! Natus veniam modi quam, eveniet sint
+                sapiente similique illum cupiditate labore beatae vero rerum.
+                Sequi officiis dignissimos id.
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </section>
+    </>
   );
 }

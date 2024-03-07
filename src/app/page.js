@@ -1,24 +1,25 @@
 import dynamic from "next/dynamic";
 import About from "@/src/components/About";
 import InitLoading from "@/src/components/InitLoading";
-// import { useState, useEffect } from "react";
 import SocialMedia from "../components/SocialMedia";
 import ProgressBar from "../components/progressBar";
 import Timeline from "../components/Timeline";
-
-import { scrollToTopOnUnload } from "./utils"; // adjust the path as needed
-
-scrollToTopOnUnload();
 
 const Scene = dynamic(() => import("@/src/components/Scene"), {
   ssr: true,
 });
 
+if (typeof window !== "undefined") {
+  window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+  };
+}
+
 export default function Home() {
   return (
     <>
+      <InitLoading />
       <main>
-        <InitLoading />
         <section className="h-screen">
           <Scene />
           <SocialMedia />
