@@ -15,7 +15,7 @@ if (typeof window !== "undefined") {
 
 export default function Home() {
   return (
-    <div className="max-w-[90rem]">
+    <div className="max-w-[90rem] w-screen">
       <InitLoading />
       <main>
         <section className="h-screen">
