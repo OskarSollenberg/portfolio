@@ -3,7 +3,6 @@
 import React, { useRef, useEffect, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import hinderImage from "@/public/medias/hinder.png";
 import Image from "next/image";
 
 export default function Timeline() {
@@ -11,6 +10,7 @@ export default function Timeline() {
   const sectionRef = useRef(null);
   const triggerRef = useRef(null);
 
+  const hinderImage = "/medias/hinder.png";
   const projects = [
     { title: "First Project", textSize: "5rem", image: hinderImage },
     { title: "First Project", textSize: "5rem" },
@@ -91,7 +91,7 @@ export default function Timeline() {
                 {index === 0 && project.image && (
                   <div className="w-full">
                     <Image
-                      src={hinderImage}
+                      src={project.image}
                       alt="Hinder"
                       layout="responsive"
                       width={500}
