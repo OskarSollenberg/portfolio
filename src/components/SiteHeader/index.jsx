@@ -16,11 +16,11 @@ export default function SiteHeader() {
 
   return (
     <div
-      className={`absolute w-full z-10 min-h-16 text-[white] bg-transparent-black flex items-center justify-center transition-transform duration-700	 ease-in-out ${
+      className={`absolute w-full z-10 min-h-16 text-[white]flex items-center justify-center transition-transform duration-700	 ease-in-out ${
         isVisible ? "transform translate-y-0" : "transform -translate-y-full"
       }`}
     >
-      <h1>Herman</h1>
+      {/* <h1>Herman</h1> */}
     </div>
   );
 }

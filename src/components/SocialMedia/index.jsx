@@ -46,7 +46,7 @@ export default function SocialMedia() {
     <div
       onMouseEnter={() => setIsOpen(true)}
       onMouseLeave={() => setIsOpen(false)}
-      className={`group absolute bottom-[2rem] transform -translate-y-[50%] h-[12rem] w-20  gap-5 transition-all duration-500 left-[99%] flex flex-col items-center justify-center ${
+      className={`group absolute top-[10rem] transform -translate-y-[50%] h-[12rem] w-20  gap-5 transition-all duration-500 left-[99%] flex flex-col items-center justify-center ${
         isOpen
           ? "bg-transparent-black transform -translate-x-16"
           : "transform translate-x-0 "

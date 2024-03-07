@@ -1,15 +1,21 @@
 "use client";
 
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 export default function Timeline() {
-  if (typeof window !== "undefined") {
-  }
+  const [background, setBackground] = useState(false);
 
   const sectionRef = useRef(null);
   const triggerRef = useRef(null);
+
+  const projects = [
+    { title: "FEATURED", subtitle: "PROJECTS", textSize: "10rem" },
+    { title: "First Project", textSize: "5rem" },
+    { title: "First Project", textSize: "5rem" },
+    { title: "Most recent Project", textSize: "5rem" },
+  ];
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -31,6 +37,8 @@ export default function Timeline() {
             end: "2000 top",
             scrub: 0.6,
             pin: true,
+            onEnter: () => setBackground(true),
+            onLeaveBack: () => setBackground(false),
           },
         }
       );
@@ -52,37 +60,31 @@ export default function Timeline() {
             ref={sectionRef}
             className="h-screen w-[400vw] flex flex-row relative text-center"
           >
-            <div className="h-screen w-screen flex flex-col justify-center items-center">
-              <h3 className="text-[10rem]">FEATURED</h3>
-              <h3 className="text-[10rem] translate-x-20">PROJECTS</h3>
-            </div>
-            <div className="h-screen w-screen flex flex-col justify-center items-center">
-              <h3 className="text-[5rem] ">First Project</h3>
-              <p className="max-w-[50rem]">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
-                tenetur quisquam quaerat! Natus veniam modi quam, eveniet sint
-                sapiente similique illum cupiditate labore beatae vero rerum.
-                Sequi officiis dignissimos id.
-              </p>
-            </div>
-            <div className="h-screen w-screen flex flex-col justify-center items-center">
-              <h3 className="text-[5rem] ">First Project</h3>
-              <p className="max-w-[50rem]">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
-                tenetur quisquam quaerat! Natus veniam modi quam, eveniet sint
-                sapiente similique illum cupiditate labore beatae vero rerum.
-                Sequi officiis dignissimos id.
-              </p>
-            </div>
-            <div className="h-screen w-screen flex flex-col justify-center items-center">
-              <h3 className="text-[5rem] ">Most recent Project</h3>
-              <p className="max-w-[50rem]">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
-                tenetur quisquam quaerat! Natus veniam modi quam, eveniet sint
-                sapiente similique illum cupiditate labore beatae vero rerum.
-                Sequi officiis dignissimos id.
-              </p>
-            </div>
+            {projects.map((project, index) => (
+              <div
+                key={index}
+                className={`h-screen w-screen flex flex-col justify-center items-center transition-all duration-500 ${
+                  background ? "bg-[#f3691f]" : ""
+                }`}
+              >
+                <h3 className={`text-[${project.textSize}]`}>
+                  {project.title}
+                </h3>
+                {project.subtitle && (
+                  <h3 className="text-[10rem] translate-x-20">
+                    {project.subtitle}
+                  </h3>
+                )}
+                {index !== 0 && (
+                  <p className="max-w-[50rem]">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Iusto tenetur quisquam quaerat! Natus veniam modi quam,
+                    eveniet sint sapiente similique illum cupiditate labore
+                    beatae vero rerum. Sequi officiis dignissimos id.
+                  </p>
+                )}
+              </div>
+            ))}
           </div>
         </div>
       </div>
