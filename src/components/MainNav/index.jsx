@@ -25,7 +25,7 @@ export default function MainNav() {
       {
         counter: 100,
         roundProps: "counter",
-        duration: 4,
+        duration: 3,
         onUpdate: function () {
           setCounter(Math.round(this.targets()[0].counter));
         },
@@ -34,7 +34,7 @@ export default function MainNav() {
 
     setTimeout(() => {
       setMenuOpen(true);
-    }, 4000);
+    }, 3000);
 
     return () => {
       counterAnimation.kill();

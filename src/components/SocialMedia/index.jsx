@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useEffect, useState } from "react";
 import { ImFacebook2 } from "react-icons/im";
 import { AiFillInstagram } from "react-icons/ai";
@@ -7,20 +9,20 @@ export default function SocialMedia() {
   const [isOpen, setIsOpen] = useState(false);
   const [textcolor, setTextcolor] = useState("white");
 
-  useEffect(() => {
-    let timer1 = setTimeout(() => {
-      setIsOpen(true);
-    }, 7000);
+  //   useEffect(() => {
+  //     let timer1 = setTimeout(() => {
+  //       setIsOpen(true);
+  //     }, 7000);
 
-    let timer2 = setTimeout(() => {
-      setIsOpen(false);
-    }, 10000);
+  //     let timer2 = setTimeout(() => {
+  //       setIsOpen(false);
+  //     }, 10000);
 
-    return () => {
-      clearTimeout(timer1);
-      clearTimeout(timer2);
-    };
-  }, []);
+  //     return () => {
+  //       clearTimeout(timer1);
+  //       clearTimeout(timer2);
+  //     };
+  //   }, []);
 
   useEffect(() => {
     const onScroll = () => {

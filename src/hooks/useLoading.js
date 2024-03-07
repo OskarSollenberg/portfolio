@@ -6,7 +6,8 @@ export default function useLoading() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 3000);
+      document.body.style.overflowY = "auto";
+    }, 100);
 
     return () => clearTimeout(timer);
   }, []);
