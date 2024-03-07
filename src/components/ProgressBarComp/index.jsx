@@ -2,7 +2,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import { gsap } from "gsap";
 
-export default function ProgressBar({ index }) {
+export default function ProgressBarComp({ index }) {
   const [scrollPosition, setScrollPosition] = useState(0);
   const progressBar = useRef(null);
   const [color, setColor] = useState("black");

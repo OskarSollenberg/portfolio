@@ -3,10 +3,9 @@ import "./globals.css";
 
 import SiteHeader from "@/src/components/SiteHeader";
 import MainNav from "@/src/components/MainNav";
-import SocialMedia from "../components/SocialMedia";
-
-import DynamicHeader from "../components/DynamicHeader";
-import ProgressBar from "../components/ProgressBar";
+import SocialMedia from "@/src/components/SocialMedia";
+import DynamicHeader from "@/src/components/DynamicHeader";
+import ProgressBarComp from "@/src/components/ProgressBarComp";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,7 +23,7 @@ export default function RootLayout({ children }) {
           {children}
           <MainNav index={200} />
           <DynamicHeader index={300} />
-          <ProgressBar index={200} />
+          <ProgressBarComp index={200} />
           <SocialMedia index={200} />
         </div>
       </body>
