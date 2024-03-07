@@ -5,7 +5,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Image from "next/image";
 
-export default function Timeline() {
+export default function Timeline({ index }) {
   const [background, setBackground] = useState("");
   const sectionRef = useRef(null);
   const triggerRef = useRef(null);
@@ -54,40 +54,18 @@ export default function Timeline() {
     <>
       <div
         style={{ background: background }}
-        className={` w-full transition-all duration-500 text-[white]`}
+        className={` w-full transition-all duration-500 text-[white] z-[${index}]`}
       >
         <div ref={triggerRef}>
           <div
             ref={sectionRef}
             className="h-screen w-[400vw] flex flex-row relative text-center"
           >
-            <div
-              className={`h-screen w-screen flex flex-col justify-center items-center `}
-            >
-              {/* <h3 className={`text-[10rem]`}>FEATURED</h3>
-              <h3 className="text-[10rem] translate-x-20">PROJECTS</h3> */}
-
-              {/* <p className="max-w-[50rem]">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
-                tenetur quisquam quaerat! Natus veniam modi quam, eveniet sint
-                sapiente similique illum cupiditate labore beatae vero rerum.
-                Sequi officiis dignissimos id.
-              </p> */}
-            </div>
             {projects.map((project, index) => (
               <div
                 key={index}
-                className={`h-screen w-screen flex flex-col justify-center items-center`}
+                className={`h-screen w-screen flex flex-col justify-center items-center max-w-[100rem]`}
               >
-                {/* <h3 className={`text-[${project.textSize}]`}>
-                  {project.title}
-                </h3> */}
-                {/* {project.subtitle && (
-                  <h3 className="text-[10rem] translate-x-20">
-                    {project.subtitle}
-                  </h3>
-                )} */}
-
                 <div className={`w-[50vw] `}>
                   <Image
                     src="/medias/hinder1.webp"
@@ -97,15 +75,6 @@ export default function Timeline() {
                     height={300}
                   />
                 </div>
-
-                {/* {index !== 0 && (
-                  <p className="max-w-[50rem]">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Iusto tenetur quisquam quaerat! Natus veniam modi quam,
-                    eveniet sint sapiente similique illum cupiditate labore
-                    beatae vero rerum. Sequi officiis dignissimos id.
-                  </p>
-                )} */}
               </div>
             ))}
           </div>

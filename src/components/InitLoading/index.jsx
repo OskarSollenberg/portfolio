@@ -5,7 +5,7 @@ import { gsap } from "gsap";
 import "./styles.css";
 import useLoading from "@/src/hooks/useLoading";
 
-export default function InitLoading() {
+export default function InitLoading({ index }) {
   const loading = useLoading();
   const circleRef = useRef(null);
   const divRef = useRef(null);
@@ -27,11 +27,11 @@ export default function InitLoading() {
   return (
     <div
       ref={divRef}
-      className="absolute w-screen h-screen z-1 bg-[#f3691f]"
+      className={`absolute w-screen h-screen bg-[#f3691f] z-[${index}]`}
       style={{ opacity: 1 }}
     >
       <div className="flex justify-center items-center h-screen">
-        <svg className="loader z-50" viewBox="0 0 50 50">
+        <svg className="loader" viewBox="0 0 50 50">
           <circle
             ref={circleRef}
             className="path"

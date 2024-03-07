@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
-export default function DynamicHeader() {
+export default function DynamicHeader({ index }) {
   const [textColor, setTextColor] = useState("#f3691f");
   const [pin, setPin] = useState(false);
 
@@ -14,6 +14,7 @@ export default function DynamicHeader() {
 
     setTimeout(() => {
       setPin(true);
+      setTextColor("white");
     }, 3000);
 
     navLinks.forEach((link, index) => {
@@ -30,7 +31,7 @@ export default function DynamicHeader() {
             trigger: `.link-${index}`,
             start: "top top",
             end: "2000 top",
-            scrub: 0.6,
+            scrub: 1.2,
             pin: pin,
             onEnter: () => setTextColor("white"),
             onLeaveBack: () => setTextColor("#f3691f"),
@@ -41,15 +42,15 @@ export default function DynamicHeader() {
   }, [pin]);
 
   return (
-    <div className="flex absolute top-0 right-0">
+    <div className={`flex absolute top-[1rem] right-0 z-[${index}]`}>
       {navLinks.map((link, index) => (
         <div
           key={index}
           style={{ color: textColor }}
-          className={`link-${index} flex h-[10rem] justify-center items-center`}
+          className={`link-${index} flex top-[1rem] justify-center items-center hover:text-[white]`}
         >
           <a
-            className="transition-all duration-200 mx-[1rem] sm:mx-[2rem] md:mx-[5rem] cursor-pointer"
+            className="transition-all hover:text-[white] duration-200 mx-[1rem] sm:mx-[2rem] md:mx-[5rem] cursor-pointer"
             href="#"
           >
             {link}

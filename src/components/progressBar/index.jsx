@@ -2,7 +2,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import { gsap } from "gsap";
 
-export default function MainNav() {
+export default function ProgressBar({ index }) {
   const [scrollPosition, setScrollPosition] = useState(0);
   const progressBar = useRef(null);
   const [color, setColor] = useState("black");
@@ -45,7 +45,9 @@ export default function MainNav() {
 
   return (
     <>
-      <div className=" bottom-0 left-0 h-2 bg-[transparent] w-full fixed">
+      <div
+        className={`bottom-0 left-0 h-2 bg-[transparent] w-full fixed z-[${index}] `}
+      >
         <div
           ref={progressBar}
           className={`rounded-xl h-full bg-[${color}]}`}

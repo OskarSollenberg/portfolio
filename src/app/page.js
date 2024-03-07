@@ -16,16 +16,16 @@ if (typeof window !== "undefined") {
 export default function Home() {
   return (
     <div className="w-screen mx-auto overflow-hidden">
-      <InitLoading />
+      <InitLoading index={10} />
       <main>
-        <section className="h-screen z-10 relative">
-          <Scene />
-        </section>
-        <section className="-z-10">
-          <Timeline />
+        <section className="h-screen relative">
+          <Scene index={20} />
         </section>
         <section className="">
-          <About />
+          <Timeline index={2} />
+        </section>
+        <section className="">
+          <About index={100} />
         </section>
       </main>
     </div>

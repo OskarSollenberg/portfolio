@@ -5,7 +5,7 @@ import { ImFacebook2 } from "react-icons/im";
 import { AiFillInstagram } from "react-icons/ai";
 import { FaLinkedin } from "react-icons/fa";
 
-export default function SocialMedia() {
+export default function SocialMedia({ index }) {
   const [isOpen, setIsOpen] = useState(false);
   const [textcolor, setTextcolor] = useState("#F16721");
   const [lowPosition, setLowPosition] = useState(false);
@@ -43,7 +43,7 @@ export default function SocialMedia() {
     <div
       onMouseEnter={() => setIsOpen(true)}
       onMouseLeave={() => setIsOpen(false)}
-      className={`group absolute bottom-full transform -translate-y-[50%] h-[12rem] w-20  gap-5 transition-all duration-500 left-[99%] flex flex-col items-center justify-center z-50 ${
+      className={`group absolute bottom-full transform -translate-y-[50%] h-[12rem] w-20  gap-5 transition-all duration-500 left-[99%] flex flex-col items-center justify-center z-[${index}] ${
         isOpen
           ? "bg-transparent-black transform -translate-x-16"
           : "transform translate-x-0 "

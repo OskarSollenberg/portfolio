@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import { gsap } from "gsap";
 import { GiHamburgerMenu } from "react-icons/gi";
 
-export default function MainNav() {
+export default function MainNav({ index }) {
   const links = [
     {
       name: "About",
@@ -79,7 +79,7 @@ export default function MainNav() {
   return (
     <>
       <div
-        className={`text-sm text-[white] transition-transform fixed bottom-4 flex gap-2 p-[6px] rounded-md duration-300 ease-in-out hover:-translate-y-2 group ${
+        className={`text-sm text-[white] transition-transform fixed bottom-4 flex gap-2 p-[6px] rounded-md duration-300 ease-in-out hover:-translate-y-2 group z-[${index}] ${
           menuOpen
             ? "border-[2px] border-[black] bg-transparent-black bg-none"
             : "border-none "

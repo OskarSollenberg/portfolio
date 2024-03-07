@@ -1,8 +1,10 @@
 import React from "react";
 
-function page() {
+function page({ index }) {
   return (
-    <div className="h-screen w-screen text-[white] text-center">ABOUT</div>
+    <div className={`h-screen w-screen text-[white] text-center z-[${index}]`}>
+      ABOUT
+    </div>
   );
 }
 
