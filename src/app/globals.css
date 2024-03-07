@@ -9,17 +9,18 @@ html {
 }
 
 body {
+  width: 100vw;
   margin: 0px;
   padding: 0px;
   overflow: hidden;
   overflow-x: hidden;
-  background-color: #7bff00;
-  background-color: #a9cbce;
-  background-color: #f3691f;
-  background-color: #5ea163;
+  background-color: #172530;
+  /* background-color: #a9cbce; */
+  /* background-color: #f3691f; */
+  /* background-color: #5ea163; */
   /* background-color: #ffa04d; */
   /* background: #15151e; */
-  background: #232332;
+  /* background: #232332; */
 }
 
 img {

@@ -8,26 +8,23 @@ import { FaLinkedin } from "react-icons/fa";
 export default function SocialMedia() {
   const [isOpen, setIsOpen] = useState(false);
   const [textcolor, setTextcolor] = useState("#F16721");
+  const [lowPosition, setLowPosition] = useState(false);
 
-  //   useEffect(() => {
-  //     let timer1 = setTimeout(() => {
-  //       setIsOpen(true);
-  //     }, 7000);
+  useEffect(() => {
+    let timer1 = setTimeout(() => {
+      setLowPosition(true);
+    }, 3000);
 
-  //     let timer2 = setTimeout(() => {
-  //       setIsOpen(false);
-  //     }, 10000);
-
-  //     return () => {
-  //       clearTimeout(timer1);
-  //       clearTimeout(timer2);
-  //     };
-  //   }, []);
+    return () => {
+      clearTimeout(timer1);
+    };
+  }, []);
 
   useEffect(() => {
     const onScroll = () => {
       if (window.scrollY >= 10) {
         setTextcolor("white");
+        setLowPosition(true);
         //   setIsOpen(false);
       } else {
         setTextcolor("#F16721");
@@ -46,11 +43,11 @@ export default function SocialMedia() {
     <div
       onMouseEnter={() => setIsOpen(true)}
       onMouseLeave={() => setIsOpen(false)}
-      className={`group absolute top-[10rem] transform -translate-y-[50%] h-[12rem] w-20  gap-5 transition-all duration-500 left-[99%] flex flex-col items-center justify-center ${
+      className={`group absolute bottom-full transform -translate-y-[50%] h-[12rem] w-20  gap-5 transition-all duration-500 left-[99%] flex flex-col items-center justify-center z-50 ${
         isOpen
           ? "bg-transparent-black transform -translate-x-16"
           : "transform translate-x-0 "
-      } `}
+      } ${lowPosition ? "translate-y-[90vh]" : "transform translate-x-0 "} `}
     >
       <div className=" absolute rounded-l-md flex p-4 justify-center items-center right-[100%] h-full w-8 bg-[black]">
         <div

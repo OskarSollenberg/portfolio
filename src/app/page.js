@@ -15,7 +15,7 @@ if (typeof window !== "undefined") {
 
 export default function Home() {
   return (
-    <div className="w-screen">
+    <div className="w-screen mx-auto">
       <InitLoading />
       <main>
         <section className="h-screen z-10 relative">
@@ -23,6 +23,9 @@ export default function Home() {
         </section>
         <section className="-z-10">
           <Timeline />
+        </section>
+        <section className="">
+          <About />
         </section>
       </main>
     </div>

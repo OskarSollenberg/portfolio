@@ -6,7 +6,7 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Image from "next/image";
 
 export default function Timeline() {
-  const [background, setBackground] = useState(false);
+  const [background, setBackground] = useState("");
   const sectionRef = useRef(null);
   const triggerRef = useRef(null);
 
@@ -32,12 +32,12 @@ export default function Timeline() {
           duration: 1,
           scrollTrigger: {
             trigger: triggerRef.current,
-            start: () => `top ${triggerRef.current.offsetHeight}px bottom`,
+            start: "top top",
             end: "2000 top",
             scrub: 0.6,
             pin: true,
-            onEnter: () => setBackground(true),
-            onLeaveBack: () => setBackground(false),
+            onEnter: () => setBackground("#f3691f"),
+            onLeaveBack: () => setBackground(""),
           },
         }
       );
@@ -53,7 +53,8 @@ export default function Timeline() {
   return (
     <>
       <div
-        className={`overflow-hidden transition-all duration-500 text-[white] pointer-events-none`}
+        style={{ background: background }}
+        className={` w-full transition-all duration-500 text-[white]`}
       >
         <div ref={triggerRef}>
           <div
@@ -76,9 +77,8 @@ export default function Timeline() {
             {projects.map((project, index) => (
               <div
                 key={index}
-                className={`h-screen w-screen flex flex-col justify-center items-center `}
+                className={`h-screen w-screen flex flex-col justify-center items-center`}
               >
-                {/* ${background ? "bg-[#f3691f]" : ""} */}
                 {/* <h3 className={`text-[${project.textSize}]`}>
                   {project.title}
                 </h3> */}
@@ -87,7 +87,8 @@ export default function Timeline() {
                     {project.subtitle}
                   </h3>
                 )} */}
-                <div className="w-full">
+
+                <div className={`w-[50vw] `}>
                   <Image
                     src="/medias/hinder1.webp"
                     alt="Hinder"
@@ -96,14 +97,15 @@ export default function Timeline() {
                     height={300}
                   />
                 </div>
-                {index !== 0 && (
+
+                {/* {index !== 0 && (
                   <p className="max-w-[50rem]">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Iusto tenetur quisquam quaerat! Natus veniam modi quam,
                     eveniet sint sapiente similique illum cupiditate labore
                     beatae vero rerum. Sequi officiis dignissimos id.
                   </p>
-                )}
+                )} */}
               </div>
             ))}
           </div>

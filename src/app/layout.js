@@ -5,6 +5,7 @@ import SiteHeader from "@/src/components/SiteHeader";
 import MainNav from "@/src/components/MainNav";
 import SocialMedia from "../components/SocialMedia";
 import ProgressBar from "../components/progressBar";
+import DynamicHeader from "../components/DynamicHeader";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,8 +17,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={` ${inter.className}`}>
         <SiteHeader />
+        <DynamicHeader />
         {children}
         <section className="flex justify-center items-center z-50 relative">
           <MainNav />
