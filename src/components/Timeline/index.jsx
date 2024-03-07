@@ -89,7 +89,7 @@ export default function Timeline() {
                 )} */}
                 <div className="w-full">
                   <Image
-                    src="/medias/hinder.webp"
+                    src="/medias/hinder1.webp"
                     alt="Hinder"
                     layout="responsive"
                     width={500}
