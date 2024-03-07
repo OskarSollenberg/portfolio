@@ -72,21 +72,21 @@ export default function SocialMedia({ index }) {
       </div>
       <div className="flex flex-col items-center justify-center gap-6 ">
         <a
-          className={` text-[2.5rem] text-[white] hover:scale-110 ${
+          className={`text-[2.5rem] text-[white] transform transition-transform duration-200 hover:scale-110 hover:text-gray-300 ${
             isOpen ? "flex" : "hidden"
           }`}
         >
           <FaLinkedin />
         </a>
         <a
-          className={`text-[2rem] text-[white] hover:scale-110 ${
+          className={`text-[2rem] text-[white] transform transition-transform duration-200 hover:scale-110 hover:text-gray-300 ${
             isOpen ? "flex" : "hidden"
           }`}
         >
           <ImFacebook2 />
         </a>
         <a
-          className={`text-[2.7rem] text-[white] hover:scale-110 ${
+          className={`text-[2.7rem] text-[white] transform transition-transform duration-200 hover:scale-110 hover:text-gray-300 ${
             isOpen ? "flex" : "hidden"
           }`}
         >

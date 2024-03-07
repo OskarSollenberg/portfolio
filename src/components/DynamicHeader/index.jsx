@@ -50,7 +50,7 @@ export default function DynamicHeader({ index }) {
           className={`link-${index} flex top-[1rem] justify-center items-center hover:text-[white]`}
         >
           <a
-            className="transition-all hover:text-[white] duration-200 mx-[1rem] sm:mx-[2rem] md:mx-[5rem] cursor-pointer"
+            className="transition-all hover:text-[white] duration-200 mx-[1rem] sm:mx-[2rem] md:mx-[5rem] cursor-pointer hover:underline text-lg sm:text-xl md:text-2xl font-semibold"
             href="#"
           >
             {link}
