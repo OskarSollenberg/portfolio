@@ -33,7 +33,7 @@ export default function Timeline() {
           duration: 1,
           scrollTrigger: {
             trigger: triggerRef.current,
-            start: "top top",
+            start: "top bottom",
             end: "2000 top",
             scrub: 0.6,
             pin: true,
@@ -54,7 +54,7 @@ export default function Timeline() {
   return (
     <>
       <div
-        className={`overflow-hidden transition-all duration-500 text-[white]`}
+        className={`overflow-hidden transition-all duration-500 text-[white] pointer-events-none`}
       >
         <div ref={triggerRef}>
           <div
@@ -64,8 +64,8 @@ export default function Timeline() {
             <div
               className={`h-screen w-screen flex flex-col justify-center items-center `}
             >
-              <h3 className={`text-[10rem]`}>FEATURED</h3>
-              <h3 className="text-[10rem] translate-x-20">PROJECTS</h3>
+              {/* <h3 className={`text-[10rem]`}>FEATURED</h3>
+              <h3 className="text-[10rem] translate-x-20">PROJECTS</h3> */}
 
               {/* <p className="max-w-[50rem]">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
@@ -79,6 +79,7 @@ export default function Timeline() {
                 key={index}
                 className={`h-screen w-screen flex flex-col justify-center items-center `}
               >
+                {/* ${background ? "bg-[#f3691f]" : ""} */}
                 {/* <h3 className={`text-[${project.textSize}]`}>
                   {project.title}
                 </h3> */}

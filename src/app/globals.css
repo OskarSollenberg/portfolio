@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 body {
   margin: 0px;
   padding: 0px;
@@ -10,10 +16,10 @@ body {
   background-color: #7bff00;
   background-color: #a9cbce;
   background-color: #f3691f;
-  /* background-color: #5ea163; */
+  background-color: #5ea163;
   /* background-color: #ffa04d; */
-  background: #15151e;
-  /* background: #232332; */
+  /* background: #15151e; */
+  background: #232332;
 }
 
 img {

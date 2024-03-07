@@ -3,6 +3,9 @@ import "./globals.css";
 
 import SiteHeader from "@/src/components/SiteHeader";
 import MainNav from "@/src/components/MainNav";
+import SocialMedia from "../components/SocialMedia";
+import ProgressBar from "../components/progressBar";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -18,6 +21,8 @@ export default function RootLayout({ children }) {
         {children}
         <section className="flex justify-center items-center">
           <MainNav />
+          <SocialMedia />
+          <ProgressBar />
         </section>
       </body>
     </html>
