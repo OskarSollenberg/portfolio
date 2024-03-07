@@ -34,7 +34,7 @@ export default function MainNav() {
 
     setTimeout(() => {
       setMenuOpen(true);
-    }, 3000);
+    }, 2800);
 
     return () => {
       counterAnimation.kill();
@@ -86,11 +86,9 @@ export default function MainNav() {
         }  `}
       >
         <div
-          className={`bg-[black] rounded-md flex justify-center items-center text-[1rem] 
+          className={`bg-[black] rounded-full flex justify-center items-center text-[1rem] 
            hover:text-[#f3691f] transition-all duration-300 hover:text-[1.2rem] cursor-pointer   ${
-             menuOpen
-               ? "rounded-full h-[3.5rem] w-[3.5rem]"
-               : "rounded-full h-[4rem] w-[4rem]"
+             menuOpen ? " h-[3.5rem] w-[3.5rem] " : " h-[4rem] w-[4rem]"
            }  `}
         >
           {counter === 100 ? <GiHamburgerMenu /> : counter}
@@ -98,7 +96,7 @@ export default function MainNav() {
 
         {menuOpen && (
           <div
-            className={`p-[1rem] opacity-50 px-[1.3rem] transformO flex items-center justify-center origin-left bg-transparent-black rounded-md gap-10 border-[black] border-[1px] transition-all duration-200 hover:opacity-100 `}
+            className={`p-[1rem] opacity-50 px-[1.3rem] transformO flex items-center justify-center origin-left bg-transparent-black rounded-md gap-10 border-[black] border-[1px] transition-all duration-200 hover:opacity-100 hover:border-[#f3691f] hover:text-[white] hover:-translate-y-[2px] `}
           >
             {links.map((link, index) => {
               return (
