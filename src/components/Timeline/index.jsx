@@ -10,7 +10,7 @@ export default function Timeline() {
   const sectionRef = useRef(null);
   const triggerRef = useRef(null);
 
-  const hinderImage = "/medias/hinder.png";
+  const hinderImage = "/medias/hinder.webp";
   const projects = [
     { title: "First Project", textSize: "5rem", image: hinderImage },
     { title: "First Project", textSize: "5rem" },
