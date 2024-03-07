@@ -20,9 +20,13 @@ export default function Model() {
   }, [isLoading]);
 
   const scale =
-    window.innerWidth < 800 ? viewport.width / 3 : viewport.width / 4.5;
+    window.innerWidth < 600
+      ? viewport.width / 2.8
+      : window.innerWidth < 1000
+      ? viewport.width / 3.5
+      : viewport.width / 4.2;
 
-  const isSmallScreen = window.innerWidth < 800;
+  const isSmallScreen = window.innerWidth < 1000;
 
   const texts = [
     { text: "SKAR", fontSize: 0.5, position: [0.2, 0, 0], visible: true },
