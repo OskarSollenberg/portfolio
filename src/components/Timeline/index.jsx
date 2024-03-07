@@ -91,8 +91,8 @@ export default function Timeline() {
                 {index === 0 && project.image && (
                   <div className="w-full">
                     <Image
-                      src={project.image}
-                      alt={project.title}
+                      src={hinderImage}
+                      alt="Hinder"
                       layout="responsive"
                       width={500}
                       height={300}
