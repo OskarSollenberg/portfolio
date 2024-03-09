@@ -19,12 +19,12 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={` ${inter.className}`}>
         <div className="flex relative justify-center items-center">
-          <SiteHeader index={200} />
+          {/* <SiteHeader index={200} /> */}
           {children}
           <MainNav index={200} />
-          <DynamicHeader index={300} />
+          {/* <DynamicHeader index={300} /> */}
           <ProgressBarComp index={200} />
-          <SocialMedia index={200} />
+          {/* <SocialMedia index={200} /> */}
         </div>
       </body>
     </html>

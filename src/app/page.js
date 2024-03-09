@@ -16,7 +16,7 @@ if (typeof window !== "undefined") {
 export default function Home() {
   return (
     <div className="w-screen mx-auto overflow-hidden">
-      <InitLoading index={10} />
+      {/* <InitLoading index={10} /> */}
       <main>
         <section className="h-screen relative">
           <Scene index={20} />
