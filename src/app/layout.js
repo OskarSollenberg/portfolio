@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={` ${inter.className}`}>
-        <div className="flex relative justify-center items-center">
+        <div className="flex justify-center items-center">
           {children}
           <MainNav index={200} />
           <ProgressBarComp index={200} />
