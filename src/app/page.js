@@ -10,15 +10,15 @@ export default function Home() {
   return (
     <div className="w-screen mx-auto overflow-hidden">
       <main>
-        {/* <section className="h-screen relative">
-          <Scene index={20} />
+        <section className="h-screen relative">
+          <Scene />
         </section>
         <section className="">
           <Timeline index={2} />
         </section>
         <section className="">
           <About index={100} />
-        </section> */}
+        </section>
       </main>
     </div>
   );

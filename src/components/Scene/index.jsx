@@ -8,7 +8,7 @@ import { Environment } from "@react-three/drei";
 
 export default function Scene({ index }) {
   return (
-    <div className={`overflow-hidden h-screen z-[${index}]`}>
+    <div className={`overflow-hidden h-screen z-0`}>
       <Canvas>
         <Model />
         <directionalLight />

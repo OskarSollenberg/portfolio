@@ -14,7 +14,7 @@ export default function Home() {
 
   return (
     <>
-      <div className={`p-[30px] fixed bottom-0 z-[1000] `}>
+      <div className={`p-[30px] fixed bottom-0 z-[2] `}>
         <div>
           <div
             onClick={() => {

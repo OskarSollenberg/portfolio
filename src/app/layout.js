@@ -17,10 +17,10 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={` ${inter.className}`}>
         <div className="flex justify-center items-center">
-          <Header />
           {children}
+          <Header />
           {/* <MainNav index={200} /> */}
-          {/* <ProgressBarComp index={200} /> */}
+          <ProgressBarComp index={200} />
         </div>
       </body>
     </html>
