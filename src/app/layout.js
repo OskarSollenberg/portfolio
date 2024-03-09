@@ -3,6 +3,7 @@ import "./globals.css";
 
 import MainNav from "@/src/components/MainNav";
 import ProgressBarComp from "@/src/components/ProgressBarComp";
+import Header from "@/src/components/header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,9 +17,10 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={` ${inter.className}`}>
         <div className="flex justify-center items-center">
+          <Header />
           {children}
-          <MainNav index={200} />
-          <ProgressBarComp index={200} />
+          {/* <MainNav index={200} /> */}
+          {/* <ProgressBarComp index={200} /> */}
         </div>
       </body>
     </html>

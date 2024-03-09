@@ -7,9 +7,6 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    colors: {
-      "transparent-black": "rgba(0, 0, 0, 0.4)",
-    },
     extend: {
       animation: {
         slide: "slide 4s forwards",

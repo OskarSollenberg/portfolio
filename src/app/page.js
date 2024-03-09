@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <div className="w-screen mx-auto overflow-hidden">
       <main>
-        <section className="h-screen relative">
+        {/* <section className="h-screen relative">
           <Scene index={20} />
         </section>
         <section className="">
@@ -18,7 +18,7 @@ export default function Home() {
         </section>
         <section className="">
           <About index={100} />
-        </section>
+        </section> */}
       </main>
     </div>
   );
