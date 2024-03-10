@@ -4,7 +4,7 @@ import Nav from "./Nav";
 import { AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
 
-export default function Header() {
+export default function SiteNav() {
   const [isActive, setIsActive] = useState(false);
   const pathname = usePathname();
 

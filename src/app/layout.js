@@ -4,7 +4,7 @@ import "./globals.css";
 // hey
 
 import ProgressBarComp from "@/src/components/ProgressBarComp";
-import Header from "@/src/components/Header";
+import SiteNav from "../components/SiteNav";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
       <body className={` ${inter.className}`}>
         <div className="flex justify-center items-center">
           {children}
-          <Header />
+          <SiteNav />
           <ProgressBarComp index={200} />
         </div>
       </body>
