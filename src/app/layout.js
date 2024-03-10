@@ -3,7 +3,7 @@ import "./globals.css";
 
 import MainNav from "@/src/components/MainNav";
 import ProgressBarComp from "@/src/components/ProgressBarComp";
-import Header from "@/src/components/header";
+import Header from "@/src/components/Header";
 
 const inter = Inter({ subsets: ["latin"] });
 

@@ -1,8 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import styles from "./styles.module.scss";
 
-export default function Index() {
+export default function Curve() {
   const initialPath = `M100 0 L200 0 L200 ${window.innerHeight} L100 ${
     window.innerHeight
   } Q-100 ${window.innerHeight / 2} 100 0`;
@@ -25,7 +24,9 @@ export default function Index() {
   };
 
   return (
-    <svg className={styles.svgCurve}>
+    <svg
+      className={`absolute top-0 -left-[99px] w-[100px] h-full fill-[#292929] stroke-none`}
+    >
       <motion.path
         variants={curve}
         initial="initial"

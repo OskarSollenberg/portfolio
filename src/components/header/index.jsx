@@ -1,10 +1,10 @@
 "use client";
 import { useEffect, useState } from "react";
-import Nav from "./nav";
+import Nav from "./Nav";
 import { AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
 
-export default function Home() {
+export default function Header() {
   const [isActive, setIsActive] = useState(false);
   const pathname = usePathname();
 

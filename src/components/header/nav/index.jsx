@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
-import { menuSlide } from "../anim";
-import Link from "./Link";
+
+import NavLink from "./NavLink";
 import Curve from "./Curve";
+import NavFooter from "../NavFooter";
 
 const navItems = [
   {
@@ -24,7 +25,16 @@ const navItems = [
   },
 ];
 
-export default function index() {
+export const menuSlide = {
+  initial: { x: "calc(100% + 100px)" },
+  enter: { x: "0", transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1] } },
+  exit: {
+    x: "calc(100% + 100px)",
+    transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1] },
+  },
+};
+
+export default function Nav() {
   const pathname = usePathname();
   const [selectedIndicator, setSelectedIndicator] = useState(pathname);
 
@@ -34,7 +44,7 @@ export default function index() {
       initial="initial"
       animate="enter"
       exit="exit"
-      className="h-screen bg-[#292929] fixed right-0 top-0 text-white w-screen"
+      className="h-screen bg-[#292929] fixed right-0 top-0 text-white w-screen md:w-auto"
     >
       <div className="box-content h-full p-24 flex flex-col justify-between">
         <div
@@ -48,21 +58,16 @@ export default function index() {
           </div>
           {navItems.map((data, index) => {
             return (
-              <Link
+              <NavLink
                 key={index}
                 data={{ ...data, index }}
                 isActive={selectedIndicator == data.href}
                 setSelectedIndicator={setSelectedIndicator}
                 className="no-underline text-white font-light"
-              ></Link>
+              ></NavLink>
             );
           })}
-          <div className="flex mt-10 justify-between w-full text-xs text-white gap-10">
-            <a>Awwwards</a>
-            <a>Instagram</a>
-            <a>Dribble</a>
-            <a>LinkedIn</a>
-          </div>
+          <NavFooter />
         </div>
       </div>
       <Curve />
