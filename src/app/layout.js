@@ -1,6 +1,8 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 
+// hey
+
 import ProgressBarComp from "@/src/components/ProgressBarComp";
 import Header from "@/src/components/Header";
 
