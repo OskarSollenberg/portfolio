@@ -23,7 +23,7 @@ export default function NavLink({ data, isActive, setSelectedIndicator }) {
 
   return (
     <motion.div
-      className={`relative flex items-center`}
+      className={`relative flex items-center no-underline text-white font-light`}
       onMouseEnter={() => {
         setSelectedIndicator(href);
       }}

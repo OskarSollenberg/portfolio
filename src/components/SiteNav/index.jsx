@@ -14,13 +14,13 @@ export default function SiteNav() {
 
   return (
     <>
-      <div className={`p-[30px] fixed bottom-0 z-[2] `}>
+      <div className={`p-[30px] fixed -bottom-4 z-[2] `}>
         <div>
           <div
             onClick={() => {
               setIsActive(!isActive);
             }}
-            className="w-20 h-20 rounded-full bg-blue-600 cursor-pointer flex items-center justify-content-center"
+            className="w-20 h-20 rounded-full bg-[#f3691f] cursor-pointer flex items-center justify-content-center"
           >
             <div
               className={`w-full flex flex-col justify-center items-center ${

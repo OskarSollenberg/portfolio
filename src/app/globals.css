@@ -14,19 +14,16 @@ body {
   margin: 0px;
   padding: 0px;
   overflow-x: hidden;
-  background-color: #2f3537;
-  background-color: #a9cbce;
-  background-color: #f3691f;
+  /* background-color: #2f3537; */
+  /* background-color: #a9cbce; */
+  /* background-color: #f3691f; */
   /* background-color: #5ea163; */
   /* background-color: #ffa04d; */
   /* background: #15151e; */
   /* background: #232332; */
   /* background: #fefce1; */
-  /* background: #69696972; */
-  /* background: #69696934; */
-  /* #FDF9EF */
-  /* #E43B13 */
-
+  background: #fdf9ef;
+  /* background: #e43b13; */
   /* background: black; */
 }
 

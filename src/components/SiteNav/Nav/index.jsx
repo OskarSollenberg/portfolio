@@ -44,16 +44,16 @@ export default function Nav() {
       initial="initial"
       animate="enter"
       exit="exit"
-      className="h-screen bg-[#292929] fixed right-0 top-0 text-white w-screen md:w-auto"
+      className="h-screen w-screen bg-[#292929] fixed right-0 top-0 text-white md:w-auto"
     >
-      <div className="box-content h-full p-24 flex flex-col justify-between">
+      <div className=" h-full p-24 flex flex-col justify-between">
         <div
           onMouseLeave={() => {
             setSelectedIndicator(pathname);
           }}
           className="flex flex-col text-7xl gap-3 mt-20"
         >
-          <div className="text-[#999999] border-b border-[#999999] uppercase text-xs mb-10">
+          <div className="text-[#999999] border-b uppercase text-xs mb-10 ">
             <p>Navigation</p>
           </div>
           {navItems.map((data, index) => {
@@ -63,7 +63,6 @@ export default function Nav() {
                 data={{ ...data, index }}
                 isActive={selectedIndicator == data.href}
                 setSelectedIndicator={setSelectedIndicator}
-                className="no-underline text-white font-light"
               ></NavLink>
             );
           })}

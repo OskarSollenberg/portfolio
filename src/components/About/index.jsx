@@ -1,11 +1,9 @@
 import React from "react";
 
-function page({ index }) {
+export default function About({ index }) {
   return (
-    <div className={`h-screen w-screen text-[white] text-center z-[${index}]`}>
-      ABOUT
+    <div className={`h-screen w-screen text-black text-center z-[${index}]`}>
+      ABOUT SECTION
     </div>
   );
 }
-
-export default page;
