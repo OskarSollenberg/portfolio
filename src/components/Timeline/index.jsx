@@ -109,7 +109,7 @@ export default function Timeline({ index }) {
             </div>
 
             {projects.map((project, index) => (
-              <Project title={project.title} index={index} />
+              <Project key={project.name} title={project.title} index={index} />
             ))}
           </div>
         </div>
