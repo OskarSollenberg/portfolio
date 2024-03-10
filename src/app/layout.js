@@ -1,7 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 
-import MainNav from "@/src/components/MainNav";
 import ProgressBarComp from "@/src/components/ProgressBarComp";
 import Header from "@/src/components/Header";
 
@@ -19,7 +18,6 @@ export default function RootLayout({ children }) {
         <div className="flex justify-center items-center">
           {children}
           <Header />
-          {/* <MainNav index={200} /> */}
           <ProgressBarComp index={200} />
         </div>
       </body>

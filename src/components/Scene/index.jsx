@@ -3,8 +3,6 @@ import { Canvas } from "@react-three/fiber";
 import Model from "./Model";
 import { Environment } from "@react-three/drei";
 // import { PerspectiveCamera } from "@react-three/drei";
-//  #FDF9EF
-//  #E43B13
 
 export default function Scene({ index }) {
   return (
