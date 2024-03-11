@@ -38,7 +38,7 @@ const Card = ({ title, description, image, txtColor }) => {
     <>
       <div
         style={{ color: txtColor }}
-        className={`flex flex-col justify-center items-center w-full place-content-center px-4 py-12  cursor-pointer`}
+        className={`flex flex-col justify-end items-start w-full place-content-center px-4 py-12  cursor-pointer`}
       >
         <motion.div
           ref={ref}
@@ -60,7 +60,7 @@ const Card = ({ title, description, image, txtColor }) => {
               backgroundImage: `url(${image})`,
               backgroundSize: "cover",
             }}
-            className="absolute flex flex-col inset-4 place-content-center rounded-xl bg-white shadow-lg"
+            className="absolute flex flex-col inset-4 place-content-center rounded-xshadow-lg"
           >
             <p
               style={{

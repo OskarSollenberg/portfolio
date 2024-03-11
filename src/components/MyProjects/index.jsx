@@ -38,6 +38,11 @@ export function Project({ title, index }) {
 }
 
 const projects = [
+  //   {
+  //     title: "",
+  //     description: "",
+  //     image: "",
+  //   },
   {
     title: "HINDER",
     description:
@@ -113,7 +118,7 @@ export default function Timeline({ index, txtColor }) {
             ref={sectionRef}
             className="h-screen flex items-center flex-row gap-10 relative w-[350vw]"
           >
-            <div className={` w-[300vw] h-screen`}></div>
+            <div className={`w-[600vw] h-screen`}></div>
             {projects.map((project, index) => (
               <>
                 <Card

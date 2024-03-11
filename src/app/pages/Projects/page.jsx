@@ -44,12 +44,12 @@ export default function Home() {
         <main>
           <div className="relative md:absolute top-[12rem] left-[15%]">
             <div className="flex relative">
-              <h1 className="text-4xl flex sm:text-6xl lg:text-8xl xl:text-[10rem] z-[1000]">
+              <h1 className="text-4xl flex sm:text-6xl lg:text-[8rem] xl:text-[9rem] z-[1000]">
                 PROJECTS
               </h1>
 
               <p
-                className={` transition-all duration-300 ease-in-out text-[4rem] ${
+                className={` transition-all duration-300 ease-in-out text-4xl flex sm:text-[2rem] lg:text-[3rem] xl:text-[4rem]  ${
                   isScrolled && "sticky -rotate-180"
                 } `}
               >
@@ -62,7 +62,6 @@ export default function Home() {
               on Hyper Island. Click on the cards to see more details.
             </p>
           </div>
-
           <MyProjects txtColor={txtColor} />
         </main>
       </div>
