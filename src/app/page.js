@@ -1,6 +1,6 @@
 import dynamic from "next/dynamic";
 import About from "@/src/components/About";
-import Timeline from "../components/Timeline";
+import SiteHeader from "../components/SiteHeader";
 
 const Scene = dynamic(() => import("@/src/components/Scene"), {
   ssr: true,
@@ -8,17 +8,10 @@ const Scene = dynamic(() => import("@/src/components/Scene"), {
 
 export default function Home() {
   return (
-    <div className="w-screen mx-auto overflow-hidden">
+    <div className="w-screen ">
       <main>
-        <section className="h-screen relative">
-          <Scene />
-        </section>
-        <section className="">
-          <Timeline index={2} />
-        </section>
-        <section className="">
-          <About index={100} />
-        </section>
+        <Scene />
+        <About index={100} />
       </main>
     </div>
   );

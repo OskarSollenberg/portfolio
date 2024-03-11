@@ -4,6 +4,7 @@ import React, { useRef, useEffect, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Image from "next/image";
+import Card from "./Card";
 const FONT_PATH = "/fonts/PPNeueMontreal-Bold.otf";
 
 export function Project({ title, index }) {
@@ -38,13 +39,33 @@ export function Project({ title, index }) {
 }
 
 const projects = [
-  { title: "HINDER" },
-  { title: "Project 2" },
-  { title: "Project 3" },
-  { title: "Project 4" },
+  {
+    title: "HINDER",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos maiores doloremque cumque eligendi repellat nihil",
+    image: "/medias/hinder1.webp",
+  },
+  {
+    title: "PROJECT 2",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos maiores doloremque cumque eligendi repellat nihil",
+    image: "/medias/hinder1.webp",
+  },
+  {
+    title: "PROJECT 3",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos maiores doloremque cumque eligendi repellat nihil",
+    image: "/medias/hinder1.webp",
+  },
+  {
+    title: "PROJECT 4",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos maiores doloremque cumque eligendi repellat nihil",
+    image: "/medias/hinder1.webp",
+  },
 ];
 
-export default function Timeline({ index }) {
+export default function Timeline({ index, txtColor }) {
   const [background, setBackground] = useState("#FDF9EF");
   const sectionRef = useRef(null);
   const triggerRef = useRef(null);
@@ -74,10 +95,6 @@ export default function Timeline({ index }) {
             end: "2000 top",
             scrub: 0,
             pin: true,
-            onEnter: () => setBackground("#292929"),
-            onEnterBack: () => setBackground("#292929"),
-            onLeave: () => setBackground("#FDF9EF"),
-            onLeaveBack: () => setBackground("#FDF9EF"),
           },
         }
       );
@@ -89,28 +106,24 @@ export default function Timeline({ index }) {
 
   return (
     <>
-      <div className={` transition-all duration-200 text-[white] z-[${index}]`}>
+      <div
+        className={` transition-all duration-200 text-[${txtColor}] z-[${index}]`}
+      >
         <div ref={triggerRef}>
           <div
-            style={{
-              background: background,
-              transition: "background 0.5s ease",
-            }}
             ref={sectionRef}
             className="h-screen flex items-center flex-row gap-10 relative w-[350vw]"
           >
-            <div
-              style={{
-                background: background,
-                transition: "background 0.5s ease",
-              }}
-              className={` bg-black w-[100vw] h-screen flex justify-center items-start`}
-            >
-              <h1 className="text-[5rem]">Projects </h1>
-            </div>
-
+            <div className={` w-[300vw] h-screen`}></div>
             {projects.map((project, index) => (
-              <Project key={project.name} title={project.title} index={index} />
+              <>
+                <Card
+                  title={project.title}
+                  description={project.description}
+                  image={project.image}
+                  txtColor={txtColor}
+                />
+              </>
             ))}
           </div>
         </div>
