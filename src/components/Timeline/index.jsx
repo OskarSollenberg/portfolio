@@ -4,12 +4,13 @@ import React, { useRef, useEffect, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Image from "next/image";
+const FONT_PATH = "/fonts/PPNeueMontreal-Bold.otf";
 
 export function Project({ title, index }) {
   return (
     <div
       key={index}
-      className={`flex flex-col justify-center items-start gap-[5rem] max-w-[30rem]`}
+      className={`flex flex-col justify-center items-start gap-[5rem] max-w-[30rem] font-[${FONT_PATH}]`}
     >
       <div className={`w-[20rem]`}>
         <Image
