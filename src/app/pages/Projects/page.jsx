@@ -42,7 +42,7 @@ export default function Home() {
         }}
       >
         <main>
-          <div className="relative md:absolute top-[8rem] left-[15%]">
+          <div className="relative md:absolute top-[12rem] left-[15%]">
             <div className="flex relative">
               <h1 className="text-4xl flex sm:text-6xl lg:text-8xl xl:text-[10rem] z-[1000]">
                 PROJECTS
