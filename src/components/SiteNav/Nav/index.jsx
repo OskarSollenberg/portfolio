@@ -44,10 +44,13 @@ export default function Nav() {
       initial="initial"
       animate="enter"
       exit="exit"
-      className="h-screen w-screen bg-[#292929] fixed right-0 top-0 text-white md:w-auto"
+      className="h-screen w-[100vw] lg:w-[85vw] bg-[#292929ea] fixed right-0 top-0 text-white "
     >
       <div className=" h-full p-24 flex flex-col justify-between">
         <div
+          style={{
+            fontFamily: "MyCustomFont",
+          }}
           onMouseLeave={() => {
             setSelectedIndicator(pathname);
           }}

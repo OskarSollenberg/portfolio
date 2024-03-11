@@ -2,30 +2,32 @@
 import React, { useRef, useState, useEffect } from "react";
 import { gsap } from "gsap";
 
-export default function ProgressBarComp({ index }) {
+export default function ProgressBarComp({ index, isHomePage }) {
   const [scrollPosition, setScrollPosition] = useState(0);
   const progressBar = useRef(null);
   const [color, setColor] = useState("black");
 
   useEffect(() => {
-    gsap.fromTo(
-      progressBar.current,
-      {
-        width: "0%",
-        backgroundColor: color,
-      },
-      {
-        width: "100%",
-        duration: 4,
-        onComplete: () => {
-          gsap.set(progressBar.current, {
-            width: "0%",
-            backgroundColor: "white",
-          });
+    if (isHomePage) {
+      gsap.fromTo(
+        progressBar.current,
+        {
+          width: "0%",
+          backgroundColor: color,
         },
-      }
-    );
-  }, []);
+        {
+          width: "100%",
+          duration: 4,
+          onComplete: () => {
+            gsap.set(progressBar.current, {
+              width: "0%",
+              backgroundColor: "#e43b13",
+            });
+          },
+        }
+      );
+    }
+  }, [isHomePage]);
 
   useEffect(() => {
     const updateScrollPosition = () => {

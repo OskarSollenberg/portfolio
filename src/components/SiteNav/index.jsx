@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import Nav from "./Nav";
 import { AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 export default function SiteNav() {
   const [isActive, setIsActive] = useState(false);
@@ -14,33 +15,48 @@ export default function SiteNav() {
 
   return (
     <>
-      <div className={`p-[30px] fixed -bottom-4 z-[2] `}>
-        <div>
+      <div
+        style={{
+          fontFamily: "MyCustomFont",
+        }}
+        className={` fixed flex items-center justify-start gap-[1rem] left-[4rem] bottom-[2rem] border-2 border-white bg-[#292929ea] text-[#FDF9EF] text-sm rounded-md p-1 transition-all duration-300 ease-in-out z-50 
+		${isActive ? "w-[4rem]" : "w-[4rem] md:w-[22rem]"}`}
+      >
+        <div
+          onClick={() => {
+            setIsActive(!isActive);
+          }}
+          className="w-16 h-8 rounded-md  cursor-pointer flex items-center justify-content-center"
+        >
           <div
-            onClick={() => {
-              setIsActive(!isActive);
-            }}
-            className="w-20 h-20 rounded-full bg-[#f3691f] cursor-pointer flex items-center justify-content-center"
+            className={`w-full flex flex-col justify-center items-center ${
+              isActive ? "-space-y-[1.5px] " : "space-y-2"
+            }`}
           >
             <div
-              className={`w-full flex flex-col justify-center items-center ${
-                isActive ? "-space-y-[1.5px] " : "space-y-2"
+              className={`h-0.5 w-[2rem] bg-white mx-auto relative transition-transform duration-300 ${
+                isActive ? "rotate-45 " : ""
               }`}
-            >
-              <div
-                className={`h-0.5 w-[2rem] bg-white mx-auto relative transition-transform duration-300 ${
-                  isActive ? "rotate-45 " : ""
-                }`}
-              ></div>
-              <div
-                className={`h-0.5 w-[2rem] bg-white mx-auto relative transition-transform duration-300 ${
-                  isActive ? "-rotate-45" : ""
-                }`}
-              ></div>
-            </div>
+            ></div>
+            <div
+              className={`h-0.5 w-[2rem] bg-white mx-auto relative transition-transform duration-300 ${
+                isActive ? "-rotate-45" : ""
+              }`}
+            ></div>
           </div>
         </div>
+        {!isActive && (
+          <div className="hidden md:flex">
+            <ul className="flex gap-[1rem] relative ">
+              <Link href="/#">Home</Link>
+              <Link href="pages/Projects">Projects</Link>
+              <Link href="pages/about">About</Link>
+              <Link href="pages/Contact">Contact</Link>
+            </ul>
+          </div>
+        )}
       </div>
+
       <AnimatePresence mode="wait">{isActive && <Nav />}</AnimatePresence>
     </>
   );

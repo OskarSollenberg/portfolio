@@ -1,9 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-
-import ProgressBarComp from "@/src/components/ProgressBarComp";
 import SiteNav from "../components/SiteNav";
-import SiteHeader from "../components/SiteHeader";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,10 +14,8 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={` ${inter.className}`}>
         <div className="flex justify-center items-center">
-          <SiteHeader />
           {children}
           <SiteNav />
-          <ProgressBarComp index={200} />
         </div>
       </body>
     </html>

@@ -1,18 +1,18 @@
 import dynamic from "next/dynamic";
-import About from "@/src/components/About";
-import SiteHeader from "../components/SiteHeader";
+import ProgressBarComp from "@/src/components/ProgressBarComp";
+import InitLoading from "../components/InitLoading";
 
 const Scene = dynamic(() => import("@/src/components/Scene"), {
   ssr: true,
 });
-
 export default function Home() {
   return (
     <div className="w-screen ">
+      <InitLoading />
       <main>
         <Scene />
-        <About index={100} />
       </main>
+      <ProgressBarComp isHomePage={true} />
     </div>
   );
 }

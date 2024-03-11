@@ -4,9 +4,9 @@ import Model from "./Model";
 import { Environment } from "@react-three/drei";
 // import { PerspectiveCamera } from "@react-three/drei";
 
-export default function Scene({ index }) {
+export default function Scene() {
   return (
-    <div className={`overflow-hidden h-screen z-0`}>
+    <div className={`overflow-hidden h-screen z-10`}>
       <Canvas>
         <Model />
         <directionalLight />

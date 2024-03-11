@@ -24,7 +24,7 @@ export function Project({ title, index }) {
       </div>
       <div>
         <h1
-          className={`text-4xl font-bold text-[#F16721] transition-all duration-200`}
+          className={`text-4xl font-bold text-[#e43b13] transition-all duration-200`}
         >
           {title}
         </h1>
@@ -69,7 +69,7 @@ const projects = [
   },
 ];
 
-export default function Timeline({ index, txtColor }) {
+export default function Timeline({ txtColor }) {
   const [background, setBackground] = useState("#FDF9EF");
   const sectionRef = useRef(null);
   const triggerRef = useRef(null);
@@ -110,9 +110,7 @@ export default function Timeline({ index, txtColor }) {
 
   return (
     <>
-      <div
-        className={` transition-all duration-200 text-[${txtColor}] z-[${index}]`}
-      >
+      <div className={` transition-all duration-200 text-[${txtColor}]`}>
         <div ref={triggerRef}>
           <div
             ref={sectionRef}
