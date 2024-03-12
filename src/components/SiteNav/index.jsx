@@ -19,7 +19,7 @@ export default function SiteNav() {
         style={{
           fontFamily: "MyCustomFont",
         }}
-        className={` fixed flex items-center justify-start gap-[1rem] left-[4rem] bottom-[2rem] border-2 border-white bg-[#292929ea] text-[#FDF9EF] text-sm rounded-md p-1 transition-all duration-300 ease-in-out z-50 
+        className={` fixed flex items-center justify-start gap-[1rem] left-[4rem] bottom-[2rem] border-2 border-white bg-[#292929ea] text-[#FDF9EF] text-sm rounded-md p-1 transition-all duration-300 ease-in-out z-[2000]
 		${isActive ? "w-[4rem]" : "w-[4rem] md:w-[22rem]"}`}
       >
         <div

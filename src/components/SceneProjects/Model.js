@@ -1,28 +1,32 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { useThree } from "@react-three/fiber";
+import AnimatedTextComponent from "./AnimatedText";
 import AnimatedCircleComponent from "./AnimatedCircleComp";
 import useLoading from "@/src/hooks/useLoading";
 
 export default function Model() {
   const { viewport } = useThree();
   const isLoading = useLoading();
-  const [isHovered, setIsHovered] = useState(true);
 
   useEffect(() => {
     if (isLoading) return;
-    setIsHovered(false);
   }, [isLoading]);
 
-  const scale =
-    window.innerWidth < 600
-      ? viewport.width / 1
-      : window.innerWidth < 1000
-      ? viewport.width / 1
-      : viewport.width / 1;
+  const texts = [
+    { text: "PR JECTS", fontSize: 0.5, position: [0.2, 0, 0], visible: true },
+  ];
 
   return (
-    <group scale={scale}>
-      <AnimatedCircleComponent isHovered={!isHovered} />
+    <group>
+      <AnimatedCircleComponent />
+      {texts.map(({ text, position, visible }, index) => (
+        <AnimatedTextComponent
+          key={index}
+          visible={visible}
+          text={isLoading ? "" : text}
+          position={position}
+        />
+      ))}
     </group>
   );
 }
