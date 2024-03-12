@@ -42,7 +42,7 @@ export default function Projects() {
         }}
       >
         <main>
-          {/* <div className="flex items-end justify-center w-screen h-screen ">
+          <div className="flex items-end justify-center w-screen h-screen ">
             {isScrolled ? (
               <p className=" text-2xl xl:text-3xl 2xl:text-4xl max-w-[80vw] md:max-w-[50vw] text-center mb-[12rem] leading-8">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
@@ -53,9 +53,9 @@ export default function Projects() {
             ) : (
               <SceneProjects />
             )}
-          </div> */}
+          </div>
 
-          <MyProjects txtColor={txtColor} />
+          {/* <MyProjects txtColor={txtColor} /> */}
         </main>
       </section>
     </>
