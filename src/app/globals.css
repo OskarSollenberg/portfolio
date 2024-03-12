@@ -7,13 +7,12 @@ html {
   justify-content: center;
   align-items: center;
   width: 100vw;
+  overflow-x: hidden;
+  margin: 0px;
+  padding: 0px;
 }
 
 body {
-  width: 100vw;
-  margin: 0px;
-  padding: 0px;
-  overflow-x: hidden;
   /* background-color: #2f3537; */
   /* background-color: #a9cbce; */
   /* background-color: #f3691f; */
@@ -22,8 +21,9 @@ body {
   /* background: #15151e; */
   /* background: #232332; */
   /* background: #fefce1; */
-  background: #fdf9ef;
+  /* background: #fdf9ef; */
   /* background: #e43b13; */
+
   /* background: black; */
 }
 

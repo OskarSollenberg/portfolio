@@ -12,16 +12,16 @@ const navItems = [
     href: "/",
   },
   {
-    title: "Work",
-    href: "/work",
+    title: "Projects",
+    href: "/pages/projects",
   },
   {
     title: "About",
-    href: "/about",
+    href: "/pages/about",
   },
   {
     title: "Contact",
-    href: "/contact",
+    href: "/pages/contact",
   },
 ];
 
@@ -44,7 +44,7 @@ export default function Nav() {
       initial="initial"
       animate="enter"
       exit="exit"
-      className="h-screen w-[100vw] lg:w-[85vw] bg-[#292929ea] fixed z-[1000] right-0 top-0 text-white "
+      className="h-screen w-[100vw] lg:w-[89vw] bg-[#292929ee] fixed z-[1000] right-0 top-0 text-white "
     >
       <div className=" h-full p-24 flex flex-col justify-between">
         <div

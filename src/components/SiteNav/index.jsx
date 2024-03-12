@@ -19,14 +19,14 @@ export default function SiteNav() {
         style={{
           fontFamily: "MyCustomFont",
         }}
-        className={` fixed flex items-center justify-start gap-[1rem] left-[4rem] bottom-[2rem] border-2 border-white bg-[#292929ea] text-[#FDF9EF] text-sm rounded-md p-1 transition-all duration-300 ease-in-out z-[2000]
+        className={` fixed flex items-center justify-start gap-[1rem] -translate-x-[50%] md:translate-x-0 left-[50%] md:left-[4rem]  bottom-[2rem]  bg-black text-[#FDF9EF] text-sm rounded-md transition-all duration-300 ease-in-out z-[2000] p-2
 		${isActive ? "w-[4rem]" : "w-[4rem] md:w-[22rem]"}`}
       >
         <div
           onClick={() => {
             setIsActive(!isActive);
           }}
-          className="w-16 h-8 rounded-md  cursor-pointer flex items-center justify-content-center"
+          className="w-16 h-8 rounded-md cursor-pointer flex items-center justify-content-center"
         >
           <div
             className={`w-full flex flex-col justify-center items-center ${
@@ -49,7 +49,7 @@ export default function SiteNav() {
           <div className="hidden md:flex">
             <ul className="flex gap-[1rem] relative ">
               <Link href="/#">Home</Link>
-              <Link href="pages/Projects">Projects</Link>
+              <Link href="pages/projects">Projects</Link>
               <Link href="pages/about">About</Link>
               <Link href="pages/Contact">Contact</Link>
             </ul>

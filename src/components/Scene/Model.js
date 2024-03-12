@@ -23,8 +23,8 @@ export default function Model() {
     window.innerWidth < 600
       ? viewport.width / 2.8
       : window.innerWidth < 1000
-      ? viewport.width / 3.5
-      : viewport.width / 4.2;
+      ? viewport.width / 2.8
+      : viewport.width / 3.5;
 
   const isSmallScreen = window.innerWidth < 1000;
 

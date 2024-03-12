@@ -10,9 +10,9 @@ export function Project({ title, index }) {
   return (
     <div
       key={index}
-      className={`flex flex-col justify-center items-start gap-[5rem] max-w-[30rem] `}
+      className={`flex flex-col justify-center items-start gap-[5rem]  `}
     >
-      <div className={`w-[20rem]`}>
+      <div className={`w-full`}>
         <Image
           className="w-full"
           src="/medias/hinder1.webp"
@@ -38,11 +38,11 @@ export function Project({ title, index }) {
 }
 
 const projects = [
-  //   {
-  //     title: "",
-  //     description: "",
-  //     image: "",
-  //   },
+  {
+    title: "",
+    description: "",
+    image: "",
+  },
   {
     title: "HINDER",
     description:
@@ -69,10 +69,25 @@ const projects = [
   },
 ];
 
-export default function Timeline({ txtColor }) {
-  const [background, setBackground] = useState("#FDF9EF");
+export default function MyProjects({ txtColor }) {
   const sectionRef = useRef(null);
   const triggerRef = useRef(null);
+
+  const [translateX, setTranslateX] = useState(getTranslateX());
+
+  function getTranslateX() {
+    // 768px is a common breakpoint for mobile devices
+    return window.innerWidth <= 768 ? "-400vw" : "-200vw";
+  }
+
+  useEffect(() => {
+    function handleResize() {
+      setTranslateX(getTranslateX());
+    }
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   if (typeof window !== "undefined") {
     window.onbeforeunload = function () {
@@ -90,7 +105,7 @@ export default function Timeline({ txtColor }) {
           translateX: 0,
         },
         {
-          translateX: "-300vw",
+          translateX: translateX,
           ease: "none",
           duration: 1,
           scrollTrigger: {
@@ -106,7 +121,7 @@ export default function Timeline({ txtColor }) {
         pin.kill();
       };
     }
-  }, []);
+  }, [translateX]);
 
   return (
     <>
@@ -114,18 +129,18 @@ export default function Timeline({ txtColor }) {
         <div ref={triggerRef}>
           <div
             ref={sectionRef}
-            className="h-screen flex items-center flex-row gap-10 relative w-[350vw]"
+            className="h-screen flex items-center flex-row gap-10 relative "
           >
-            <div className={`w-[600vw] h-screen`}></div>
+            <div className={` h-screen`}></div>
             {projects.map((project, index) => (
-              <>
+              <React.Fragment key={index}>
                 <Card
                   title={project.title}
                   description={project.description}
                   image={project.image}
                   txtColor={txtColor}
                 />
-              </>
+              </React.Fragment>
             ))}
           </div>
         </div>

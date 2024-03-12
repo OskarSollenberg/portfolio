@@ -11,17 +11,10 @@ export default function InitLoading() {
   const divRef = useRef(null);
 
   useEffect(() => {
-    if (!loading) {
-      gsap.to(circleRef.current, {
-        duration: 1,
-        opacity: 0,
-      });
-
-      gsap.to(divRef.current, {
-        duration: 1,
-        opacity: 0,
-      });
-    }
+    gsap.to(divRef.current, {
+      duration: 1,
+      opacity: 0,
+    });
   }, [loading]);
 
   return (

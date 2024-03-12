@@ -2,7 +2,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import { gsap } from "gsap";
 
-export default function ProgressBarComp({ index, isHomePage }) {
+export default function ProgressBarComp({ isHomePage }) {
   const [scrollPosition, setScrollPosition] = useState(0);
   const progressBar = useRef(null);
   const [color, setColor] = useState("black");
@@ -17,7 +17,7 @@ export default function ProgressBarComp({ index, isHomePage }) {
         },
         {
           width: "100%",
-          duration: 4,
+          duration: 3,
           onComplete: () => {
             gsap.set(progressBar.current, {
               width: "0%",
@@ -48,7 +48,7 @@ export default function ProgressBarComp({ index, isHomePage }) {
   return (
     <>
       <div
-        className={`bottom-0 left-0 h-2 bg-[transparent] w-full fixed z-[${index}] `}
+        className={`bottom-0 left-0 h-2 bg-[transparent] w-full fixed z-[1000] `}
       >
         <div
           ref={progressBar}

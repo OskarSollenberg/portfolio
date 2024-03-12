@@ -38,7 +38,7 @@ const Card = ({ title, description, image, txtColor }) => {
     <>
       <div
         style={{ color: txtColor }}
-        className={`flex flex-col justify-end items-start w-full place-content-center px-4 py-12  cursor-pointer`}
+        className={`flex flex-col justify-end items-start w-auto place-content-center px-4 py-12  cursor-pointer`}
       >
         <motion.div
           ref={ref}
@@ -51,7 +51,7 @@ const Card = ({ title, description, image, txtColor }) => {
             rotateX,
             rotateY,
           }}
-          className="relative h-[20rem] w-[30rem] rounded-xl"
+          className="relative w-[80vw] h-[70vw] min-w-[25rem] min-h-[20rem] sm:h-[23vw] sm:w-[38vw] lg:h-[25vw] lg:w-[40vw] rounded-xl"
         >
           <div
             style={{

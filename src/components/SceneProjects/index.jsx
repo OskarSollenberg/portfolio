@@ -2,32 +2,19 @@
 import { Canvas } from "@react-three/fiber";
 import Model from "./Model";
 import { Environment } from "@react-three/drei";
-// import { PerspectiveCamera } from "@react-three/drei";
+import { PerspectiveCamera } from "@react-three/drei";
+import useLoading from "../../hooks/useLoading";
 
-export default function SceneProjects() {
+export default function Scene() {
+  const isLoading = useLoading();
   return (
-    <div className={` absolute top-0 left-0 h-screen z-10 w-screen`}>
+    <div className={`w-screen h-screen z-10`}>
       <Canvas>
         <Model />
         <directionalLight />
         <Environment preset="city" />
-        {/* <PerspectiveCamera makeDefault position={[2, 2, 10]} /> */}
+        <PerspectiveCamera makeDefault position={[0, 0, 10]} />
       </Canvas>
     </div>
   );
 }
-
-//   <directionalLight intensity={2} position={[0, 2, 3]} />;
-
-// sunset;
-// dawn;
-// night;
-// warehouse;
-// forest;
-// apartment;
-// studio;
-// city;
-// park;
-// lobby;
-// cloudy;
-// sunny;

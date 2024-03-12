@@ -3,7 +3,6 @@
 import React, { useEffect, useState } from "react";
 import MyProjects from "@/src/components/MyProjects";
 import { FaArrowRight } from "react-icons/fa";
-import InitLoading from "../../../components/InitLoading";
 import SceneProjects from "@/src/components/SceneProjects";
 
 export default function Projects() {
@@ -43,11 +42,22 @@ export default function Projects() {
         }}
       >
         <main>
+          <div className="flex items-end justify-center w-screen h-screen ">
+            {isScrolled ? (
+              <p className=" text-2xl xl:text-3xl 2xl:text-4xl max-w-[80vw] md:max-w-[50vw] text-center mb-[12rem] leading-8">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
+                nostrum earum doloremque sunt, eos ea eum, quis eligendi,
+                reprehenderit itaque voluptates saepe alias? Voluptatibus velit
+                perferendis sequi harum, laboriosam aliquid!
+              </p>
+            ) : (
+              <SceneProjects />
+            )}
+          </div>
+
           <MyProjects txtColor={txtColor} />
         </main>
       </section>
-      <SceneProjects />
-      <InitLoading />
     </>
   );
 }

@@ -7,7 +7,7 @@ export default function useLoading() {
     const timer = setTimeout(() => {
       setLoading(false);
       document.body.style.overflowY = "auto";
-    }, 3000);
+    }, 2000);
 
     return () => clearTimeout(timer);
   }, []);
