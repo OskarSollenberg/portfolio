@@ -56,7 +56,6 @@ export default function SiteNav() {
           </div>
         )}
       </div>
-
       <AnimatePresence mode="wait">{isActive && <Nav />}</AnimatePresence>
     </>
   );
