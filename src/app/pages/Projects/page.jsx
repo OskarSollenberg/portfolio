@@ -54,8 +54,7 @@ export default function Projects() {
               <SceneProjects />
             )}
           </div>
-
-          {/* <MyProjects txtColor={txtColor} /> */}
+          <MyProjects txtColor={txtColor} />
         </main>
       </section>
     </>

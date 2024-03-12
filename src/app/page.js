@@ -1,5 +1,5 @@
 import dynamic from "next/dynamic";
-import InitLoading from "../components/InitLoading";
+// import InitLoading from "../components/InitLoading";
 
 const Scene = dynamic(() => import("@/src/components/Scene"), {
   ssr: true,
@@ -8,7 +8,7 @@ const Scene = dynamic(() => import("@/src/components/Scene"), {
 export default function Home() {
   return (
     <div className="w-screen h-screen overflow-hidden bg-[#e43b13]">
-      <InitLoading />
+      {/* <InitLoading /> */}
       <main>
         <Scene />
       </main>

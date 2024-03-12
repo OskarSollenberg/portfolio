@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useRef, useEffect, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
@@ -77,7 +76,9 @@ export default function MyProjects({ txtColor }) {
 
   function getTranslateX() {
     // 768px is a common breakpoint for mobile devices
-    return window.innerWidth <= 768 ? "-400vw" : "-200vw";
+    return typeof window !== "undefined" && window.innerWidth <= 768
+      ? "-400vw"
+      : "-200vw";
   }
 
   useEffect(() => {
@@ -85,8 +86,10 @@ export default function MyProjects({ txtColor }) {
       setTranslateX(getTranslateX());
     }
 
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    if (typeof window !== "undefined") {
+      window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
+    }
   }, []);
 
   if (typeof window !== "undefined") {
