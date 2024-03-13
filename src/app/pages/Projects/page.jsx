@@ -5,6 +5,11 @@ import MyProjects from "@/src/components/MyProjects";
 import { FaArrowRight } from "react-icons/fa";
 import SceneProjects from "@/src/components/SceneProjects";
 
+// const FONT_PATH = "/fonts/Migha-BlackCondensedCNTR.otf";
+// const FONT_PATH = "/fonts/Class-357-Regular.ttf";
+// const FONT_PATH = "/fonts/AkhbarBold.ttf";
+// const FONT_PATH = "/fonts/Mortend-Extra-Bold.otf";
+
 export default function Projects() {
   const [bgColor, setBgColor] = useState("#fdf9ef");
   const [txtColor, setTxtColor] = useState("black");
@@ -36,7 +41,7 @@ export default function Projects() {
       <section
         className="w-screen mx-auto overflow-hidden transition-all duration-300 ease-in-out"
         style={{
-          fontFamily: "MyCustomFont",
+          fontFamily: "montreal",
           backgroundColor: bgColor,
           color: txtColor,
         }}
@@ -44,11 +49,13 @@ export default function Projects() {
         <main>
           <div className="flex items-end justify-center w-screen h-screen ">
             {isScrolled ? (
-              <p className=" text-2xl xl:text-3xl 2xl:text-4xl max-w-[80vw] md:max-w-[50vw] text-center mb-[12rem] leading-8">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
-                nostrum earum doloremque sunt, eos ea eum, quis eligendi,
-                reprehenderit itaque voluptates saepe alias? Voluptatibus velit
-                perferendis sequi harum, laboriosam aliquid!
+              <p className=" text-4xl xl:text-1xl 2xl:text-4xl max-w-[80vw] md:max-w-[50vw] text-center mb-[4rem] leading-[3rem]">
+                Here are some of the projects I've worked on during my time at
+                Hyper Island. <br /> <br />
+                Most of these projects are smaller projects with different focus
+                areas. Some are my personal projects but ive also got the
+                opertunity to work with a variety of people during these
+                projects and I've learned a lot from each and every one of them.
               </p>
             ) : (
               <SceneProjects />

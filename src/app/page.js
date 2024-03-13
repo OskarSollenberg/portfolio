@@ -7,7 +7,7 @@ const Scene = dynamic(() => import("@/src/components/Scene"), {
 
 export default function Home() {
   return (
-    <div className="w-screen h-screen overflow-hidden bg-[#e43b13]">
+    <div className="w-screen h-screen overflow-hidden bg-[#FDF9EF]">
       {/* <InitLoading /> */}
       <main>
         <Scene />
