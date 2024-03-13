@@ -39,7 +39,7 @@ export default function Projects() {
   return (
     <>
       <section
-        className="w-screen mx-auto overflow-hidden transition-all duration-300 ease-in-out"
+        className="w-screen mx-auto overflow-hidden transition-colors duration-700 ease-in-out"
         style={{
           fontFamily: "montreal",
           backgroundColor: bgColor,
@@ -49,7 +49,7 @@ export default function Projects() {
         <main>
           <div className="flex items-end justify-center w-screen h-screen ">
             {isScrolled ? (
-              <p className=" text-4xl xl:text-1xl 2xl:text-4xl max-w-[80vw] md:max-w-[50vw] text-center mb-[4rem] leading-[3rem]">
+              <p className=" text-2xl md:text-3xl  lg:text-4xl max-w-[85vw] md:max-w-[70vw]  xl:max-w-[50vw] text-center mb-[4rem] lg:leading-[3rem]">
                 Here are some of the projects I've worked on during my time at
                 Hyper Island. <br /> <br />
                 Most of these projects are smaller projects with different focus

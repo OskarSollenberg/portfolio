@@ -1,4 +1,5 @@
 import dynamic from "next/dynamic";
+
 // import InitLoading from "../components/InitLoading";
 
 const Scene = dynamic(() => import("@/src/components/Scene"), {
