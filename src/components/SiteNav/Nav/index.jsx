@@ -41,7 +41,7 @@ export default function Nav() {
 
   return (
     <>
-      <div className="absolute top-0 right-0 z-[2000] ">
+      <div className="absolute top-0 right-0 z-[2000] mt-[4rem] mr-[4rem]  md:mt-[5.5rem] md:mr-[5.5rem]  ">
         <ConnectWithMe />
       </div>
       <motion.div
@@ -52,7 +52,7 @@ export default function Nav() {
         className="h-screen w-[100vw] bg-[#292929ee] fixed z-[1000] right-0 top-0 text-white "
       >
         {/* lg:w-[89vw] */}
-        <div className=" h-full p-24 flex flex-col justify-between">
+        <div className=" md:ml-[15rem] h-full flex flex-col items-center md:items-start justify-center">
           <div
             style={{
               fontFamily: "Montreal",
@@ -60,11 +60,11 @@ export default function Nav() {
             onMouseLeave={() => {
               setSelectedIndicator(pathname);
             }}
-            className="flex flex-col text-7xl gap-3 mt-20"
+            className=" flex flex-col text-[7rem] md:text-[8rem] leading-tight "
           >
-            <div className="text-[#999999] border-b uppercase text-xs mb-10 ">
+            {/* <div className="text-[#999999] border-b uppercase text-xs mb-10 ">
               <p>Navigation</p>
-            </div>
+            </div> */}
             {navItems.map((data, index) => {
               return (
                 <NavLink

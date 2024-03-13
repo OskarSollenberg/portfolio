@@ -6,7 +6,7 @@ import { TiSocialLinkedinCircular } from "react-icons/ti";
 
 const ConnectWithMe = () => {
   return (
-    <div className="flex w-auto justify-end mt-[5.5rem] mr-[5.5rem]  ">
+    <div className="flex w-auto justify-end ">
       <MagnetButton />
     </div>
   );
