@@ -50,14 +50,15 @@ export default function Projects() {
           <div className="flex items-end justify-center w-screen h-screen ">
             {isScrolled ? (
               <p className="text-2xl md:text-3xl lg:text-4xl max-w-[85vw] md:max-w-[70vw] xl:max-w-[50vw] text-center mb-[4rem] lg:leading-[3rem]">
+                {`
                 Here are some of the projects I've worked on during my time at
-                Hyper Island.
+                Hyper Island.`}
                 <br />
                 <br />
-                Most of these projects are smaller projects with different focus
+                {`Most of these projects are smaller projects with different focus
                 areas. Some are my personal projects but I've also got the
                 opportunity to work with a variety of people during these
-                projects and I've learned a lot from each and every one of them.
+                projects and I've learned a lot from each and every one of them.`}
               </p>
             ) : (
               <SceneProjects />
