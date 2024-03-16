@@ -1,153 +1,47 @@
-"use client";
-import React, { useRef, useEffect, useState } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import Image from "next/image";
-import Card from "./Card";
+import React from "react";
+import NavItem from "./NavItem";
 
-export function Project({ title, index }) {
+export default function MyProjects() {
   return (
-    <div
-      key={index}
-      className={`flex flex-col justify-center items-start gap-[5rem]  `}
-    >
-      <div className={`w-full`}>
-        <Image
-          className="w-full"
-          src="/medias/hinder1.webp"
-          alt="Hinder"
-          width={500}
-          height={300}
-          style={{ width: "auto", height: "auto" }}
+    <section className="bg-black p-4 md:p-8 mb-[50vh]">
+      <div className="mx-auto max-w-5xl">
+        <NavItem
+          heading="Hinder"
+          subheading="It's a dating app"
+          imgSrc="/medias/hinder1.webp"
+          href="#"
+        />
+        <NavItem
+          heading="PetFinder"
+          subheading="Its all about the SEO and Performance!!"
+          imgSrc="/medias/petfinder.png"
+          href="#"
+        />
+        <NavItem
+          heading="PencilPaws"
+          subheading="Use the apple pencil on an ipad!"
+          imgSrc="/medias/pencil-paws.png"
+          href="#"
+        />
+        <NavItem
+          heading="Nordstan"
+          subheading="The most used bus in Gothemburg is bus number 16"
+          imgSrc="/medias/nordstan.png"
+          href="#"
+        />
+        <NavItem
+          heading="Hangman"
+          subheading="Creating a classic"
+          imgSrc="/medias/hangman.png"
+          href="#"
+        />
+        <NavItem
+          heading="The Egg"
+          subheading="Completely useless but fun"
+          imgSrc="/medias/egg.png"
+          href="#"
         />
       </div>
-      <div>
-        <h1
-          className={`text-4xl font-bold text-[#e43b13] transition-all duration-200`}
-        >
-          {title}
-        </h1>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex quibusdam
-          dicta dignissimos itaque ducimus.{" "}
-        </p>
-      </div>
-    </div>
-  );
-}
-
-const projects = [
-  {
-    title: "",
-    description: "",
-    image: "",
-  },
-  {
-    title: "HINDER",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos maiores doloremque cumque eligendi repellat nihil",
-    image: "/medias/hinder1.webp",
-  },
-  {
-    title: "PROJECT 2",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos maiores doloremque cumque eligendi repellat nihil",
-    image: "/medias/hinder1.webp",
-  },
-  {
-    title: "PROJECT 3",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos maiores doloremque cumque eligendi repellat nihil",
-    image: "/medias/hinder1.webp",
-  },
-  {
-    title: "PROJECT 4",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos maiores doloremque cumque eligendi repellat nihil",
-    image: "/medias/hinder1.webp",
-  },
-];
-
-export default function MyProjects({ txtColor }) {
-  const sectionRef = useRef(null);
-  const triggerRef = useRef(null);
-
-  const [translateX, setTranslateX] = useState(getTranslateX());
-
-  function getTranslateX() {
-    // 768px is a common breakpoint for mobile devices
-    return typeof window !== "undefined" && window.innerWidth <= 768
-      ? "-400vw"
-      : "-200vw";
-  }
-
-  useEffect(() => {
-    function handleResize() {
-      setTranslateX(getTranslateX());
-    }
-
-    if (typeof window !== "undefined") {
-      window.addEventListener("resize", handleResize);
-      return () => window.removeEventListener("resize", handleResize);
-    }
-  }, []);
-
-  if (typeof window !== "undefined") {
-    window.onbeforeunload = function () {
-      window.scrollTo(0, 0);
-    };
-  }
-
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-
-    if (sectionRef.current) {
-      const pin = gsap.fromTo(
-        sectionRef.current,
-        {
-          translateX: 0,
-        },
-        {
-          translateX: translateX,
-          ease: "none",
-          duration: 1,
-          scrollTrigger: {
-            trigger: triggerRef.current,
-            start: "top top",
-            end: "2000 top",
-            scrub: 0,
-            pin: true,
-          },
-        }
-      );
-      return () => {
-        pin.kill();
-      };
-    }
-  }, [translateX]);
-
-  return (
-    <>
-      <div className={` transition-all duration-200 text-[${txtColor}]`}>
-        <div ref={triggerRef}>
-          <div
-            ref={sectionRef}
-            className="h-screen flex items-center flex-row gap-10 relative "
-          >
-            <div className={` h-screen`}></div>
-            {projects.map((project, index) => (
-              <React.Fragment key={index}>
-                <Card
-                  title={project.title}
-                  description={project.description}
-                  image={project.image}
-                  txtColor={txtColor}
-                />
-              </React.Fragment>
-            ))}
-          </div>
-        </div>
-      </div>
-    </>
+    </section>
   );
 }

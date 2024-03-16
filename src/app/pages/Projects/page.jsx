@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import ProjectsNav from "@/src/components/ProjectsNav";
+import MyProjects from "@/src/components/MyProjects";
 import { FaArrowRight } from "react-icons/fa";
 import SceneProjects from "@/src/components/SceneProjects";
 
@@ -64,7 +64,7 @@ export default function Projects() {
               <SceneProjects />
             )}
           </div>
-          <ProjectsNav />
+          <MyProjects />
         </main>
       </section>
     </>

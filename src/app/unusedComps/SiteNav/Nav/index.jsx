@@ -5,7 +5,7 @@ import ConnectWithMe from "./ConnectWithMe";
 
 import NavLink from "./NavLink";
 import Curve from "./Curve";
-// import NavFooter from "./NavFooter";
+// import NavFooter from "../NavFooter";
 
 const navItems = [
   {

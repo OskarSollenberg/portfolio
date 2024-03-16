@@ -1,0 +1,14 @@
+.siteNav::before {
+  content: "Internship starts in";
+  display: block;
+  position: absolute;
+  top: -18px;
+  left: 82px;
+  color: black;
+}
+
+@media (max-width: 768px) {
+  .siteNav::before {
+    display: none;
+  }
+}

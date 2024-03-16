@@ -36,7 +36,7 @@ const NavItem = ({ heading, imgSrc, subheading, href }) => {
         }}
         transition={{ type: "spring" }}
         src={imgSrc}
-        className="absolute z-0 h-[12rem] w-[15rem] rounded-md object-cover md:h-[18rem] md:w-[25rem] right-[4rem] "
+        className="absolute z-0 h-[12rem] w-[15rem] rounded-md object-cover md:h-[18rem] md:w-[25rem] right-[4rem] border-2"
         alt={`Image representing a link for ${heading}`}
       />
     </motion.a>
