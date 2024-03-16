@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import MyProjects from "@/src/components/MyProjects";
+import ProjectsNav from "@/src/components/ProjectsNav";
 import { FaArrowRight } from "react-icons/fa";
 import SceneProjects from "@/src/components/SceneProjects";
 
@@ -49,9 +49,9 @@ export default function Projects() {
         <main>
           <div className="flex items-end justify-center w-screen h-screen ">
             {isScrolled ? (
-              <p className="text-2xl md:text-3xl lg:text-4xl max-w-[85vw] md:max-w-[70vw] xl:max-w-[50vw] text-center mb-[4rem] lg:leading-[3rem]">
+              <p className="text-2xl md:text-3xl lg:text-2xl max-w-[85vw] md:max-w-[70vw] xl:max-w-[50vw] text-center mb-[4rem] lg:leading-[3rem]">
                 {`
-                Here are some of the projects I've worked on during my time at
+                These are some of the projects I've worked on during my time at
                 Hyper Island.`}
                 <br />
                 <br />
@@ -64,7 +64,7 @@ export default function Projects() {
               <SceneProjects />
             )}
           </div>
-          <MyProjects txtColor={txtColor} />
+          <ProjectsNav />
         </main>
       </section>
     </>
