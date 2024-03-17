@@ -3,7 +3,9 @@ export const projects = [
     title: "Hinder",
     subTitle: "It's a dating app",
     imgSrc: "/medias/hinder1.webp",
-
+    video: "#",
+    gihub: "#",
+    netlify: "#",
     description:
       "This is a dating app I created together with 3 others from hyper island have created. It is the first project we did in react.",
     learnings:
@@ -13,6 +15,9 @@ export const projects = [
     title: "PetFinder",
     subTitle: "Its all about the SEO and Performance!!",
     imgSrc: "/medias/petfinder.png",
+    video: "#",
+    gihub: "#",
+    netlify: "#",
     description:
       "PetFinder is a project focusing on SEO, performance and accecibility. This was about a 2 week project me and 3 other students created during one of our modules at Hyper Island.",
     learnings:
@@ -23,21 +28,41 @@ export const projects = [
     title: "PencilPaws",
     subTitle: "Use the apple pencil on an ipad!",
     imgSrc: "/medias/pencil-paws.png",
+    video: "#",
+    gihub: "#",
+    netlify: "#",
+    description: "lorem",
+    learnings: "lorem",
   },
 
   {
     title: "Nordstan",
     subTitle: "The most used bus in Gothemburg is bus number 16",
     imgSrc: "/medias/nordstan.png",
+    video: "#",
+    gihub: "#",
+    netlify: "#",
+    description: "lorem",
+    learnings: "lorem",
   },
   {
     title: "Hangman",
     subTitle: "Creating a classic",
     imgSrc: "/medias/hangman.png",
+    video: "#",
+    gihub: "#",
+    netlify: "#",
+    description: "lorem",
+    learnings: "lorem",
   },
   {
     title: "The Egg",
     subTitle: "Completely useless but fun",
     imgSrc: "/medias/egg.png",
+    video: "#",
+    gihub: "#",
+    netlify: "#",
+    description: "lorem",
+    learnings: "lorem",
   },
 ];

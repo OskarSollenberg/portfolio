@@ -21,10 +21,10 @@ const navItems = [
     title: "About",
     href: "/pages/about",
   },
-  {
-    title: "Contact",
-    href: "/pages/contact",
-  },
+  //   {
+  //     title: "Contact",
+  //     href: "/pages/contact",
+  //   },
 ];
 
 export const menuSlide = {

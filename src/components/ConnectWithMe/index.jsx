@@ -42,7 +42,7 @@ const MagnetButton = ({ icon, color, size, type }) => {
       onMouseLeave={handleMouseLeave}
       animate={{ x, y }}
       transition={{ type: "spring", stiffness: 200, damping: 20 }}
-      className={`group relative grid h-[40px] w-[40px] place-content-center rounded-full border-2 border-[${color}] transition-colors duration-700 ease-out`}
+      className={`group relative grid h-[40px] w-[40px] place-content-center rounded-full transition-colors duration-700 ease-out`}
     >
       <div
         className={`absolute inset-0 z-0 scale-0 rounded-full bg-[${color}] transition-transform duration-700 ease-out group-hover:scale-100`}
@@ -74,7 +74,7 @@ const MagnetButton = ({ icon, color, size, type }) => {
             fill={color}
             href="#circlePath"
             style={{ letterSpacing: "0.2em" }}
-            className={`fill-[${color}] text-[.75rem]  font-light uppercase opacity-0 transition-opacity duration-700 ease-out group-hover:opacity-100 mr-5`}
+            className={`fill-[${color}] text-[.75rem] font-light uppercase opacity-0 transition-opacity duration-700 ease-out group-hover:opacity-100 mr-5`}
           >
             {type === "github" && "CHECK OUT THE CODE CHECK OUT THE CODE "}
             {type === "socials" &&

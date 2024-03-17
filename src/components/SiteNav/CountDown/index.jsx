@@ -48,8 +48,8 @@ const CountDown = () => {
   return (
     <>
       <div className="sticky flex justify-center items-center left-0 right-0 top-0 z-50 w-full h-[2rem] bg-[#FDF9EF] text-black px-2">
-        <div className="absolute -top-[1.7rem] -left-0 opacity-30">
-          Going on Internship in
+        <div className="absolute -top-[1.7rem] -left-0 ">
+          Internship starts in
         </div>
 
         <div className="mx-auto flex w-fit max-w-5xl flex-wrap items-center justify-center gap-x-4 text-xs md:text-sm">

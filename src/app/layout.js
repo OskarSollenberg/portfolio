@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
       <body className={` ${inter.className}`}>
         <div className="flex justify-center items-center">
           {children}
-          <ProgressBarComp isHomePage={true} />
+          {/* <ProgressBarComp isHomePage={true} /> */}
         </div>
       </body>
     </html>
