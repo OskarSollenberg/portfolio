@@ -1,5 +1,6 @@
 "use client";
 
+import SiteNav from "@/src/components/SiteNav";
 import React, { useEffect, useState } from "react";
 import MyProjects from "@/src/components/MyProjects";
 import { FaArrowRight } from "react-icons/fa";
@@ -11,8 +12,7 @@ import SceneProjects from "@/src/components/SceneProjects";
 // const FONT_PATH = "/fonts/Mortend-Extra-Bold.otf";
 
 export default function Projects() {
-  const [bgColor, setBgColor] = useState("#fdf9ef");
-  const [txtColor, setTxtColor] = useState("black");
+  const [bgColor, setBgColor] = useState("#F3691F");
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -21,10 +21,8 @@ export default function Projects() {
       if (scrollPosition > 0) {
         setIsScrolled(true);
         setBgColor("black");
-        setTxtColor("#fdf9ef");
       } else {
-        setBgColor("#fdf9ef");
-        setTxtColor("black");
+        setBgColor("#F3691F");
         setIsScrolled(false);
       }
     };
@@ -38,12 +36,13 @@ export default function Projects() {
 
   return (
     <>
+      <SiteNav isHomepage={false} />
+
       <section
-        className="w-screen mx-auto overflow-hidden transition-colors duration-700 ease-in-out"
+        className="w-screen mx-auto overflow-hidden text-white transition-colors duration-700 ease-in-out"
         style={{
           fontFamily: "montreal",
           backgroundColor: bgColor,
-          color: txtColor,
         }}
       >
         <main>

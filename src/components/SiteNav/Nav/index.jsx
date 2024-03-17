@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
-import ConnectWithMe from "./ConnectWithMe";
+import ConnectWithMe from "../../ConnectWithMe";
+import { TiSocialLinkedinCircular } from "react-icons/ti";
 
 import NavLink from "./NavLink";
 import Curve from "./Curve";
@@ -42,7 +43,12 @@ export default function Nav() {
   return (
     <>
       <div className="absolute top-0 right-0 z-[4000] mt-[4rem] mr-[4rem]  md:mt-[5.5rem] md:mr-[5.5rem]  ">
-        <ConnectWithMe />
+        <ConnectWithMe
+          icon={<TiSocialLinkedinCircular />}
+          color={"#fff"}
+          size={50}
+          type={"socials"}
+        />
       </div>
       <motion.div
         variants={menuSlide}

@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SceneAbout from "@/src/components/SceneAbout";
+import SiteNav from "@/src/components/SiteNav";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -39,6 +40,7 @@ export default function Projects() {
 
   return (
     <>
+      <SiteNav isHomepage={false} />
       <div className=" translate z-50">
         <SceneAbout />
       </div>

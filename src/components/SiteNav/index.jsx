@@ -5,9 +5,8 @@ import CountDown from "./CountDown";
 
 import { AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
-import "./styles.css";
 
-export default function SiteNav() {
+export default function SiteNav({ isHomepage }) {
   const [isActive, setIsActive] = useState(false);
   const pathname = usePathname();
 
@@ -21,8 +20,8 @@ export default function SiteNav() {
         style={{
           fontFamily: "Montreal",
         }}
-        className={` fixed flex items-center justify-start gap-[1rem] -translate-x-[50%] md:translate-x-0 left-[50%]  md:left-[4rem]  bottom-[2rem]  bg-black text-[#FDF9EF] text-sm rounded-md transition-all duration-300 ease-in-out z-[2000] p-[4px]
-		${isActive ? "w-[4rem] " : "w-[4rem] md:w-auto siteNav"}`}
+        className={` fixed flex items-center justify-start gap-[1rem] -translate-x-[50%] md:translate-x-0 left-[50%] md:left-[4rem]  bottom-[2rem]  bg-black text-[#FDF9EF] text-sm rounded-md transition-all duration-300 ease-in-out z-[2000] p-[4px]
+		${isActive ? "w-[4rem] " : "w-[4rem] md:w-auto"}`}
       >
         <div
           onClick={() => {
@@ -47,7 +46,7 @@ export default function SiteNav() {
             ></div>
           </div>
         </div>
-        {!isActive && (
+        {!isActive && isHomepage && (
           <div className="hidden md:flex">
             <CountDown />
           </div>
