@@ -41,7 +41,7 @@ export default function Nav() {
 
   return (
     <>
-      <div className="absolute top-0 right-0 z-[2000] mt-[4rem] mr-[4rem]  md:mt-[5.5rem] md:mr-[5.5rem]  ">
+      <div className="absolute top-0 right-0 z-[4000] mt-[4rem] mr-[4rem]  md:mt-[5.5rem] md:mr-[5.5rem]  ">
         <ConnectWithMe />
       </div>
       <motion.div
@@ -60,7 +60,7 @@ export default function Nav() {
             onMouseLeave={() => {
               setSelectedIndicator(pathname);
             }}
-            className=" flex flex-col text-[7rem] md:text-[8rem] leading-tight "
+            className=" flex flex-col text-[5rem] sm:text-[7rem] md:text-[8rem] leading-tight "
           >
             {/* <div className="text-[#999999] border-b uppercase text-xs mb-10 ">
               <p>Navigation</p>

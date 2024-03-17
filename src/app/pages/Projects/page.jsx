@@ -51,8 +51,8 @@ export default function Projects() {
             {isScrolled ? (
               <p className="text-2xl md:text-3xl lg:text-2xl max-w-[85vw] md:max-w-[70vw] xl:max-w-[50vw] text-center mb-[4rem] lg:leading-[3rem]">
                 {`
-                These are some of the projects I've worked on during my time at
-                Hyper Island.`}
+
+				Here im showcaseing my learning jurney through out my time at Hyper Island making me the front-end developer i am today.`}
                 <br />
                 <br />
                 {`Most of these projects are smaller projects with different focus

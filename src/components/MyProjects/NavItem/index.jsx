@@ -1,9 +1,11 @@
 import { motion } from "framer-motion";
+import Link from "next/link";
+
 import React from "react";
 
-const NavItem = ({ heading, imgSrc, subheading, href }) => {
+const NavItem = ({ title, imgSrc, subTitle, href }) => {
   return (
-    <motion.a
+    <motion.div
       href={href}
       initial="initial"
       whileHover="whileHover"
@@ -22,10 +24,10 @@ const NavItem = ({ heading, imgSrc, subheading, href }) => {
           }}
           className="relative z-10 block text-4xl font-bold text-neutral-500 transition-colors duration-500 group-hover:text-neutral-50 md:text-6xl hover:scale-110 "
         >
-          {heading}
+          {title}
         </motion.span>
         <span className="relative z-10 mt-2 block text-base text-neutral-500 transition-colors duration-500 group-hover:text-neutral-50">
-          {subheading}
+          {subTitle}
         </span>
       </div>
 
@@ -37,9 +39,9 @@ const NavItem = ({ heading, imgSrc, subheading, href }) => {
         transition={{ type: "spring" }}
         src={imgSrc}
         className="absolute z-0 h-[12rem] w-[15rem] rounded-md object-cover md:h-[18rem] md:w-[25rem] right-[4rem] border-2"
-        alt={`Image representing a link for ${heading}`}
+        alt={`Image representing a link for ${title}`}
       />
-    </motion.a>
+    </motion.div>
   );
 };
 

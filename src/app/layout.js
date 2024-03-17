@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import SiteNav from "../components/SiteNav";
 import ProgressBarComp from "@/src/components/ProgressBarComp";
+import ConnectWithMe from "../components/SiteNav/Nav/ConnectWithMe";
 
 const inter = Inter({ subsets: ["latin"] });
 

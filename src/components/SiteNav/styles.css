@@ -1,8 +1,8 @@
 .siteNav::before {
-  content: "Internship starts in";
+  content: "Going on Internship in";
   display: block;
   position: absolute;
-  top: -18px;
+  top: -20px;
   left: 82px;
   color: black;
 }
