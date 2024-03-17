@@ -39,7 +39,7 @@ export default function Projects() {
       <SiteNav isHomepage={false} />
 
       <section
-        className="w-screen mx-auto overflow-hidden text-white transition-colors duration-700 ease-in-out"
+        className="w-screen mx-auto overflow-hidden text-white transition-colors duration-700 ease-in-out p-[1rem]"
         style={{
           fontFamily: "montreal",
           backgroundColor: bgColor,
@@ -48,16 +48,13 @@ export default function Projects() {
         <main>
           <div className="flex items-end justify-center w-screen h-screen ">
             {isScrolled ? (
-              <p className="text-2xl md:text-3xl lg:text-2xl max-w-[85vw] md:max-w-[70vw] xl:max-w-[50vw] text-center mb-[4rem] lg:leading-[3rem]">
+              <p className=" w-screen rounded-[2rem] py-[4rem] text-[1.5rem] md:text-3xl lg:text-3xl max-w-[85vw] md:max-w-[65vw]  text-center mb-[5rem] lg:mb-[10rem]  lg:leading-[3rem]">
                 {`
-
-				Here im showcaseing my learning jurney through out my time at Hyper Island making me the front-end developer i am today.`}
+				Here is a showcase of my learning jurney through out my time at Hyper Island.`}
                 <br />
                 <br />
-                {`Most of these projects are smaller projects with different focus
-                areas. Some are my personal projects but I've also got the
-                opportunity to work with a variety of people during these
-                projects and I've learned a lot from each and every one of them.`}
+                {` Some are my personal projects but I've also had the pleasure of
+                working with a variety of people. They are all smaller project built with the soul purpose of learning`}
               </p>
             ) : (
               <SceneProjects />

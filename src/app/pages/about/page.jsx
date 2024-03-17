@@ -13,11 +13,11 @@ export default function Projects() {
 
   useEffect(() => {
     gsap.to(imageRef.current, {
-      y: "160%",
+      y: "170%",
       scale: 0.6,
       height: "30rem",
       width: "100vw",
-      borderRadius: "4rem",
+      borderRadius: "1rem",
       opacity: 1,
       scrollTrigger: {
         trigger: imageRef.current,
@@ -41,18 +41,17 @@ export default function Projects() {
   return (
     <>
       <SiteNav isHomepage={false} />
+
       <div className=" translate z-50">
         <SceneAbout />
       </div>
       <main className="absolute w-screen h-screen top-0 ">
         <div
           ref={imageRef}
-          className="w-screen  h-screen opacity-20 "
+          className="w-screen h-screen opacity-20 bg-no-repeat bg-cover bg-left lg:bg-center"
           style={{
             fontFamily: "montreal",
             backgroundImage: `url("/medias/studio.jpg")`,
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "cover",
           }}
         ></div>
 
@@ -60,20 +59,11 @@ export default function Projects() {
         <div className=" flex justify-center items-start h-[200vh] text-lg text-white ">
           <p
             ref={pRef}
-            className="text-center max-w-[90vw] opacity-0 md:max-w-[50vw] translate-y-[2rem] transition-all "
+            className="text-center max-w-[90vw] opacity-0 md:max-w-[70vw] translate-y-[2rem] transition-all text-2xl "
           >
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero
-            explicabo, accusantium ut laudantium possimus tempore architecto
-            incidunt velit dolore veritatis temporibus. Labore corporis, minima
-            magni modi debitis sequi odio libero? Lorem ipsum dolor sit amet
-            consectetur, adipisicing elit. Libero explicabo, accusantium ut
-            laudantium possimus tempore architecto incidunt velit dolore
-            veritatis temporibus. Labore corporis, minima magni modi debitis
-            sequi odio libero? Lorem ipsum dolor sit amet consectetur,
-            adipisicing elit. Libero explicabo, accusantium ut laudantium
-            possimus tempore architecto incidunt velit dolore veritatis
-            temporibus. Labore corporis, minima magni modi debitis sequi odio
-            libero?
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum
+            asperiores dicta beatae dolore hic sint, deserunt cum in porro
+            quidem id tempora magni et, minima esse? Nulla in qui asperiores.
           </p>
         </div>
         <div className=" w-screen h-screen"></div>
