@@ -2,7 +2,6 @@ import { FaGithub } from "react-icons/fa";
 import { BiLogoNetlify } from "react-icons/bi";
 import ConnectWithMe from "../../../../components/ConnectWithMe";
 import SiteNav from "@/src/components/SiteNav";
-
 import { projects } from "@/src/data/projects";
 
 export default function Project() {
