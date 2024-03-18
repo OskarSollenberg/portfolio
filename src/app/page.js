@@ -1,5 +1,6 @@
 import dynamic from "next/dynamic";
 import SiteNav from "../components/SiteNav";
+import MainNav from "../components/MainNav";
 
 // import InitLoading from "../components/InitLoading";
 
@@ -11,6 +12,7 @@ export default function Home() {
   return (
     <div className="w-screen h-screen overflow-hidden ">
       <SiteNav isHomepage={true} />
+      <MainNav />
 
       {/* <InitLoading /> */}
       <main>
