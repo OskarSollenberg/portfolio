@@ -26,7 +26,7 @@ const NavItem = ({ title, imgSrc, subTitle, href }) => {
             >
               {title}
             </motion.span>
-            <span className="relative z-10 mt-2 block text-base text-neutral-500 transition-colors duration-500 group-hover:text-neutral-50 max-w-[10rem]">
+            <span className="relative z-10 mt-2 block text-base text-neutral-500 transition-colors duration-500 group-hover:text-neutral-50 max-w-[10rem] sm:max-w-[20rem] md:max-w-[30rem]">
               {subTitle}
             </span>
           </div>

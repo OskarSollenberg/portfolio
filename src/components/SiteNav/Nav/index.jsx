@@ -42,7 +42,7 @@ export default function Nav() {
 
   return (
     <>
-      <div className="absolute top-0 right-0 z-[4000] mt-[4rem] mr-[4rem]  md:mt-[5.5rem] md:mr-[5.5rem]  ">
+      <div className="absolute top-0 right-0 z-[4000] mt-[4rem] mr-[4rem]  md:mt-[5.5rem] md:mr-[5.5rem] ">
         <ConnectWithMe
           icon={<TiSocialLinkedinCircular />}
           color={"#fff"}
@@ -55,7 +55,7 @@ export default function Nav() {
         initial="initial"
         animate="enter"
         exit="exit"
-        className="h-screen w-[100vw] bg-[#292929ee] fixed z-[1000] right-0 top-0 text-white "
+        className="h-screen w-[100vw] bg-[#292929ee] fixed z-[1000] right-0 top-0 text-white"
       >
         {/* lg:w-[89vw] */}
         <div className=" h-full flex flex-col items-center justify-center">
