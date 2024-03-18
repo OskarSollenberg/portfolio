@@ -5,7 +5,7 @@ import { projects } from "@/src/data/projects";
 
 export default function MyProjects() {
   return (
-    <section className="bg-black p-4 md:p-8 mb-[50vh]">
+    <section className="bg-black mb-[50vh] p-[2rem]">
       <div className="mx-auto max-w-5xl">
         {projects.map((project, index) => (
           <NavItem

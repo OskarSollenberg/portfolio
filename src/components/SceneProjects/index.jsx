@@ -13,7 +13,7 @@ export default function Scene() {
         <Model />
         <directionalLight />
         <Environment preset="city" />
-        <PerspectiveCamera makeDefault position={[0, 0, 10]} />
+        {/* <PerspectiveCamera makeDefault position={[0, 0, 10]} /> */}
       </Canvas>
     </div>
   );

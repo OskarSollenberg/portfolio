@@ -58,7 +58,7 @@ export default function Nav() {
         className="h-screen w-[100vw] bg-[#292929ee] fixed z-[1000] right-0 top-0 text-white "
       >
         {/* lg:w-[89vw] */}
-        <div className=" md:ml-[15rem] h-full flex flex-col items-center md:items-start justify-center">
+        <div className=" h-full flex flex-col items-center justify-center">
           <div
             style={{
               fontFamily: "Montreal",
@@ -66,7 +66,7 @@ export default function Nav() {
             onMouseLeave={() => {
               setSelectedIndicator(pathname);
             }}
-            className=" flex flex-col text-[3rem] sm:text-[7rem] md:text-[8rem] leading-tight "
+            className=" flex leading-[4rem] flex-col text-[4rem] sm:text-[8rem] sm:leading-[10rem] md:text-[10rem] md:leading-[12rem]"
           >
             {/* <div className="text-[#999999] border-b uppercase text-xs mb-10 ">
               <p>Navigation</p>

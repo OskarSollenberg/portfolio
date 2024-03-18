@@ -1,12 +1,15 @@
 "use client";
 import { FaGithub } from "react-icons/fa";
 import { BiLogoNetlify } from "react-icons/bi";
+import { RiArrowGoBackFill } from "react-icons/ri";
+
 import ConnectWithMe from "../../../../components/ConnectWithMe";
 import SiteNav from "@/src/components/SiteNav";
 import { projects } from "@/src/data/projects";
 
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 export default function Project() {
   const params = useParams();
@@ -41,6 +44,14 @@ export default function Project() {
     <section>
       <SiteNav isHomepage={false} />
       <div className="grid lg:grid-cols-2 w-screen h-screen text-center lg:text-start">
+        <div className="absolute top-[2rem] left-[2rem] text-[1rem]  bg-black text-white p-2 rounded-lg hover:scale-110 transition-all duration-200 hover:bg-white hover:text-black active:scale-90 cursor-pointer">
+          <Link href="/pages/projects">
+            <div className="flex justify-center items-center gap-2" href="">
+              Projects <RiArrowGoBackFill />
+            </div>
+          </Link>
+        </div>
+
         <div className="bg-[#f3691f] w-full text-white h-full flex justify-center items-center p-10 ">
           <div className="p-4 md:p-8 flex flex-col gap-[4rem]">
             <div>
