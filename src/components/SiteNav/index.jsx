@@ -20,7 +20,7 @@ export default function SiteNav({ isHomepage }) {
         style={{
           fontFamily: "Montreal",
         }}
-        className={` fixed flex items-center justify-start gap-[1rem] -translate-x-[50%] md:translate-x-0 left-[50%] md:left-[4rem]  bottom-[2rem]  bg-black text-[#FDF9EF] text-sm rounded-md transition-all duration-300 ease-in-out z-[4000] p-[6px]
+        className={` fixed flex items-center rounded-lg justify-start gap-[1rem] -translate-x-[50%] md:translate-x-0 left-[50%] md:left-[4rem]  bottom-[2rem]   text-[#FDF9EF] text-sm transition-all duration-300 ease-in-out z-[4000] p-[6px]
 		${isActive ? "w-[4rem] " : "w-[4rem] md:w-auto"}
 		`}
       >
@@ -28,7 +28,7 @@ export default function SiteNav({ isHomepage }) {
           onClick={() => {
             setIsActive(!isActive);
           }}
-          className="w-16 h-8 cursor-pointer flex items-center justify-content-center"
+          className="w-16 h-16 min-w-16 min-h-16 cursor-pointer flex items-center justify-content-center rounded-full bg-[#f3691f]"
         >
           <div
             className={`w-full flex flex-col justify-center items-center ${
@@ -36,12 +36,12 @@ export default function SiteNav({ isHomepage }) {
             }`}
           >
             <div
-              className={`h-0.5 w-[2rem] bg-white mx-auto relative transition-transform duration-300 ${
+              className={`h-0.5 w-[2rem] bg-[#FEFCE1] mx-auto relative transition-transform duration-300 ${
                 isActive ? "rotate-45 " : ""
               }`}
             ></div>
             <div
-              className={`h-0.5 w-[2rem] bg-white mx-auto relative transition-transform duration-300 ${
+              className={`h-0.5 w-[2rem] bg-[#FEFCE1] mx-auto relative transition-transform duration-300 ${
                 isActive ? "-rotate-45" : ""
               }`}
             ></div>

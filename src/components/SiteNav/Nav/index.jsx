@@ -6,6 +6,7 @@ import { TiSocialLinkedinCircular } from "react-icons/ti";
 
 import NavLink from "./NavLink";
 import Curve from "./Curve";
+import Link from "next/link";
 // import NavFooter from "./NavFooter";
 
 const navItems = [
@@ -42,10 +43,10 @@ export default function Nav() {
 
   return (
     <>
-      <div className="absolute top-0 right-0 z-[4000] mt-[4rem] mr-[4rem]  md:mt-[5.5rem] md:mr-[5.5rem] ">
+      <div className="absolute top-0 right-0 z-[400] mt-[4rem] mr-[4rem] md:mt-[5.5rem] md:mr-[5.5rem] ">
         <ConnectWithMe
           icon={<TiSocialLinkedinCircular />}
-          color={"#fff"}
+          color={"#f3691f"}
           size={50}
           type={"socials"}
         />
@@ -55,9 +56,8 @@ export default function Nav() {
         initial="initial"
         animate="enter"
         exit="exit"
-        className="h-screen w-[100vw] bg-[#292929ee] fixed z-[1000] right-0 top-0 text-white"
+        className="h-screen w-[100vw] bg-[#292929ee] fixed z-[300] right-0 top-0"
       >
-        {/* lg:w-[89vw] */}
         <div className=" h-full flex flex-col items-center justify-center">
           <div
             style={{
@@ -68,17 +68,19 @@ export default function Nav() {
             }}
             className=" flex leading-[4rem] flex-col text-[4rem] sm:text-[8rem] sm:leading-[10rem] md:text-[10rem] md:leading-[12rem]"
           >
-            {/* <div className="text-[#999999] border-b uppercase text-xs mb-10 ">
-              <p>Navigation</p>
-            </div> */}
-            {navItems.map((data, index) => {
+            <div className="text-[#f3691f] border-[#FEFCE1] border-b uppercase text-xs mb-10 ">
+              <p>This is a navigation</p>
+            </div>
+            {navItems.map((project, index) => {
               return (
-                <NavLink
-                  key={index}
-                  data={{ ...data, index }}
-                  isActive={selectedIndicator == data.href}
-                  setSelectedIndicator={setSelectedIndicator}
-                ></NavLink>
+                <Link href={project.href} key={index}>
+                  <NavLink
+                    key={index}
+                    data={{ ...project, index }}
+                    isActive={selectedIndicator == project.href}
+                    setSelectedIndicator={setSelectedIndicator}
+                  ></NavLink>
+                </Link>
               );
             })}
             {/* <NavFooter /> */}

@@ -36,7 +36,7 @@ export default function AnimatedTextComponent({
       font={FONT_PATH}
       fontSize={fontSize}
       letterSpacing={letterSpacingSpring.letterSpacing}
-      color={isHovered ? "black" : "white"}
+      color={isHovered ? "black" : "#ff4400"}
       onPointerOver={() => handleHover(true)}
       onPointerOut={() => handleHover(false)}
       position={position}

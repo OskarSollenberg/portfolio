@@ -43,16 +43,16 @@ export default function Project() {
   return (
     <section>
       <SiteNav isHomepage={false} />
-      <div className="grid lg:grid-cols-2 w-screen h-screen text-center lg:text-start">
-        <div className="absolute top-[2rem] left-[2rem] text-[1rem]  bg-black text-white p-2 rounded-lg hover:scale-110 transition-all duration-200 hover:bg-white hover:text-black active:scale-90 cursor-pointer">
+      <div className="grid items-center justify-center lg:grid-cols-2 w-screen h-screen text-center lg:text-start">
+        <div className="absolute top-[2rem] left-[2rem] text-[1rem]  bg-black text-white p-2 rounded-lg hover:scale-110 transition-all duration-200 hover:bg-[#F3691F] hover:text-black active:scale-90 cursor-pointer">
           <Link href="/pages/projects">
             <div className="flex justify-center items-center gap-2" href="">
-              Projects <RiArrowGoBackFill />
+              <RiArrowGoBackFill />
             </div>
           </Link>
         </div>
 
-        <div className="bg-[#f3691f] w-full text-white h-full flex justify-center items-center p-10 ">
+        <div className=" w-full text-black h-full flex justify-center items-center p-10 ">
           <div className="p-4 md:p-8 flex flex-col gap-[4rem]">
             <div>
               <h2 className="text-2xl font-bold md:text-4xl lg:text-5xl">
@@ -90,9 +90,13 @@ export default function Project() {
             </div>
           </div>
         </div>
-        <div className="bg-[#fefce1] mb-[10rem] lg:mb-0 w-full h-full flex justify-center items-center p-10">
+        <div className="bg-[#fefce1] mb-[10rem] lg:mb-0 flex justify-center items-center p-10">
           <div className="h-full">
-            <img className="h-full object-cover" src={imgSrc} alt="" />
+            <img
+              className="h-full object-cover min-h-[30rem]"
+              src={imgSrc}
+              alt=""
+            />
             {/* <video
               src={imgSrc}
               type="video/mp4"

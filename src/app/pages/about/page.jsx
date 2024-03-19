@@ -56,7 +56,7 @@ export default function Projects() {
         ></div>
 
         <div className=" w-screen h-screen"></div>
-        <div className=" flex justify-center items-start h-[200vh] text-lg text-white ">
+        <div className=" flex justify-center items-start h-[200vh] text-lg ">
           <p
             ref={pRef}
             className="text-center max-w-[90vw] opacity-0 md:max-w-[70vw] translate-y-[2rem] transition-all text-2xl "

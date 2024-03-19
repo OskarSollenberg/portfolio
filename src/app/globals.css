@@ -2,40 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  overflow-x: hidden;
-  margin: 0px;
-  padding: 0px;
-}
-
-body {
-  /* background-color: #2f3537; */
-  /* background-color: #a9cbce; */
-  background-color: #f3691f;
-  /* background-color: #5ea163; */
-  /* background-color: #ffa04d; */
-  /* background: #15151e; */
-  /* background: #232332; */
-  background: #fefce1;
-  /* background: #fdf9ef; */
-  /* background: #e43b13; */
-  /* background: black; */
-
-  padding-top: env(safe-area-inset-top, 20px);
-  padding-right: env(safe-area-inset-right, 1em);
-  padding-bottom: env(safe-area-inset-bottom, 0.5vh);
-  padding-left: env(safe-area-inset-left, 1.4rem);
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
 @font-face {
   font-family: "Montreal";
   src: url("/fonts/PPNeueMontreal-Bold.otf") format("opentype");
@@ -59,4 +25,36 @@ img {
 @font-face {
   font-family: "Mortend";
   src: url("/fonts/Mortend-Extra-Bold.otf") format("opentype");
+}
+
+html {
+  width: 100vw;
+  overflow-x: hidden;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  /* background-color: #2f3537; */
+  /* background-color: #a9cbce; */
+  /* background-color: #f3691f; */
+  /* background-color: #5ea163; */
+  /* background-color: #ffa04d; */
+  /* background: #15151e; */
+  /* background: #232332; */
+  background: #fefce1;
+  /* background: #fdf9ef; */
+  /* background: #e43b13; */
+  /* background: #ff4613; */
+  /* background: #ff4400; */
+
+  padding-top: env(safe-area-inset-top, 20px);
+  padding-right: env(safe-area-inset-right, 1em);
+  padding-bottom: env(safe-area-inset-bottom, 0.5vh);
+  padding-left: env(safe-area-inset-left, 1.4rem);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }

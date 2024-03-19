@@ -10,14 +10,10 @@ const Scene = dynamic(() => import("@/src/components/Scene"), {
 
 export default function Home() {
   return (
-    <div className="w-screen h-screen overflow-hidden ">
-      <SiteNav isHomepage={true} />
-      <MainNav />
-
+    <main className="w-screen  h-full overflow-hidden ">
       {/* <InitLoading /> */}
-      <main>
-        <Scene />
-      </main>
-    </div>
+      <Scene />
+      <SiteNav isHomepage={true} />
+    </main>
   );
 }

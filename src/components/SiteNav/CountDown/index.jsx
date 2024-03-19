@@ -47,7 +47,7 @@ const CountDown = () => {
 
   return (
     <>
-      <div className="sticky flex justify-center items-center left-0 right-0 top-0 z-50 w-full h-[2rem] bg-[#FDF9EF] text-black px-2">
+      <div className="sticky flex justify-center items-center left-0 right-0 top-0 z-50 w-full h-[2rem] text-black px-2">
         <div className="absolute -top-[1.7rem] -left-0 ">
           Internship starts in
         </div>

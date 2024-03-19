@@ -12,7 +12,7 @@ import SceneProjects from "@/src/components/SceneProjects";
 // const FONT_PATH = "/fonts/Mortend-Extra-Bold.otf";
 
 export default function Projects() {
-  const [bgColor, setBgColor] = useState("#F3691F");
+  const [bgColor, setBgColor] = useState("#FEFCE1");
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -22,7 +22,7 @@ export default function Projects() {
         setIsScrolled(true);
         setBgColor("black");
       } else {
-        setBgColor("#F3691F");
+        setBgColor("#FEFCE1");
         setIsScrolled(false);
       }
     };

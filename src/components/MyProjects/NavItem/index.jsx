@@ -32,7 +32,7 @@ const NavItem = ({ title, imgSrc, subTitle }) => {
         <motion.img
           transition={{ type: "spring" }}
           src={imgSrc}
-          className="sm:absolute rotate-0 md:scale-0 md:group-hover:scale-100 transition-all duration-500 ease-in-out group-hover:rotate-[12.5deg] md:-rotate-[12.5deg]  h-[8rem] w-[12rem] group-hover:scale-1 z-[1000] rounded-md object-cover  md:h-[12rem] md:w-[18rem] lg:h-[18rem] lg:w-[25rem] right-[4rem] border-2"
+          className="sm:absolute rotate-0 md:scale-0 md:group-hover:scale-100 transition-all duration-500 ease-in-out group-hover:rotate-[12.5deg] md:-rotate-[12.5deg]  h-[8rem] w-[12rem] group-hover:scale-1 z-[100] rounded-md object-cover  md:h-[12rem] md:w-[18rem] lg:h-[18rem] lg:w-[25rem] right-[4rem] border-2"
           alt={`Image representing a link for ${title}`}
         />
       </motion.div>
