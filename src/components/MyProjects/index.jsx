@@ -10,7 +10,7 @@ export default function MyProjects() {
       <div className="mx-auto max-w-5xl">
         {projects.map((project, index) => (
           <Link
-            href={`./projects/${project.title}`}
+            href={`/projects/${project.title}`}
             key={project.title}
             passHref
           >
