@@ -5,6 +5,9 @@ import React, { useEffect, useState } from "react";
 import MyProjects from "@/src/components/MyProjects";
 import { FaArrowRight } from "react-icons/fa";
 import SceneProjects from "@/src/components/SceneProjects";
+import NavItem from "@/src/components/NavItem";
+import { projects } from "@/src/data/projects";
+import Link from "next/link";
 
 // const FONT_PATH = "/fonts/Migha-BlackCondensedCNTR.otf";
 // const FONT_PATH = "/fonts/Class-357-Regular.ttf";
@@ -60,7 +63,25 @@ export default function Projects() {
               <SceneProjects />
             )}
           </div>
-          <MyProjects />
+          <div className="bg-black mb-[50vh] p-[2rem]">
+            <div className="mx-auto max-w-5xl">
+              {projects.map((project, index) => (
+                <Link
+                  href={`./projects/${project.title}`}
+                  key={project.title}
+                  passHref
+                >
+                  <NavItem
+                    key={index}
+                    title={project.title}
+                    subTitle={project.subTitle}
+                    imgSrc={project.imgSrc}
+                    href={`/projects/${project.title}`}
+                  />
+                </Link>
+              ))}
+            </div>
+          </div>
         </main>
       </section>
     </>

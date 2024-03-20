@@ -1,2 +1,2 @@
-[[plugins]]
-package = "@netlify/plugin-nextjs"
+href={`/projects/${project.title}`} 
+key={project.title} passHref>
