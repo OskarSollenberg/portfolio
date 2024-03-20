@@ -67,16 +67,14 @@ export default function Projects() {
             <div className="mx-auto max-w-5xl">
               {projects.map((project, index) => (
                 <Link
-                  href={`./projects/${project.href}`}
+                  href={`/pages/projects/${project.href}`}
                   key={project.title}
                   passHref
                 >
                   <NavItem
-                    key={index}
                     title={project.title}
                     subTitle={project.subTitle}
                     imgSrc={project.imgSrc}
-                    href={`/projects/${project.href}`}
                   />
                 </Link>
               ))}
