@@ -71,17 +71,12 @@ export default function Nav() {
             <div className="text-[#f3691f] border-[#FEFCE1] border-b uppercase text-xs mb-10 ">
               <p>This is a navigation</p>
             </div>
-            {navItems.map((project, index) => {
+            {navItems.map((navItem, index) => {
               return (
-                <Link
-                  href="/projects/[project]"
-                  as={`/projects/${project.href}`}
-                  key={index}
-                >
+                <Link href={navItem.href} key={index}>
                   <NavLink
-                    key={index}
-                    data={{ ...project, index }}
-                    isActive={selectedIndicator == project.href}
+                    data={{ ...navItem }}
+                    isActive={selectedIndicator == navItem.href}
                     setSelectedIndicator={setSelectedIndicator}
                   ></NavLink>
                 </Link>
