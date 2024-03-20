@@ -6,7 +6,7 @@ import CountDown from "./CountDown";
 import { AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
 
-export default function SiteNav({ isHomepage }) {
+export default function SiteNav({ isHomepage, black }) {
   const [isActive, setIsActive] = useState(false);
   const pathname = usePathname();
 
@@ -28,7 +28,8 @@ export default function SiteNav({ isHomepage }) {
           onClick={() => {
             setIsActive(!isActive);
           }}
-          className="w-16 h-16 min-w-16 min-h-16 cursor-pointer flex items-center justify-content-center rounded-full bg-[#f3691f]"
+          className={`w-16 h-16 min-w-16 min-h-16 cursor-pointer flex items-center justify-content-center rounded-full 
+		  ${black ? `bg-black` : "bg-[#f3691f]"}`}
         >
           <div
             className={`w-full flex flex-col justify-center items-center ${
