@@ -15,12 +15,9 @@ export default function Project() {
   const params = useParams();
   const [selectedProject, setSelectedProject] = useState(null);
 
-  console.log("params:" + params.project);
-  console.log("Projects:" + projects[0].title);
-
   useEffect(() => {
     const selectedProject = projects.find(
-      (project) => project.title === params.project
+      (project) => project.href === params.project
     );
     setSelectedProject(selectedProject);
   }, []);

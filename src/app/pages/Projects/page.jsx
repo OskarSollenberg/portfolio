@@ -67,7 +67,7 @@ export default function Projects() {
             <div className="mx-auto max-w-5xl">
               {projects.map((project, index) => (
                 <Link
-                  href={`/projects/${project.href}`}
+                  href={`./projects/${project.href}`}
                   key={project.title}
                   passHref
                 >

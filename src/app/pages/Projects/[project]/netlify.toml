@@ -1,2 +1,0 @@
-href={`/projects/${project.title}`} 
-key={project.title} passHref>
