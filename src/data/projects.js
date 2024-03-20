@@ -1,18 +1,34 @@
 export const projects = [
   {
     title: "Hinder",
+    href: "hinder",
     subTitle: "It's a dating app",
     imgSrc: "/medias/hinder1.webp",
     video: "#",
     gihub: "#",
     netlify: "#",
     description:
-      "This is a dating app I created together with 3 others from hyper island have created. It is the first project we did in react.",
-    learnings:
-      "To understand the concept and comonent structure of React. Learning how to use things like routing, hooks, context, tailwind, fetching data using Apis and more.",
+      "Hinder is a dating app alowing users to set up an account or login. Once in the app you wipe left or right on other to like or not to like the profile youre swiping on. You can also see who has liked you and who you have liked.",
+    learnings: [
+      {
+        learning: "lorem",
+      },
+      { learning: "lorem" },
+      {
+        learning: "lorem",
+      },
+      { learning: "lorem" },
+      {
+        learning: "lorem",
+      },
+      {
+        learning: "lorem",
+      },
+    ],
   },
   {
     title: "PetFinder",
+    href: "petfinder",
     subTitle: "Its all about the SEO and Performance!!",
     imgSrc: "/medias/petfinder.png",
     video: "#",
@@ -20,49 +36,103 @@ export const projects = [
     netlify: "#",
     description:
       "PetFinder is a project focusing on SEO, performance and accecibility. This was about a 2 week project me and 3 other students created during one of our modules at Hyper Island.",
-    learnings:
-      "What generates google authority. Understanding how to use best practices for accecibility and performance when writing code. Learning how to perform A/B testing as well as multi-variant as well as using tools such as lighthouse and screaming frog.",
+    learnings: [
+      {
+        learning: "lorem",
+      },
+      { learning: "lorem" },
+      {
+        learning: "lorem",
+      },
+      { learning: "lorem" },
+      {
+        learning: "lorem",
+      },
+      {
+        learning: "lorem",
+      },
+    ],
   },
 
   {
     title: "PencilPaws",
+    href: "pencilpaws",
     subTitle: "Use the apple pencil on an ipad!",
     imgSrc: "/medias/pencil-paws.png",
     video: "#",
     gihub: "#",
     netlify: "#",
-    description: "lorem",
-    learnings: "lorem",
+    description:
+      "A 2-player game where you guess the animal your friend is drawing. The game is played in real time and you can use the apple pencil on an ipad to draw.",
+    learnings: [
+      {
+        learning:
+          "Javascript concepts such as variables, loops, functions, objects and arrays",
+      },
+      { learning: "DOM API to query, modify and create elements" },
+      {
+        learning: "Using event listeners to add interactivity",
+      },
+      { learning: "Using Web Storage API to persist data" },
+      {
+        learning: "Fetch API to get data from a 3rd party",
+      },
+      {
+        learning: "Working with canvas and makinging it work on all devices",
+      },
+    ],
   },
 
   {
     title: "Nordstan",
+    href: "nordstan",
     subTitle: "The most used bus in Gothemburg is bus number 16",
     imgSrc: "/medias/nordstan.png",
     video: "#",
     gihub: "#",
     netlify: "#",
     description: "lorem",
-    learnings: "lorem",
+    learnings: [
+      {
+        learning: "lorem",
+      },
+      { learning: "lorem" },
+      {
+        learning: "lorem",
+      },
+      { learning: "lorem" },
+      {
+        learning: "lorem",
+      },
+      {
+        learning: "lorem",
+      },
+    ],
   },
   {
     title: "Hangman",
+    href: "hangman",
     subTitle: "Creating a classic",
     imgSrc: "/medias/hangman.png",
     video: "#",
     gihub: "#",
     netlify: "#",
     description: "lorem",
-    learnings: "lorem",
-  },
-  {
-    title: "The Egg",
-    subTitle: "Completely useless but fun",
-    imgSrc: "/medias/egg.png",
-    video: "#",
-    gihub: "#",
-    netlify: "#",
-    description: "lorem",
-    learnings: "lorem",
+    learnings: [
+      {
+        learning: "lorem",
+      },
+      { learning: "lorem" },
+      {
+        learning: "lorem",
+      },
+      { learning: "lorem" },
+      {
+        learning: "lorem",
+      },
+      {
+        learning: "lorem",
+      },
+    ],
   },
 ];

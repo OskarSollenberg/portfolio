@@ -19,7 +19,7 @@ export default function MyProjects() {
               title={project.title}
               subTitle={project.subTitle}
               imgSrc={project.imgSrc}
-              href={`./projects/${project.title}`}
+              href={`/projects/${project.title}`}
             />
           </Link>
         ))}

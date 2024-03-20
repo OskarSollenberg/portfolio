@@ -44,27 +44,29 @@ export default function Project() {
     <section>
       <SiteNav isHomepage={false} />
       <div className="grid items-center justify-center lg:grid-cols-2 w-screen h-screen text-center lg:text-start">
-        <div className="absolute top-[2rem] left-[2rem] text-[1rem]  bg-black text-white p-2 rounded-lg hover:scale-110 transition-all duration-200 hover:bg-[#F3691F] hover:text-black active:scale-90 cursor-pointer">
+        <div className="absolute z-[500] top-[2rem] left-[2rem] text-[1rem]  bg-black text-white p-2 rounded-lg  transition-all hover:scale-125 duration-200 hover:bg-[#F3691F] hover:text-black cursor-pointer">
           <Link href="/pages/projects">
-            <div className="flex justify-center items-center gap-2" href="">
-              <RiArrowGoBackFill />
-            </div>
+            <RiArrowGoBackFill />
           </Link>
         </div>
 
         <div className=" w-full text-black h-full flex justify-center items-center p-10 ">
           <div className="p-4 md:p-8 flex flex-col gap-[4rem]">
             <div>
-              <h2 className="text-2xl font-bold md:text-4xl lg:text-5xl">
+              <h2 className="text-3xl font-bold md:text-4xl lg:text-5xl">
                 {title}
               </h2>
               <p className="mt-4  text-base lg:text-lg">{description}</p>
             </div>
             <div>
-              <h2 className="text-1xl font-bold md:text-2xl">
+              <h2 className="text-2xl font-bold md:text-2xl">
                 Biggest learnings
               </h2>
-              <p className="mt-4  text-base lg:text-lg">{learnings}</p>
+              <ul className="flex flex-col gap-4 lg:gap-1 underline underline-offset-[.3rem] lg:no-underline mt-4 text-sm lg:list-disc translate-x-0">
+                {learnings.map((learningObj, index) => (
+                  <li key={index}>{learningObj.learning}</li>
+                ))}
+              </ul>
             </div>
             <div className="flex justify-center lg:justify-start items-start gap-[8rem] ">
               <div className="flex group flex-col gap-4 justify-center items-center">
