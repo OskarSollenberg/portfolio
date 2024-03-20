@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "lint": "next lint",
+    "dev": "next",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "start": "next start"
   },
   "dependencies": {
     "@react-three/drei": "^9.99.4",
@@ -22,6 +22,7 @@
     "sass": "^1.71.1"
   },
   "devDependencies": {
+    "@netlify/plugin-nextjs": "^4.41.3",
     "autoprefixer": "^10.4.17",
     "eslint": "^8",
     "eslint-config-next": "14.0.4",

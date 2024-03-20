@@ -73,7 +73,11 @@ export default function Nav() {
             </div>
             {navItems.map((project, index) => {
               return (
-                <Link href={project.href} key={index}>
+                <Link
+                  href="/projects/[project]"
+                  as={`/projects/${project.href}`}
+                  key={index}
+                >
                   <NavLink
                     key={index}
                     data={{ ...project, index }}
