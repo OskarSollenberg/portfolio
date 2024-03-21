@@ -10,6 +10,7 @@ import { projects } from "@/src/data/projects";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Project() {
   const params = useParams();
@@ -20,7 +21,7 @@ export default function Project() {
       (project) => project.href === params.project
     );
     setSelectedProject(selectedProject);
-  }, []);
+  }, [params.project]);
 
   if (!selectedProject) {
     return <div></div>;
@@ -91,10 +92,12 @@ export default function Project() {
         </div>
         <div className="bg-[#fefce1] mb-[10rem] lg:mb-0 flex justify-center items-center p-10">
           <div className="h-full">
-            <img
+            <Image
               className="h-full object-cover min-h-[30rem]"
               src={imgSrc}
               alt=""
+              width={1000}
+              height={1000}
             />
             {/* <video
               src={imgSrc}

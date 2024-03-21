@@ -10,10 +10,16 @@ import { usePathname } from "next/navigation";
 export default function SiteNav({ isHomepage, black }) {
   const [isActive, setIsActive] = useState(false);
   const pathname = usePathname();
+  const [lastPathname, setLastPathname] = useState(null);
 
-  useEffect(() => {
-    if (isActive) setIsActive(false);
-  }, [pathname]);
+  const handleClick = () => {
+    if (pathname !== lastPathname) {
+      setIsActive(false);
+      setLastPathname(pathname);
+    } else {
+      setIsActive(!isActive);
+    }
+  };
 
   return (
     <>
@@ -26,9 +32,7 @@ export default function SiteNav({ isHomepage, black }) {
 		`}
       >
         <div
-          onClick={() => {
-            setIsActive(!isActive);
-          }}
+          onClick={handleClick}
           className={`w-16 h-16 min-w-16 min-h-16 cursor-pointer flex items-center justify-content-center rounded-full 
 		  ${black ? `bg-black` : "bg-[#f3691f]"}`}
         >
