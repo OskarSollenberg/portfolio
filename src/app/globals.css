@@ -35,18 +35,19 @@ html {
 }
 
 body {
-  /* background-color: #2f3537; */
+  /* background-color: #03232d9c; */
   /* background-color: #a9cbce; */
   /* background-color: #f3691f; */
   /* background-color: #5ea163; */
   /* background-color: #ffa04d; */
   /* background: #15151e; */
-  /* background: #232332; */
   background: #fefce1;
   /* background: #fdf9ef; */
   /* background: #e43b13; */
   /* background: #ff4613; */
   /* background: #ff4400; */
+  /* background: #232332; */
+  /* background-color: black; */
 
   padding-top: env(safe-area-inset-top, 20px);
   padding-right: env(safe-area-inset-right, 1em);

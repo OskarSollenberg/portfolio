@@ -1,9 +1,7 @@
 import React from "react";
 import { animated } from "react-spring";
 import { Text as DreiText } from "@react-three/drei";
-
 const FONT_PATH = "/fonts/PPNeueMontreal-Bold.otf";
-
 const AnimatedText = animated(DreiText);
 
 export default function AnimatedTextComponent({

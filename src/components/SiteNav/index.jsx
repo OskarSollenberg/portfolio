@@ -1,4 +1,5 @@
 "use client";
+
 import { useEffect, useState } from "react";
 import Nav from "./Nav";
 import CountDown from "./CountDown";
@@ -54,7 +55,6 @@ export default function SiteNav({ isHomepage, black }) {
           </div>
         )}
       </div>
-
       <AnimatePresence mode="wait">{isActive && <Nav />}</AnimatePresence>
     </>
   );

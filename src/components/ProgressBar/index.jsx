@@ -5,29 +5,6 @@ import { gsap } from "gsap";
 export default function ProgressBarComp({ isHomePage }) {
   const [scrollPosition, setScrollPosition] = useState(0);
   const progressBar = useRef(null);
-  const [color, setColor] = useState("black");
-
-  useEffect(() => {
-    if (isHomePage) {
-      gsap.fromTo(
-        progressBar.current,
-        {
-          width: "0%",
-          backgroundColor: color,
-        },
-        {
-          width: "100%",
-          duration: 3,
-          onComplete: () => {
-            gsap.set(progressBar.current, {
-              width: "0%",
-              backgroundColor: "#e43b13",
-            });
-          },
-        }
-      );
-    }
-  }, [isHomePage]);
 
   useEffect(() => {
     const updateScrollPosition = () => {
@@ -48,11 +25,11 @@ export default function ProgressBarComp({ isHomePage }) {
   return (
     <>
       <div
-        className={`bottom-0 left-0 h-2 bg-[transparent] w-full fixed z-[1000] `}
+        className={`bottom-0 left-0 h-2 bg-[transparent] w-full fixed z-[5000] `}
       >
         <div
           ref={progressBar}
-          className={`rounded-xl h-full bg-[${color}]}`}
+          className={`rounded-xl h-full w-0 bg-[#F3691F]`}
         ></div>
       </div>
     </>

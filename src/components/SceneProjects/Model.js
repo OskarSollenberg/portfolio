@@ -7,18 +7,6 @@ import useLoading from "@/src/hooks/useLoading";
 export default function Model() {
   const { viewport } = useThree();
   const isLoading = useLoading();
-  const [isHovered, setIsHovered] = useState(true);
-
-  const handleHover = (newHoverState, text) => {
-    if (isLoading || (text !== "SKAR" && text !== "Herman")) return;
-    setIsHovered(newHoverState);
-  };
-
-  useEffect(() => {
-    if (isLoading) return;
-    setIsHovered(false);
-  }, [isLoading]);
-
   const scale =
     window.innerWidth < 600
       ? viewport.width / 2.8
@@ -26,21 +14,18 @@ export default function Model() {
       ? viewport.width / 3
       : viewport.width / 3.5;
 
-  const isSmallScreen = window.innerWidth < 1000;
-
   const texts = [
     { text: "PR  JECTS", fontSize: 0.4, position: [0, 0, 0], visible: true },
   ];
 
   return (
     <group scale={scale}>
-      <AnimatedCircleComponent isHovered={!isHovered} />
+      <AnimatedCircleComponent />
       {texts.map(({ text, fontSize, position, visible }, index) => (
         <AnimatedTextComponent
           key={index}
-          visible={visible ? !isHovered : isHovered}
+          visible={visible}
           handleHover={(newHoverState) => handleHover(newHoverState, text)}
-          isHovered={!isHovered}
           text={isLoading ? "" : text}
           fontSize={fontSize}
           position={position}

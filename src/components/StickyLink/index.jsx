@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useRef, useState } from "react";
 import { MdOutlineArrowUpward } from "react-icons/md";
 
-const ConnectWithMe = ({ icon, color, size, type }) => {
+const StickyLink = ({ icon, color, size, type }) => {
   return (
     <div className="flex w-auto justify-end ">
       <MagnetButton icon={icon} color={color} size={size} type={type} />
@@ -87,4 +87,4 @@ const MagnetButton = ({ icon, color, size, type }) => {
   );
 };
 
-export default ConnectWithMe;
+export default StickyLink;

@@ -1,8 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-import ProgressBarComp from "@/src/components/ProgressBarComp";
-import ConnectWithMe from "../components/ConnectWithMe";
-import MainNav from "../components/MainNav";
+import ProgressBar from "@/src/components/ProgressBar";
+import TopNav from "../components/TopNav";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,8 +16,8 @@ export default function RootLayout({ children }) {
       <body className={` ${inter.className}`}>
         <div className="flex justify-center items-center">
           {children}
-          <MainNav />
-          {/* <ProgressBarComp isHomePage={true} /> */}
+          <TopNav />
+          <ProgressBar />
         </div>
       </body>
     </html>

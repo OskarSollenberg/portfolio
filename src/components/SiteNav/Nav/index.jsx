@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
-import ConnectWithMe from "../../ConnectWithMe";
+import StickyLink from "../../StickyLink";
 import { TiSocialLinkedinCircular } from "react-icons/ti";
 
 import NavLink from "./NavLink";
@@ -44,7 +44,7 @@ export default function Nav() {
   return (
     <>
       <div className="absolute top-0 right-0 z-[400] mt-[4rem] mr-[4rem] md:mt-[5.5rem] md:mr-[5.5rem] ">
-        <ConnectWithMe
+        <StickyLink
           icon={<TiSocialLinkedinCircular />}
           color={"#f3691f"}
           size={50}

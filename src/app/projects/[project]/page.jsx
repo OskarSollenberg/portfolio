@@ -3,7 +3,7 @@ import { FaGithub } from "react-icons/fa";
 import { BiLogoNetlify } from "react-icons/bi";
 import { RiArrowGoBackFill } from "react-icons/ri";
 
-import ConnectWithMe from "@/src/components/ConnectWithMe";
+import StickyLink from "@/src/components/StickyLink";
 import SiteNav from "@/src/components/SiteNav";
 import { projects } from "@/src/data/projects";
 
@@ -42,7 +42,7 @@ export default function Project() {
       <SiteNav isHomepage={false} />
       <div className="grid items-center justify-center lg:grid-cols-2 w-screen h-screen text-center lg:text-start">
         <div className="absolute z-[500] top-[2rem] left-[2rem] text-[1rem]  bg-black text-white p-2 rounded-lg  transition-all hover:scale-125 duration-200 hover:bg-[#F3691F] hover:text-black cursor-pointer">
-          <Link href="/pages/projects">
+          <Link href="/projects">
             <RiArrowGoBackFill />
           </Link>
         </div>
@@ -67,7 +67,7 @@ export default function Project() {
             </div>
             <div className="flex justify-center lg:justify-start items-start gap-[8rem] ">
               <div className="flex group flex-col gap-4 justify-center items-center">
-                <ConnectWithMe
+                <StickyLink
                   color={"#000"}
                   icon={<FaGithub />}
                   size={50}
@@ -76,7 +76,7 @@ export default function Project() {
                 <p className="group-hover:opacity-0 text-[12px]">VIEW CODE</p>
               </div>
               <div className="flex group flex-col gap-4 justify-center items-center">
-                <ConnectWithMe
+                <StickyLink
                   color={"#000"}
                   icon={<BiLogoNetlify />}
                   size={50}

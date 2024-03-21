@@ -1,10 +1,4 @@
-"use client";
-
-import React, { useState, useEffect } from "react";
-import { gsap } from "gsap";
-import { GiHamburgerMenu } from "react-icons/gi";
-
-export default function MainNav() {
+export default function TopNav() {
   const clr = "rgba(105, 105, 105, 0.183)";
   const links = [
     {

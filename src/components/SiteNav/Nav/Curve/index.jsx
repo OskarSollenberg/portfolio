@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 
 export default function Curve() {
@@ -23,8 +22,6 @@ export default function Curve() {
     },
   };
 
-  // #292929
-  // #f3691f
   return (
     <svg
       className={`absolute top-0 -left-[99px] w-[100px] h-full fill-[#292929] stroke-none`}
