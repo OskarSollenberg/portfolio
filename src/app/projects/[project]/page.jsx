@@ -3,7 +3,7 @@ import { FaGithub } from "react-icons/fa";
 import { BiLogoNetlify } from "react-icons/bi";
 import { RiArrowGoBackFill } from "react-icons/ri";
 
-import ConnectWithMe from "../../../../components/ConnectWithMe";
+import ConnectWithMe from "@/src/components/ConnectWithMe";
 import SiteNav from "@/src/components/SiteNav";
 import { projects } from "@/src/data/projects";
 

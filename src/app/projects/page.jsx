@@ -66,11 +66,7 @@ export default function Projects() {
           <div className="bg-black mb-[50vh] p-[2rem]">
             <div className="mx-auto max-w-5xl">
               {projects.map((project, index) => (
-                <Link
-                  href={`/pages/projects/${project.href}`}
-                  key={project.title}
-                  passHref
-                >
+                <Link href={`/projects/${project.href}`} key={project.title}>
                   <NavItem
                     title={project.title}
                     subTitle={project.subTitle}
