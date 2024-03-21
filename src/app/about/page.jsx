@@ -28,6 +28,8 @@ export default function Projects({ color }) {
     });
   }, []);
 
+  //   comment
+
   return (
     <>
       <SiteNav isHomepage={false} black={true} />
