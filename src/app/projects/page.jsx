@@ -12,7 +12,7 @@ export default function Projects() {
       <section
         className="w-screen mx-auto overflow-hidden transition-colors duration-700 ease-in-out"
         style={{
-          fontFamily: "Grotesk",
+          fontFamily: "Montreal",
         }}
       >
         <main>

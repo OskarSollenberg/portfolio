@@ -37,12 +37,12 @@ export default function Projects({ color }) {
       <div className=" translate z-50">
         <SceneAbout />
       </div>
-      <main className="absolute w-screen h-screen top-0 bg-[#FEFCE1]">
+      <main className="absolute w-screen h-screen top-0 text-white">
         <div
           ref={imageRef}
           className="w-screen h-screen opacity-60 bg-no-repeat bg-cover bg-left lg:bg-center"
           style={{
-            fontFamily: "montreal",
+            fontFamily: "Montreal",
             backgroundImage: `url("/medias/studio.jpg")`,
           }}
         ></div>
