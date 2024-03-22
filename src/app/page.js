@@ -9,7 +9,7 @@ const SceneHome = dynamic(() => import("@/src/components/SceneHome"), {
 
 export default function Home() {
   return (
-    <main className="w-screen  h-full overflow-hidden ">
+    <main className="w-screen  h-full overflow-hidden">
       <SceneHome />
       <SiteNav isHomepage={true} />
     </main>

@@ -8,16 +8,6 @@
 }
 
 @font-face {
-  font-family: "Migha";
-  src: url("/fonts/Migha-BlackCondensedCNTR.otf") format("opentype");
-}
-
-@font-face {
-  font-family: "Class";
-  src: url("/fonts/Class-357-Regular.ttf") format("truetype");
-}
-
-@font-face {
   font-family: "Akhbar";
   src: url("/fonts/AkhbarBold.ttf") format("truetype");
 }
@@ -25,6 +15,10 @@
 @font-face {
   font-family: "Mortend";
   src: url("/fonts/Mortend-Extra-Bold.otf") format("opentype");
+}
+@font-face {
+  font-family: "Grotesk";
+  src: url("/FamiljenGrotesk-SemiBold.otf") format("opentype");
 }
 
 html {
@@ -46,7 +40,7 @@ body {
   /* background: #e43b13; */
   /* background: #ff4613; */
   /* background: #ff4400; */
-  /* background: #232332; */
+  background: #232332;
   /* background-color: black; */
 
   padding-top: env(safe-area-inset-top, 20px);

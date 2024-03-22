@@ -2,11 +2,9 @@
 import { FaGithub } from "react-icons/fa";
 import { BiLogoNetlify } from "react-icons/bi";
 import { RiArrowGoBackFill } from "react-icons/ri";
-
 import StickyLink from "@/src/components/StickyLink";
 import SiteNav from "@/src/components/SiteNav";
 import { projects } from "@/src/data/projects";
-
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import Link from "next/link";

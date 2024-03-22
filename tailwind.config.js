@@ -8,6 +8,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        white: "#fefce1",
+      },
       animation: {
         slide: "slide 4s forwards",
       },

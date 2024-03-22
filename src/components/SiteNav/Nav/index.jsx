@@ -3,30 +3,11 @@ import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import StickyLink from "../../StickyLink";
 import { TiSocialLinkedinCircular } from "react-icons/ti";
-
 import NavLink from "./NavLink";
 import Curve from "./Curve";
 import Link from "next/link";
+import { navItems } from "@/src/data/navItems";
 // import NavFooter from "./NavFooter";
-
-const navItems = [
-  {
-    title: "Home",
-    href: "/",
-  },
-  {
-    title: "Projects",
-    href: "/projects",
-  },
-  {
-    title: "About",
-    href: "/about",
-  },
-  //   {
-  //     title: "Contact",
-  //     href: "/pages/contact",
-  //   },
-];
 
 export const menuSlide = {
   initial: { x: "calc(100% + 100px)" },
