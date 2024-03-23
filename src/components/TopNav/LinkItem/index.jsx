@@ -8,11 +8,11 @@ export default function index({ link, title, activeLink, setActiveLink }) {
     <div>
       <Link
         href={link}
-        className={`border-r-[2px] active:scale-[90%] border-[black] px-[6px] cursor-pointer transition-all duration-100 hover:-translate-y-[2px]
+        className={`border-r-[2px] active:scale-[90%]  px-[6px] cursor-pointer transition-all duration-100 hover-bg-[#f3691f] hover:text-[#f3691f] 
 		${
       link === pathname
-        ? "text-[#f3691f] group-hover:border-[#f3691f]"
-        : "text-[#fefce1]"
+        ? "text-[#f3691f]  border-[black] line-through "
+        : "text-[black] opacity-100 border-none underline-none "
     }`}
       >
         {title}

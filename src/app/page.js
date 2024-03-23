@@ -9,9 +9,18 @@ const SceneHome = dynamic(() => import("@/src/components/SceneHome"), {
 
 export default function Home() {
   return (
-    <main className="w-screen  h-full overflow-hidden">
-      <SceneHome />
-      <SiteNav isHomepage={true} />
+    <main className="w-screen h-full overflow-hidden">
+      <div
+        style={
+          {
+            //   backgroundImage: `url("/medias/frilagd.png")`,
+          }
+        }
+        className=" w-screen h-screen bg-no-repeat relative"
+      >
+        <SceneHome />
+        <SiteNav isHomepage={true} />
+      </div>
     </main>
   );
 }

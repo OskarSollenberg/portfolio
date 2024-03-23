@@ -37,7 +37,7 @@ export default function Projects({ color }) {
       <div className=" translate z-50">
         <SceneAbout />
       </div>
-      <main className="absolute w-screen h-screen top-0 text-white">
+      <main className="absolute w-screen h-screen top-0 text-black">
         <div
           ref={imageRef}
           className="w-screen h-screen opacity-60 bg-no-repeat bg-cover bg-left lg:bg-center"

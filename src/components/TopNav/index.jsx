@@ -11,10 +11,13 @@ export default function TopNav() {
   return (
     <>
       <div
-        className={`text-sm w-screen justify-end transition-transform fixed right-0 top-0 flex gap-2 p-[6px] duration-300 ease-in-out scale-[80%] origin-top-right  hover:scale-[110%] group cursor-pointer text-white z-[4000]`}
+        style={{
+          fontFamily: "Montreal",
+        }}
+        className={`text-sm w-screen justify-end transition-transform fixed right-0 top-0 flex gap-2 p-[6px] duration-300 ease-in-out scale-[80%] origin-top-right  hover:scale-[110%] group cursor-pointer z-[4000]`}
       >
         <div
-          className={`p-[1rem] opacity-50 px-[1.3rem] transformO flex items-center justify-center origin-left  rounded-md gap-10 transition-all duration-200 hover:opacity-100  `}
+          className={`p-[1rem] px-[1.3rem] flex items-center justify-center origin-left gap-10 transition-all duration-200 hover:opacity-100`}
         >
           {navItems.map((navItem, index) => {
             return (

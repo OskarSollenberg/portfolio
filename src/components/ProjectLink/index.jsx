@@ -7,7 +7,7 @@ const ProjectLink = ({ title, imgSrc, subTitle }) => {
     <div className="group">
       <motion.div
         initial="initial"
-        className=" relative flex flex-col items-center justify-center text-[#F3691F] sm:justify-between gap-8 text-center sm:text-start sm:flex-row border-b-2 border-[#FEFCE1] bg-[#f3691f1d] rounded-md mb-[2rem] p-[4rem] py-[4rem] transition-colors duration-500 hover:border-[#F3691F] hover:bg-[#f3691f] border-2 md:py-8 "
+        className=" relative flex flex-col items-center justify-center text-[#F3691F] sm:justify-between gap-8 text-center sm:text-start sm:flex-row border-b-2 border-[#FEFCE1] bg-[#f3691f1d]  mb-[2rem] p-[4rem] py-[4rem] transition-colors duration-500 hover:border-[#F3691F] hover:bg-[#f3691f] border-2 md:py-8 "
       >
         <div>
           <motion.span

@@ -10,7 +10,7 @@ export default function Projects() {
     <>
       <SiteNav isHomepage={false} />
       <section
-        className="w-screen mx-auto overflow-hidden transition-colors duration-700 ease-in-out"
+        className="w-screen mx-auto overflow-hidden transition-colors duration-700 ease-in-out "
         style={{
           fontFamily: "Montreal",
         }}
@@ -18,8 +18,8 @@ export default function Projects() {
         <main>
           <SceneProjects />
           <div className="flex items-start justify-center w-screen h-screen ">
-            <p className=" w-screen rounded-[1rem] p-[2rem] lg:p-[4rem] text-[1.5rem] md:text-3xl lg:text-3xl max-w-[85vw] md:max-w-[65vw] text-center lg:leading-[3rem] text-white">
-              {` Here is a showcase of my learning jurney through out my time at `}
+            <p className=" w-screen rounded-[1rem] p-[2rem] lg:p-[4rem] text-[1.5rem] md:text-3xl lg:text-3xl max-w-[85vw] md:max-w-[65vw] text-center lg:leading-[3rem] text-black ">
+              {` Here is a showcase of my learning journey through out my time at `}
               <span className="text-[#f3691f]">{`Hyper Island`}</span>
               {`.`}
 

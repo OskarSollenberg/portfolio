@@ -40,7 +40,7 @@ export default function Project() {
     <section>
       <SiteNav isHomepage={false} />
       <div className="grid items-center justify-center lg:grid-cols-2 w-screen h-screen text-center lg:text-start">
-        <div className="absolute z-[500] top-[2rem] left-[2rem] text-[1rem]  bg-black text-white p-2 rounded-lg  transition-all hover:scale-125 duration-200 hover:bg-[#F3691F] hover:text-black cursor-pointer">
+        <div className="absolute z-[500]  top-[2rem] left-[2rem] text-[1rem] bg-white p-2 rounded-lg  transition-all hover:scale-125 duration-200 hover:bg-[#F3691F] hover:text-black cursor-pointer">
           <Link href="/projects">
             <RiArrowGoBackFill />
           </Link>
