@@ -1,13 +1,7 @@
-"use client";
 import { navItems } from "@/src/data/navItems";
 import LinkItem from "./LinkItem";
-import { useState } from "react";
 
 export default function TopNav() {
-  //   const clr = "rgba(105, 105, 105, 0.183)";
-
-  const [activeLink, setActiveLink] = useState("/");
-
   return (
     <>
       <div
@@ -21,13 +15,7 @@ export default function TopNav() {
         >
           {navItems.map((navItem, index) => {
             return (
-              <LinkItem
-                activeLink={activeLink}
-                setActiveLink={setActiveLink}
-                title={navItem.title}
-                key={index}
-                link={navItem.href}
-              />
+              <LinkItem title={navItem.title} key={index} link={navItem.href} />
             );
           })}
         </div>
