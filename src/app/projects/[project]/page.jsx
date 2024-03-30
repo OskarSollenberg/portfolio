@@ -32,7 +32,7 @@ export default function Project() {
     video,
     description,
     learnings,
-    gihub,
+    github,
     netlify,
   } = selectedProject;
 
@@ -51,39 +51,47 @@ export default function Project() {
               <h2 className="text-3xl font-bold md:text-4xl lg:text-5xl">
                 {title}
               </h2>
-              <p className="mt-4  text-base lg:text-lg">{description}</p>
+              <p className="mt-4 text-base lg:text-lg">{description}</p>
             </div>
-            <div>
+            <div className="flex flex-col gap-2">
               <h2 className="text-2xl font-bold md:text-2xl">
                 Biggest learnings
               </h2>
-              <ul className="flex flex-col gap-4 lg:gap-1 underline underline-offset-[.3rem] lg:no-underline mt-4 text-sm lg:list-disc translate-x-0">
+              <ul className="flex flex-col gap-4 lg:gap-1 text-sm lg:list-disc translate-x-0">
                 {learnings.map((learningObj, index) => (
                   <li key={index}>{learningObj.learning}</li>
                 ))}
               </ul>
             </div>
             <div className="flex justify-center lg:justify-start items-start gap-[8rem] ">
-              <div className="flex group flex-col gap-4 justify-center items-center">
+              <a
+                href={github}
+                className="flex group flex-col gap-4 justify-center items-center"
+              >
                 <StickyLink
                   color={"#000"}
                   icon={<FaGithub />}
                   size={50}
                   type={"github"}
                 />
+
                 <p className="group-hover:opacity-0 text-[12px]">VIEW CODE</p>
-              </div>
-              <div className="flex group flex-col gap-4 justify-center items-center">
+              </a>
+              <a
+                href={netlify}
+                className="flex group flex-col gap-4 justify-center items-center"
+              >
                 <StickyLink
                   color={"#000"}
                   icon={<BiLogoNetlify />}
                   size={50}
                   type={"netlify"}
                 />
+
                 <p className="group-hover:opacity-0 text-[12px]">
                   LAUNCH WEBSITE
                 </p>
-              </div>
+              </a>
             </div>
           </div>
         </div>
