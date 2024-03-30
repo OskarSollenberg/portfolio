@@ -28,6 +28,9 @@ html {
   padding: 0px;
 }
 
+* {
+}
+
 body {
   /* background-color: #03232d9c; */
   /* background-color: #a9cbce; */
@@ -46,6 +49,13 @@ body {
   /* background-color: #e3e4dd; */
   /* background-color: #ffacdf; */
   /* background-color: #1e1e1e; */
+
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
 
   padding-top: env(safe-area-inset-top, 20px);
   padding-right: env(safe-area-inset-right, 1em);

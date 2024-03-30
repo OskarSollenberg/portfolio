@@ -3,23 +3,32 @@ export const projects = [
     title: "Hinder",
     href: "hinder",
     subTitle: "It's a dating app",
-    imgSrc: "/medias/hinder1.webp",
+    imgSrc: "/medias/hinder.webp",
     video: "/medias/hinder.webm",
     github: "https://github.com/OskarSollenberg/Hinder",
     netlify: "https://portfolio-oskar-new--hinderr.netlify.app",
     description:
-      "We have developed a dating application that enables you to set up a profile, browse through other profiles by swiping, and form a match when both parties express mutual interest. This app features account creation, along with the flexibility to log out and log back in, utilizing local storage to mimic the functionality of a database.",
+      "A dating app that enables you to set up a profile, browse through other profiles by swiping, and match with others. This app features account creation, along with the flexibility to log out and log back in, utilizing local storage to mimic the functionality of a database.",
     learnings: [
       {
         learning:
-          "Understanding how to create a React application with dynamic, interactive user interfaces",
+          "How to create a React-application with dynamic, interactive user interfaces.",
       },
       {
         learning:
-          "Getting a better understanding of component state and props, including using hooks to control component behavior.",
+          "Better understanding of component state and props and hooks.",
       },
       {
         learning: "Learning more about Fetching data using APIs",
+      },
+      {
+        learning: "Understanding how to set up and use Context",
+      },
+      {
+        learning: "Client side Registration, Authorisation & Authentication",
+      },
+      {
+        learning: "Learning how to use local storage",
       },
     ],
   },

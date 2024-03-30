@@ -2,7 +2,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import { gsap } from "gsap";
 
-export default function ProgressBarComp({ isHomePage }) {
+export default function ProgressBar({ isHomePage }) {
   const [scrollPosition, setScrollPosition] = useState(0);
   const progressBar = useRef(null);
 
@@ -11,7 +11,6 @@ export default function ProgressBarComp({ isHomePage }) {
       const scrollY = window.scrollY;
       const fullHeight = document.body.scrollHeight - window.innerHeight;
       const scrollPercent = scrollY / fullHeight;
-      setScrollPosition(scrollY);
       gsap.to(progressBar.current, { width: `${scrollPercent * 100}%` });
     };
 

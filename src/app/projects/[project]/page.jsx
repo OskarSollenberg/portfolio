@@ -3,7 +3,6 @@ import { FaGithub } from "react-icons/fa";
 import { BiLogoNetlify } from "react-icons/bi";
 import { RiArrowGoBackFill } from "react-icons/ri";
 import StickyLink from "@/src/components/StickyLink";
-import SiteNav from "@/src/components/SiteNav";
 import { projects } from "@/src/data/projects";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -37,36 +36,38 @@ export default function Project() {
   } = selectedProject;
 
   return (
-    <section>
-      <div className="grid items-center justify-center lg:grid-cols-2 w-screen h-screen text-center lg:text-start">
-        <div className="absolute z-[500]  top-[2rem] left-[2rem] text-[1rem] bg-white p-2 rounded-lg  transition-all hover:scale-125 duration-200 hover:bg-[#F3691F] hover:text-black cursor-pointer">
-          <Link href="/projects">
-            <RiArrowGoBackFill />
-          </Link>
-        </div>
+    <section className="block w-screen h-screen lg:flex justify-center items-center ">
+      <div className="absolute z-[500] top-[2rem] left-[2rem] text-[1rem] hover:bg-[#F3691F] rounded-lg  transition-all hover:scale-125 duration-200 bg-black text-white hover:text-black cursor-pointer p-2 ">
+        <Link href="/projects">
+          <RiArrowGoBackFill />
+        </Link>
+      </div>
 
-        <div className=" w-full text-black h-full flex justify-center items-center p-10 ">
-          <div className="p-4 md:p-8 flex flex-col gap-[4rem]">
-            <div>
+      <div className="flex mt-[4rem] flex-col-reverse lg:grid items-center justify-center lg:grid-cols-2 text-center lg:text-start">
+        <div className="w-full h-full text-black flex justify-center items-center md:px-10 sm:mt-0 md:mt-0">
+          <div className=" flex flex-col gap-[2.5rem]">
+            <div className="px-[1rem]">
               <h2 className="text-3xl font-bold md:text-4xl lg:text-5xl">
                 {title}
               </h2>
-              <p className="mt-4 text-base lg:text-lg">{description}</p>
+              <p className="mt-4 text-[.9rem] w-full leading-[1.5rem]">
+                {description}
+              </p>
             </div>
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-4 px-[1rem] h-full">
               <h2 className="text-2xl font-bold md:text-2xl">
                 Biggest learnings
               </h2>
-              <ul className="flex flex-col gap-4 lg:gap-1 text-sm lg:list-disc translate-x-0">
-                {learnings.map((learningObj, index) => (
-                  <li key={index}>{learningObj.learning}</li>
+              <ul className="flex flex-col gap-4 lg:gap-1 text-[.8rem] lg:text-[.9rem] italic translate-x-0">
+                {learnings.map((project, index) => (
+                  <li key={index}> - {project.learning}</li>
                 ))}
               </ul>
             </div>
-            <div className="flex justify-center lg:justify-start items-start gap-[8rem] ">
+            <div className="flex justify-center gap-[8rem] mb-[3rem] mt-[2rem] ">
               <a
                 href={github}
-                className="flex group flex-col gap-4 justify-center items-center"
+                className="flex group flex-col gap-4 justify-center items-center ml-[3rem] sm:ml-0"
               >
                 <StickyLink
                   color={"#000"}
@@ -79,7 +80,7 @@ export default function Project() {
               </a>
               <a
                 href={netlify}
-                className="flex group flex-col gap-4 justify-center items-center"
+                className="flex group flex-col gap-4 justify-center items-center mr-[3rem] sm:mr-0"
               >
                 <StickyLink
                   color={"#000"}
@@ -95,24 +96,15 @@ export default function Project() {
             </div>
           </div>
         </div>
-        <div className="bg-[#fefce1] mb-[10rem] lg:mb-0 flex justify-center items-center p-10">
-          <div className="h-full">
-            {/* <Image
-              className="h-full object-cover min-h-[30rem]"
-              src={imgSrc}
-              alt=""
-              width={1000}
-              height={1000}
-            /> */}
-            <video
-              src={video}
-              type="video/webm"
-              loop
-              autoPlay
-              muted
-              className="h-full min-h-[30rem]"
-            ></video>
-          </div>
+        <div className="flex justify-center items-center lg:p-8 h-full ">
+          <video
+            src={video}
+            type="video/webm"
+            loop
+            autoPlay
+            muted
+            className="mb-[3rem] lg:mb-0 mt-[5rem] lg:mt-0 max-w-[80vw] lg:max-w-full "
+          ></video>
         </div>
       </div>
     </section>

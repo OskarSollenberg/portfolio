@@ -6,7 +6,7 @@ import CountDown from "./CountDown";
 import { AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
 
-export default function SiteNav({ isHomepage, black }) {
+export default function SiteNav({ isHomepage }) {
   const [isActive, setIsActive] = useState(false);
   const pathname = usePathname();
   const [lastPathname, setLastPathname] = useState(null);
@@ -21,19 +21,18 @@ export default function SiteNav({ isHomepage, black }) {
   };
 
   return (
-    <>
+    <div>
       <div
         style={{
           fontFamily: "Montreal",
         }}
-        className={`fixed flex items-center rounded-lg justify-start gap-[1rem] -translate-x-[50%] md:translate-x-0 left-[50%]  md:left-[4rem] bottom-[2rem] text-[#FDF9EF] text-sm transition-all duration-300 ease-in-out z-[4000] p-[6px]
+        className={`fixed flex items-center rounded-lg justify-start gap-[1rem] -translate-x-[50%] md:translate-x-0 left-[50%]  md:left-[4rem] bottom-[2rem] text-[#FDF9EF] text-sm transition-all duration-300 ease-in-out z-[5000] p-[6px]
 		${isActive ? "w-[4rem] " : "w-[4rem] md:w-auto"}
 		`}
       >
         <div
           onClick={handleClick}
-          className={`w-16 h-16 min-w-16 min-h-16 cursor-pointer flex items-center justify-content-center rounded-full 
-		  ${black ? `bg-black` : "bg-[#f3691f]"}`}
+          className={`w-16 h-16 min-w-16 min-h-16 cursor-pointer flex items-center justify-content-center rounded-full bg-[#f3691f]`}
         >
           <div
             className={`w-full flex flex-col justify-center items-center ${
@@ -59,6 +58,6 @@ export default function SiteNav({ isHomepage, black }) {
         )}
       </div>
       <AnimatePresence mode="wait">{isActive && <Nav />}</AnimatePresence>
-    </>
+    </div>
   );
 }
