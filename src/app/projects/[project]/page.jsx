@@ -38,7 +38,6 @@ export default function Project() {
 
   return (
     <section>
-      <SiteNav isHomepage={false} />
       <div className="grid items-center justify-center lg:grid-cols-2 w-screen h-screen text-center lg:text-start">
         <div className="absolute z-[500]  top-[2rem] left-[2rem] text-[1rem] bg-white p-2 rounded-lg  transition-all hover:scale-125 duration-200 hover:bg-[#F3691F] hover:text-black cursor-pointer">
           <Link href="/projects">
@@ -90,19 +89,21 @@ export default function Project() {
         </div>
         <div className="bg-[#fefce1] mb-[10rem] lg:mb-0 flex justify-center items-center p-10">
           <div className="h-full">
-            <Image
+            {/* <Image
               className="h-full object-cover min-h-[30rem]"
               src={imgSrc}
               alt=""
               width={1000}
               height={1000}
-            />
-            {/* <video
-              src={imgSrc}
-              type="video/mp4"
+            /> */}
+            <video
+              src={video}
+              type="video/webm"
               loop
-              className="clip w-full"
-            ></video> */}
+              autoPlay
+              muted
+              className="h-full min-h-[30rem]"
+            ></video>
           </div>
         </div>
       </div>

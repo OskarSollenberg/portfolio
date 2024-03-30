@@ -11,7 +11,7 @@ export default function index({ link, title, activeLink, setActiveLink }) {
         className={`border-r-[2px] active:scale-[90%]  px-[6px] cursor-pointer transition-all duration-100 hover-bg-[#f3691f] hover:text-[#f3691f] 
 		${
       link === pathname
-        ? "text-[#f3691f]  border-[black] line-through "
+        ? "text-[#f3691f]  border-[black] "
         : "text-[black] opacity-100 border-none underline-none "
     }`}
       >

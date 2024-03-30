@@ -4,7 +4,7 @@ import LinkItem from "./LinkItem";
 import { useState } from "react";
 
 export default function TopNav() {
-  const clr = "rgba(105, 105, 105, 0.183)";
+  //   const clr = "rgba(105, 105, 105, 0.183)";
 
   const [activeLink, setActiveLink] = useState("/");
 

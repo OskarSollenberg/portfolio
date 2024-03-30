@@ -4,7 +4,7 @@ export const projects = [
     href: "hinder",
     subTitle: "It's a dating app",
     imgSrc: "/medias/hinder1.webp",
-    video: "#",
+    video: "/medias/hinder.webm",
     gihub: "#",
     netlify: "#",
     description:
