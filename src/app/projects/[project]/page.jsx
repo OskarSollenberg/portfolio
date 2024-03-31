@@ -28,7 +28,8 @@ export default function Project() {
     title,
     subTitle,
     imgSrc,
-    video,
+    videoWebm,
+    videoMp4,
     description,
     learnings,
     github,
@@ -37,7 +38,7 @@ export default function Project() {
 
   return (
     <section className="">
-      <div className="absolute z-[500] top-[2rem] left-[2rem] text-[1rem] hover:bg-[#F3691F] rounded-lg  transition-all hover:scale-125 duration-200 bg-black text-white hover:text-black cursor-pointer p-2 ">
+      <div className="absolute z-[500] top-[2rem] left-[2rem] text-[1rem] hover:bg-white rounded-lg  transition-all hover:scale-125 duration-200 bg-black text-white hover:text-black cursor-pointer p-2 ">
         <Link href="/projects">
           <RiArrowGoBackFill />
         </Link>
@@ -97,13 +98,15 @@ export default function Project() {
         </div>
         <div className="flex justify-center items-center lg:p-8 h-full ">
           <video
-            src={video}
             type="video/webm"
             loop
             autoPlay
             muted
             className="mb-[3rem] lg:mb-0 mt-[5rem] lg:mt-0 max-w-[80vw] lg:max-w-full "
-          ></video>
+          >
+            <source src={videoWebm} type="video/webm" />
+            <source src={videoMp4} type="video/mp4" />
+          </video>
         </div>
       </div>
     </section>

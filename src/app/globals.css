@@ -50,12 +50,12 @@ body {
   /* background-color: #ffacdf; */
   /* background-color: #1e1e1e; */
 
-  /* -webkit-touch-callout: none;
+  -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  user-select: none; */
+  user-select: none;
 
   padding-top: env(safe-area-inset-top, 20px);
   padding-right: env(safe-area-inset-right, 1em);
