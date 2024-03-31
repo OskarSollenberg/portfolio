@@ -5,7 +5,7 @@ export const projects = [
     subTitle: "It's a dating app",
     imgSrc: "/medias/hinder.webp",
     videoWebm: "/medias/hinder.webm",
-    videoMp4: "/medias/hinder-phone.mp4",
+    videoMp4: "/medias/hinder.mp4",
     github: "https://github.com/OskarSollenberg/Hinder",
     netlify: "https://portfolio-oskar-new--hinderr.netlify.app",
     description:
@@ -26,7 +26,7 @@ export const projects = [
         learning: "Understanding how to set up and use Context",
       },
       {
-        learning: "Client side Registration, Authorisation & Authentication",
+        learning: "Client side Registration, Authorization & Authentication",
       },
       {
         learning: "Learning how to use local storage",
@@ -38,26 +38,29 @@ export const projects = [
     href: "petfinder",
     subTitle: "Its all about the SEO and Performance!!",
     imgSrc: "/medias/petfinder.png",
-    videoWebm: "#",
-    videoMp4: "/medias/hinder-phone.mp4",
+    videoWebm: "/medias/petfinder.webm",
+    videoMp4: "/medias/petfinder.mp4",
     github: "#",
     netlify: "#",
     description:
-      "PetFinder is a project focusing on SEO, performance and accecibility. This was about a 2 week project me and 3 other students created during one of our modules at Hyper Island.",
+      "PetFinder is a project focusing on SEO, performance and accessibility. This was about a 2 week project me and 3 other students created during one of our modules at Hyper Island.",
     learnings: [
       {
-        learning: "lorem",
+        learning: "A deeper understanding and reasoning around Performance",
       },
-      { learning: "lorem" },
+      { learning: "Analyzing Lighthouse metrics" },
       {
-        learning: "lorem",
-      },
-      { learning: "lorem" },
-      {
-        learning: "lorem",
+        learning: "How to optimize a website for conversion",
       },
       {
-        learning: "lorem",
+        learning:
+          "Learning how to achieve a fast website through coding best practices",
+      },
+      {
+        learning: "Making a website that is accessible for all",
+      },
+      {
+        learning: "SEO practice for optimizing websites",
       },
     ],
   },
