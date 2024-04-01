@@ -49,7 +49,7 @@ export default function Projects({ color }) {
         <div className=" flex justify-center items-center text-lg flex-col gap-5 ">
           <p
             style={{ lineHeight: "2.5rem", fontFamily: "Montreal" }}
-            className="text-center text-[1.3rem] sm:text-[1.5rem] md:text-[1.9rem] translate-y-[5rem]"
+            className="text-center text-[1.3rem] sm:text-[1.5rem] md:text-[1.9rem] translate-y-[5rem] text-[#F3691F]"
           >
             Who am I?
           </p>

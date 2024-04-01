@@ -40,8 +40,8 @@ export const projects = [
     imgSrc: "/medias/petfinder.png",
     videoWebm: "/medias/petfinder.webm",
     videoMp4: "/medias/petfinder.mp4",
-    github: "#",
-    netlify: "#",
+    github: "https://github.com/OskarSollenberg/petfinder",
+    netlify: "https://petfinder-group4.netlify.app/",
     description:
       "PetFinder is a project focusing on SEO, performance and accessibility. This was about a 2 week project me and 3 other students created during one of our modules at Hyper Island.",
     learnings: [
@@ -70,10 +70,10 @@ export const projects = [
     href: "pencilpaws",
     subTitle: "Use the apple pencil on an ipad!",
     imgSrc: "/medias/pencil-paws.png",
-    videoWebm: "#",
-    videoMp4: "/medias/hinder-phone.mp4",
-    github: "#",
-    netlify: "#",
+    videoWebm: "/medias/pencilpaws.webm",
+    videoMp4: "/medias/pencilpaws.mp4",
+    github: "https://github.com/OskarSollenberg/PencilPaws",
+    netlify: "https://pencilpawsipad.netlify.app",
     description:
       "A 2-player game where you guess the animal your friend is drawing. The game is played in real time and you can use the apple pencil on an ipad to draw.",
     learnings: [
@@ -95,58 +95,53 @@ export const projects = [
     ],
   },
 
-  {
-    title: "Nordstan",
-    href: "nordstan",
-    subTitle: "The most used bus in Gothemburg is bus number 16",
-    imgSrc: "/medias/nordstan.png",
-    videoWebm: "#",
-    videoMp4: "/medias/hinder-phone.mp4",
-    github: "#",
-    netlify: "#",
-    description: "lorem",
-    learnings: [
-      {
-        learning: "lorem",
-      },
-      { learning: "lorem" },
-      {
-        learning: "lorem",
-      },
-      { learning: "lorem" },
-      {
-        learning: "lorem",
-      },
-      {
-        learning: "lorem",
-      },
-    ],
-  },
+  //   {
+  //     title: "Nordstan",
+  //     href: "nordstan",
+  //     subTitle: "The most used bus in Gothemburg is bus number 16",
+  //     imgSrc: "/medias/nordstan.png",
+  //     videoWebm: "#",
+  //     videoMp4: "/medias/hinder-phone.mp4",
+  //     github: "#",
+  //     netlify: "#",
+  //     description: "lorem",
+  //     learnings: [
+  //       {
+  //         learning: "lorem",
+  //       },
+  //       { learning: "lorem" },
+  //       {
+  //         learning: "lorem",
+  //       },
+  //       { learning: "lorem" },
+  //       {
+  //         learning: "lorem",
+  //       },
+  //       {
+  //         learning: "lorem",
+  //       },
+  //     ],
+  //   },
   {
     title: "Hangman",
     href: "hangman",
     subTitle: "Creating a classic",
     imgSrc: "/medias/hangman.png",
-    videoWebm: "#",
-    videoMp4: "/medias/hinder-phone.mp4",
-    github: "#",
-    netlify: "#",
-    description: "lorem",
+    videoWebm: "/medias/hangman.webm",
+    videoMp4: "/medias/hangman.mp4",
+    github: "https://github.com/OskarSollenberg/ITTT---Hangman-ver2",
+    netlify: "https://hangmanversion2.netlify.app",
+    description:
+      "This is a creative version on the classic hangman game. You have 6 tries to guess the word. If you guess the word you win, if you don't you lose. It`s done using only vanilla javascript, HTML and CSS. This was my personal project during one of the first modules at Hyper Island.",
     learnings: [
       {
-        learning: "lorem",
+        learning: "Javascript concepts such as variables, loops, functions",
       },
-      { learning: "lorem" },
+      { learning: "How to implement sound in your website" },
       {
-        learning: "lorem",
+        learning: "Learning more about how to create fully responsive websites",
       },
-      { learning: "lorem" },
-      {
-        learning: "lorem",
-      },
-      {
-        learning: "lorem",
-      },
+      { learning: "HTML, CSS, JS and SASS" },
     ],
   },
 ];

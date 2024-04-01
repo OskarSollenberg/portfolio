@@ -31,7 +31,7 @@ export default function Nav() {
         exit="exit"
         className="w-screen h-screen bg-[#292929ee] fixed right-0 top-0  z-[4000] "
       >
-        <div className="absolute top-0 left-0 mt-[3rem] ml-[3rem]">
+        <div className="absolute top-0 right-0 mt-[3rem] mr-[3rem]">
           <StickyLink
             icon={<TiSocialLinkedinCircular />}
             color={"#f3691f"}
