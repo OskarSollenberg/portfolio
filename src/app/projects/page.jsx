@@ -43,7 +43,6 @@ export default function Projects() {
           </div>
         </main>
       </section>
-      <ProgressBar />
     </>
   );
 }

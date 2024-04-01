@@ -7,7 +7,6 @@ import { projects } from "@/src/data/projects";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 
 export default function Project() {
   const params = useParams();
@@ -89,7 +88,9 @@ export default function Project() {
                   />
 
                   <p className="group-hover:opacity-0 text-[12px] ">
-                    LAUNCH WEBSITE
+                    {netlify === "#"
+                      ? "Wesbite is under repair"
+                      : "LAUNCH WEBSITE"}
                   </p>
                 </a>
               </div>

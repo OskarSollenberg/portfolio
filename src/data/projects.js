@@ -95,33 +95,32 @@ export const projects = [
     ],
   },
 
-  //   {
-  //     title: "Nordstan",
-  //     href: "nordstan",
-  //     subTitle: "The most used bus in Gothemburg is bus number 16",
-  //     imgSrc: "/medias/nordstan.png",
-  //     videoWebm: "#",
-  //     videoMp4: "/medias/hinder-phone.mp4",
-  //     github: "#",
-  //     netlify: "#",
-  //     description: "lorem",
-  //     learnings: [
-  //       {
-  //         learning: "lorem",
-  //       },
-  //       { learning: "lorem" },
-  //       {
-  //         learning: "lorem",
-  //       },
-  //       { learning: "lorem" },
-  //       {
-  //         learning: "lorem",
-  //       },
-  //       {
-  //         learning: "lorem",
-  //       },
-  //     ],
-  //   },
+  {
+    title: "Nordstan",
+    href: "nordstan",
+    subTitle: "The most used bus in Gothenburg is bus number 16",
+    imgSrc: "/medias/nordstan.png",
+    videoWebm: "/medias/nordstan.webm",
+    videoMp4: "/medias/nordstan.mp4",
+    github: "https://github.com/OskarSollenberg/ITTT---ResRobot_Nordstan",
+    netlify: "#",
+    description:
+      "This is an website I created in an early module at Hyper Island. Using a animation i created the website displays in realtime when bus 16 arrives and leaves Nordstan in Gothenburg. The website is made with HTML, CSS/SASS and Javascript.",
+    learnings: [
+      {
+        learning:
+          "Learning javascript concepts such as variables, loops, functions",
+      },
+      { learning: "Understanding how to use live updated API`S" },
+      {
+        learning: "Using animations to make a website more interactive",
+      },
+      {
+        learning:
+          "To keep responsiveness with animated elements on the webpage",
+      },
+    ],
+  },
   {
     title: "Hangman",
     href: "hangman",

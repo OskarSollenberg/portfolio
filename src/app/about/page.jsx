@@ -31,7 +31,6 @@ export default function Projects({ color }) {
 
   return (
     <>
-      <SiteNav isHomepage={false} />
       <div className=" translate z-50">
         <SceneAbout />
       </div>
