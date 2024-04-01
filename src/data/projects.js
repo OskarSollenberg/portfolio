@@ -16,8 +16,7 @@ export const projects = [
           "How to create a React-application with dynamic, interactive user interfaces.",
       },
       {
-        learning:
-          "Better understanding of component state and props and hooks.",
+        learning: "Understanding of component state and props and hooks.",
       },
       {
         learning: "Learning more about Fetching data using APIs",
@@ -46,7 +45,7 @@ export const projects = [
       "PetFinder is a project focusing on SEO, performance and accessibility. This was about a 2 week project me and 3 other students created during one of our modules at Hyper Island.",
     learnings: [
       {
-        learning: "A deeper understanding and reasoning around Performance",
+        learning: "Understanding and reasoning around Performance",
       },
       { learning: "Analyzing Lighthouse metrics" },
       {

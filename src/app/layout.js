@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
       <body className={` ${inter.className}`}>
         <div className="flex justify-center items-center">
           {children}
-          <TopNav />
+          {/* <TopNav /> */}
         </div>
       </body>
     </html>

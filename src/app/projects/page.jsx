@@ -17,7 +17,7 @@ export default function Projects() {
       >
         <main>
           <SceneProjects />
-          <div className="flex items-center justify-center w-screen h-[70vh] lg:h-screen ">
+          <div className="flex items-start justify-center w-screen h-[70vh] lg:h-screen ">
             <p className=" w-screen rounded-[1rem] p-4 sm:p-[2rem] lg:p-[4rem] text-[1.3rem] sm:text-[1.5rem] md:text-3xl lg:text-3xl max-w-[90vw] sm:max-w-[90vw] md:max-w-[85vw] lg:max-w-[75vw] text-center lg:leading-[3rem] text-black ">
               {` Here is a showcase of my learning journey through out my time at `}
               <span className="text-[#f3691f]">{`Hyper Island`}</span>

@@ -36,20 +36,20 @@ export default function Project() {
   } = selectedProject;
 
   return (
-    <section className="">
+    <section>
       <div className="absolute z-[500] top-[2rem] left-[2rem] text-[1rem] rounded-lg  transition-all hover:scale-125 duration-200 bg-[#F3691F] text-white lg:text-black lg:bg-white cursor-pointer p-2 ">
         <Link href="/projects">
           <RiArrowGoBackFill />
         </Link>
       </div>
       <div className="flex flex-col-reverse lg:grid items-center justify-center lg:grid-cols-2 text-center text-white lg:text-start">
-        <div className="w-full h-screen flex justify-center item-center lg:items-center md:px-10 sm:mt-0 md:mt-0 bg-[#F3691F]">
+        <div className="w-full flex justify-center item-center lg:items-center md:px-10 sm:mt-0 md:mt-0 bg-[#F3691F] lg:h-screen">
           <div className=" flex flex-col mt-[3rem] lg:justify-end gap-[2rem] ">
             <div className="px-[1rem]">
               <h2 className="text-3xl font-bold md:text-4xl lg:text-5xl">
                 {title}
               </h2>
-              <p className="mt-4 text-[.9rem] w-full leading-[1.5rem]">
+              <p className="mt-4 text-[.9rem] w-full leading-[1.5rem] p-4 lg:p-0">
                 {description}
               </p>
             </div>
@@ -57,9 +57,9 @@ export default function Project() {
               <h2 className="text-2xl font-bold md:text-2xl">
                 Biggest learnings
               </h2>
-              <ul className="flex flex-col gap-2 lg:gap-[0.6rem] text-[.8rem] lg:text-[.9rem] italic">
+              <ul className="flex flex-col p-4 lg:p-0 gap-2 lg:gap-[0.6rem] text-[.8rem] lg:text-[.9rem] italic">
                 {learnings.map((project, index) => (
-                  <li key={index}> - {project.learning}</li>
+                  <li key={index}>{project.learning}</li>
                 ))}
               </ul>
               <div className="flex justify-center gap-[8rem] mb-[3rem] mt-[2rem]">
@@ -98,7 +98,7 @@ export default function Project() {
           </div>
         </div>
         <div className="flex justify-center items-center p-0 lg:p-8 lg:w-full mt-[6rem] lg:mt-0 w-screen ">
-          <video type="video/webm" loop autoPlay muted className="">
+          <video type="video/webm" loop autoPlay muted>
             <source src={videoWebm} type="video/webm" />
             <source src={videoMp4} type="video/mp4" />
           </video>
