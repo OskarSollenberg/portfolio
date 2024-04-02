@@ -89,7 +89,7 @@ export default function Project() {
 
                   <p className="group-hover:opacity-0 text-[12px] ">
                     {netlify === "#"
-                      ? "Wesbite is under repair"
+                      ? "Website is under repair"
                       : "LAUNCH WEBSITE"}
                   </p>
                 </a>

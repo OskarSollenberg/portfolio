@@ -18,8 +18,8 @@ export default function AnimatedTextComponent({
       ref={textRef}
       font={FONT_PATH}
       fontSize={fontSize}
-      letterSpacing={0.2}
-      color={"black"}
+      letterSpacing={0.25}
+      color={"#ff4400"}
       position={position}
       visible={visible}
     >

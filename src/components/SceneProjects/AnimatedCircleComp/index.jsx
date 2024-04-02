@@ -30,7 +30,7 @@ export default function AnimatedCircleComponent() {
   useEffect(() => {
     function animateCircle(circle) {
       gsap.to(circle.position, {
-        x: loading ? 0 : -0.48, // Move to the right when not loading
+        x: loading ? 0 : -0.47, // Move to the right when not loading
         y: 0,
         duration: 1.5,
         ease: "elastic.out(0.1, 0.1)",

@@ -9,13 +9,13 @@ export default function Model() {
   const isLoading = useLoading();
   const scale =
     window.innerWidth < 600
-      ? viewport.width / 2.8
+      ? viewport.width / 3.2
       : window.innerWidth < 1000
       ? viewport.width / 3
       : viewport.width / 3.5;
 
   const texts = [
-    { text: "PR  JECTS", fontSize: 0.4, position: [0, 0, 0], visible: true },
+    { text: "PR   JECTS", fontSize: 0.4, position: [0, 0, 0], visible: true },
   ];
 
   return (

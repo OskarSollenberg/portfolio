@@ -37,10 +37,11 @@ export default function Projects({ color }) {
       <main className="absolute w-screen h-screen top-0 text-black">
         <div
           ref={imageRef}
-          className="w-screen h-screen opacity-60 bg-no-repeat bg-cover bg-left lg:bg-center"
+          className="w-screen h-screen bg-no-repeat bg-cover bg-left lg:bg-center"
           style={{
             fontFamily: "Montreal",
-            backgroundImage: `url("/medias/studio.jpg")`,
+            // backgroundImage: `url("/medias/studio.webp")`,
+            backgroundImage: `url("/medias/studio-dark.jpg")`,
           }}
         ></div>
 
@@ -55,19 +56,19 @@ export default function Projects({ color }) {
           <p className="text-center max-w-[90vw] sm:max-w-[85vw] lg:max-w-[75vw] text-[0.9rem] xl:text-[1.6rem] translate-y-[5rem] leading-[1.4rem] sm:leading-8 md:leading-9 lg:leading-10 xl:leading-12 sm:text-[1.2rem] lg:text-[1.4rem]">
             My journey started in the creative world at the Royal College of
             Music (KMH) in Stockholm, where I immersed myself in a program all
-            about Music and Media Production. It wasn&apos;t just about notes
-            and beats. I got to improve in a variety of activities, from filming
-            and creating sound/music for pictures, to learning about marketing
-            and being introduced to coding for the first time.
+            about Music and Media Production. It wasn't just about notes and
+            beats. I got to improve in a variety of activities, from filming and
+            creating sound/music for pictures, to learning about marketing and
+            being introduced to coding for the first time.
           </p>
           <p className="text-center sm:max-w-[85vw] lg:max-w-[75vw]  max-w-[90vw]  text-[0.9rem] xl:text-[1.6rem] translate-y-[5rem] leading-0 leading-[1.4rem] sm:leading-8 md:leading-9 lg:leading-10 xl:leading-12 sm:text-[1.2rem] lg:text-[1.4rem]">
             Programming and web development have been in the back of my mind
             ever since my time at KMH, and I have now spent a little over half a
             year learning everything I possibly can about web development at
-            Hyper Island. I love working with visually appealing content but ive
-            also set a clear goal of achieving the skill set of a full-stack
-            engineer. In a perfect world, I would be able to combine my
-            creativity with my technical skills in coding to bring to life
+            Hyper Island. I love working with visually appealing content, but
+            I've also set a clear goal of achieving the skill set of a
+            full-stack engineer. In a perfect world, I would be able to combine
+            my creativity with my technical skills in coding to bring to life
             visually stunning and functional websites.
           </p>
         </div>
