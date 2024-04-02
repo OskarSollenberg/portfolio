@@ -8,7 +8,7 @@ import { useGLTF } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import useLoading from "@/src/hooks/useLoading";
 
-const ROTATION_SPEED_HOVERED = 0.05;
+const ROTATION_SPEED_HOVERED = 0.03;
 const ROTATION_SPEED_NOT_HOVERED = 0.015;
 const MODEL_PATH = "/medias/torrus.glb";
 
@@ -34,7 +34,7 @@ export default function AnimatedCircleComponent({ isHovered }) {
   useEffect(() => {
     function animateCircle(circle, isHovered) {
       gsap.to(circle.position, {
-        x: isHovered ? -1 : 0,
+        x: isHovered ? -0.94 : 0,
         duration: 1.7,
         ease: "elastic.out(0.1, 0.1)",
       });

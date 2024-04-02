@@ -29,17 +29,17 @@ export default function Model() {
   const isSmallScreen = window.innerWidth < 1000;
 
   const texts = [
-    { text: "SKAR", fontSize: 0.5, position: [0.2, 0, 0], visible: true },
+    { text: "SKAR", fontSize: 0.5, position: [0.3, 0, 0], visible: true },
     {
       text: "PORTFOLIO BY",
       fontSize: isSmallScreen ? 0.1 : 0.05,
-      position: isSmallScreen ? [-0.65, 0.4, 0] : [-1, 0.3, 0],
+      position: isSmallScreen ? [-0.64, 0.4, 0] : [-0.93, 0.3, 0],
       visible: true,
     },
     {
       text: "HERMAN SOLLENBERG",
       fontSize: isSmallScreen ? 0.1 : 0.05,
-      position: isSmallScreen ? [0.29, -0.4, 0] : [0.69, -0.3, 0],
+      position: isSmallScreen ? [0.4, -0.4, 0] : [0.8, -0.3, 0],
       visible: true,
       textDecoration: "underline",
     },
