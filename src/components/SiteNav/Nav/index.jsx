@@ -49,7 +49,7 @@ export default function Nav() {
             }}
             className=" flex items-center sm:items-start leading-[6rem] flex-col text-[3.8rem] sm:text-[8rem] sm:leading-[9rem] md:text-[9rem] lg:text-[11rem] md:leading-[12rem]"
           >
-            <div className="hidden sm:flex text-[#f3691f] border-[#FEFCE1] border-b uppercase text-xs mb-10 ">
+            <div className="hidden xl:flex text-[#f3691f] border-[#FEFCE1] border-b uppercase text-xs ">
               <p>Navigation</p>
             </div>
             {navItems.map((navItem, index) => {
