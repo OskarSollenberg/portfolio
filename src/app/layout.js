@@ -1,7 +1,6 @@
 import Head from "next/head";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import TopNav from "../components/TopNav";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,7 +12,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html>
       <Head>
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
@@ -21,6 +20,7 @@ export default function RootLayout({ children }) {
           name="viewport"
           content="width=device-width, initial-scale=1, viewport-fit=cover"
         />
+        <script src="/setViewportDimensions.js" />
       </Head>
       <body className={` ${inter.className}`}>
         <div className="homePage flex justify-center items-center">
