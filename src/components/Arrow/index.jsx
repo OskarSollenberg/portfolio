@@ -12,7 +12,7 @@ export default function Arrow() {
       className={` ${
         isLoading ? "opacity-0" : "opacity-40 transition-all duration-500"
       } `}
-      animate={{ y: ["0%", "20%", "0%"] }}
+      animate={{ y: ["0%", "40%", "0%"] }}
       transition={{
         duration: 1.5,
         ease: "easeInOut",
