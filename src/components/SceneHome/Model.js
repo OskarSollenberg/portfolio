@@ -3,6 +3,7 @@ import { useThree } from "@react-three/fiber";
 import AnimatedTextComponent from "./AnimatedText";
 import AnimatedCircleComponent from "./AnimatedCircleComp";
 import useLoading from "@/src/hooks/useLoading";
+import { color } from "framer-motion";
 
 export default function Model() {
   const { viewport } = useThree();
@@ -29,12 +30,19 @@ export default function Model() {
   const isSmallScreen = window.innerWidth < 1000;
 
   const texts = [
-    { text: "SKAR", fontSize: 0.5, position: [0.3, 0, 0], visible: true },
+    {
+      text: "SKAR",
+      fontSize: 0.5,
+      position: [0.3, 0, 0],
+      visible: true,
+      color: "#fd4110",
+    },
     {
       text: "PORTFOLIO BY",
       fontSize: isSmallScreen ? 0.1 : 0.05,
       position: isSmallScreen ? [-0.65, 0.4, 0] : [-0.95, 0.3, 0],
       visible: true,
+      color: "black",
     },
     {
       text: "HERMAN SOLLENBERG",
@@ -42,14 +50,15 @@ export default function Model() {
       position: isSmallScreen ? [0.4, -0.4, 0] : [0.8, -0.3, 0],
       visible: true,
       textDecoration: "underline",
+      color: "black",
     },
-    { text: "Herman", visible: false },
+    { text: "Herman", visible: false, color: "#fd4110" },
   ];
 
   return (
     <group scale={scale}>
       <AnimatedCircleComponent isHovered={!isHovered} />
-      {texts.map(({ text, fontSize, position, visible }, index) => (
+      {texts.map(({ text, fontSize, position, visible, color }, index) => (
         <AnimatedTextComponent
           key={index}
           visible={visible ? !isHovered : isHovered}
@@ -58,6 +67,7 @@ export default function Model() {
           text={isLoading ? "" : text}
           fontSize={fontSize}
           position={position}
+          color={color}
         />
       ))}
     </group>

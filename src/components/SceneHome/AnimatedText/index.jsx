@@ -18,6 +18,7 @@ export default function AnimatedTextComponent({
   text,
   fontSize = 0.5,
   position = [0, 0, 0],
+  color,
 }) {
   const letterSpacingSpring = useSpring({
     letterSpacing: isHovered ? 0.26 : 0.2,
@@ -36,11 +37,13 @@ export default function AnimatedTextComponent({
       font={FONT_PATH}
       fontSize={fontSize}
       letterSpacing={letterSpacingSpring.letterSpacing}
-      color={isHovered ? "#fd4110" : "#fd4110"}
+      //   color={isHovered ? "#fd4110" : "#fd4110"}
+
       onPointerOver={() => handleHover(true)}
       onPointerOut={() => handleHover(false)}
       position={position}
       visible={visible}
+      color={color}
     >
       {text}
     </AnimatedText>

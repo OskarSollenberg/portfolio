@@ -11,18 +11,18 @@ const MODEL_PATH = "/medias/torrus.glb";
 
 const AnimatedMesh = animated(MeshTransmissionMaterial);
 
-export default function AnimatedCircleComponent() {
+export default function AnimatedCircleComponent(isLoading) {
   const meshRef = useRef();
   const { nodes } = useGLTF(MODEL_PATH);
   const loading = useLoading();
 
   const circleStyles = useSpring({
     color: "#D95E05",
-    thickness: 2,
-    roughness: 5,
-    transmission: 0,
-    ior: 1.3,
-    chromaticAberration: 0,
+    thickness: loading ? 0.2 : 2,
+    roughness: loading ? 0 : 5,
+    transmission: loading ? 1 : 0,
+    ior: loading ? 0.9 : 1.3,
+    chromaticAberration: loading ? 1 : 0,
     backside: true,
     config: { tension: 50, friction: 10 },
   });

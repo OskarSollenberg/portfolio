@@ -20,7 +20,7 @@ export default function Model() {
 
   return (
     <group scale={scale}>
-      <AnimatedCircleComponent />
+      <AnimatedCircleComponent isLoading={isLoading} />
       {texts.map(({ text, fontSize, position, visible }, index) => (
         <AnimatedTextComponent
           key={index}

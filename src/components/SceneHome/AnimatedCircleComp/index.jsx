@@ -27,7 +27,7 @@ export default function AnimatedCircleComponent({ isHovered }) {
     ior: isHovered ? 1.3 : 0.9,
     chromaticAberration: isHovered ? 0 : 1,
     backside: true,
-    config: { tension: 50, friction: 10 },
+    // config: { tension: 50, friction: 10 },
   });
 
   // useEffect for handling hover state
