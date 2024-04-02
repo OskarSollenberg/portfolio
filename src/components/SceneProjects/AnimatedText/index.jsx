@@ -17,7 +17,7 @@ export default function AnimatedTextComponent({
       font={FONT_PATH}
       fontSize={fontSize}
       letterSpacing={0.2}
-      color={"black"}
+      color={"#ff4400"}
       position={position}
       visible={visible}
     >

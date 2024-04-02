@@ -43,7 +43,7 @@ export default function Model() {
       visible: true,
       textDecoration: "underline",
     },
-    { text: "Herman", visible: false },
+    { text: "herman", visible: false },
   ];
 
   return (

@@ -17,12 +17,12 @@ export default function AnimatedCircleComponent() {
   const loading = useLoading();
 
   const circleStyles = useSpring({
-    color: "#F16721",
-    thickness: 0.2,
-    roughness: 0,
-    transmission: 1,
-    ior: 0.9,
-    chromaticAberration: 1,
+    color: "#D95E05",
+    thickness: 2,
+    roughness: 5,
+    transmission: 0,
+    ior: 1.3,
+    chromaticAberration: 0,
     backside: true,
     config: { tension: 50, friction: 10 },
   });

@@ -17,7 +17,7 @@ export default function Projects({ color }) {
       height: "30rem",
       width: "100vw",
       borderRadius: "1rem",
-      opacity: 1,
+      filter: "brightness(200%)",
       scrollTrigger: {
         trigger: imageRef.current,
         start: "top top",
@@ -34,7 +34,7 @@ export default function Projects({ color }) {
       <div className=" translate z-50">
         <SceneAbout />
       </div>
-      <main className="absolute w-screen h-screen top-0 text-black">
+      <main className="absolute w-screen h-screen  top-0 text-black">
         <div
           ref={imageRef}
           className="w-screen h-screen bg-no-repeat bg-cover bg-left lg:bg-center"
