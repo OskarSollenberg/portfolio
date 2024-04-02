@@ -21,8 +21,8 @@ export default function RootLayout({ children }) {
           content="width=device-width; initial-scale=1.0; maximum-scale=1.0;"
         />
       </Head>
-      <body className={` ${inter.className}`}>
-        <div className="homePage flex justify-center items-center">
+      <body className={`${inter.className}`}>
+        <div className="flex justify-center items-center">
           {children}
           {/* <TopNav /> */}
         </div>
