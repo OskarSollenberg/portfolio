@@ -24,14 +24,14 @@ const ProjectLink = ({ title, imgSrc, subTitle }) => {
           >
             {title}
           </motion.span>
-          <span className="relative z-10 mt-2 block text-base  transition-colors duration-500 group-hover:text-[#FEFCE1] max-w-[10rem] sm:max-w-[20rem] md:max-w-[30rem]">
+          <span className="relative z-10 mt-2 block text-base  transition-colors duration-500 group-hover:text-[#FEFCE1] max-w-[20rem] sm:max-w-[50rem]">
             {subTitle}
           </span>
         </div>
         <motion.img
           transition={{ type: "spring" }}
           src={imgSrc}
-          className="sm:absolute rotate-0 md:scale-0 md:group-hover:scale-100 transition-all duration-500 ease-in-out group-hover:rotate-[12.5deg] md:-rotate-[12.5deg]  h-[8rem] w-[12rem] group-hover:scale-1 z-[100] rounded-sm object-cover  md:h-[12rem] md:w-[18rem] lg:h-[18rem] lg:w-[25rem] right-[4rem] "
+          className="lg:absolute rotate-0 lg:scale-0 lg:group-hover:scale-100 transition-all duration-500 ease-in-out group-hover:rotate-[12.5deg] lg:-rotate-[12.5deg]  h-[8rem] w-[12rem] group-hover:scale-1 z-[100] rounded-sm object-cover lg:h-[12rem] lg:w-[18rem] xl:h-[18rem] xl:w-[25rem] right-[4rem] "
           alt={`Image representing a link for ${title}`}
         />
       </motion.div>
