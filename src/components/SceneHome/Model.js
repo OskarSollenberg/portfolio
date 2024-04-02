@@ -33,7 +33,7 @@ export default function Model() {
     {
       text: "PORTFOLIO BY",
       fontSize: isSmallScreen ? 0.1 : 0.05,
-      position: isSmallScreen ? [-0.64, 0.4, 0] : [-0.93, 0.3, 0],
+      position: isSmallScreen ? [-0.65, 0.4, 0] : [-0.95, 0.3, 0],
       visible: true,
     },
     {
@@ -43,7 +43,7 @@ export default function Model() {
       visible: true,
       textDecoration: "underline",
     },
-    { text: "herman", visible: false },
+    { text: "Herman", visible: false },
   ];
 
   return (

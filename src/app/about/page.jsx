@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SceneAbout from "@/src/components/SceneAbout";
-import SiteNav from "@/src/components/SiteNav";
+import Arrow from "@/src/components/Arrow";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -11,26 +11,31 @@ export default function Projects({ color }) {
   const imageRef = useRef(null);
 
   useEffect(() => {
-    gsap.to(imageRef.current, {
-      y: "170%",
-      scale: 0.6,
-      height: "30rem",
-      width: "100vw",
-      borderRadius: "1rem",
-      filter: "brightness(200%)",
-      scrollTrigger: {
-        trigger: imageRef.current,
-        start: "top top",
-        end: "bottom top",
-        scrub: true,
-      },
-    });
+    gsap.fromTo(
+      imageRef.current,
+      { filter: "brightness(100%)" },
+      {
+        y: "170%",
+        scale: 0.6,
+        height: "30rem",
+        width: "100vw",
+        borderRadius: "1rem",
+        filter: "brightness(200%)",
+        scrollTrigger: {
+          trigger: imageRef.current,
+          start: "top top",
+          end: "bottom top",
+          scrub: true,
+        },
+      }
+    );
   }, []);
-
-  //   comment
 
   return (
     <>
+      <div className="absolute inset-0 flex items-center justify-center text-[5rem] sm:text-[6rem] md:text-[7rem] lg:text-[8rem] text-[#F3691F] translate-y-[7rem] sm:translate-y-[8rem] md:translate-y-[9rem] lg:translate-y-[10rem] xl:translate-y-[11rem] z-[1000]">
+        <Arrow />
+      </div>
       <div className=" translate z-50">
         <SceneAbout />
       </div>
