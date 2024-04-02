@@ -25,9 +25,9 @@ html,
 body {
   box-sizing: border-box;
   width: 100%;
-  min-height: 100vh; /* Fallback for Js load */
-  min-height: var(--doc-height);
-  min-height: -webkit-fill-available;
+  /* min-height: 100vh; */
+  height: 100dvh;
+  /* min-height: -webkit-fill-available; */
   margin: 0;
   padding: 0;
 }
