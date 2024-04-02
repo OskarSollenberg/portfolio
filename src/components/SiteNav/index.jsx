@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useLayoutEffect } from "react";
 import Nav from "./Nav";
 import CountDown from "./CountDown";
 import { AnimatePresence } from "framer-motion";
@@ -19,6 +19,16 @@ export default function SiteNav({ isHomepage }) {
       setIsActive(!isActive);
     }
   };
+  useLayoutEffect(() => {
+    // Get original body overflow
+    const originalStyle = window.getComputedStyle(document.body).overflow;
+    // Prevent scrolling on the body
+    if (isActive) {
+      document.body.style.overflow = "hidden";
+    }
+    // Re-enable scrolling when component unmounts
+    return () => (document.body.style.overflow = originalStyle);
+  }, [isActive]); //
 
   return (
     <div>

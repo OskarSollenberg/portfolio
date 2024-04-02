@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import StickyLink from "../../StickyLink";
@@ -29,7 +29,7 @@ export default function Nav() {
         initial="initial"
         animate="enter"
         exit="exit"
-        className="w-screen h-screen bg-[#292929ee] fixed right-0 top-0  z-[4000] "
+        className="w-screen h-screen bg-[#292929ee] fixed right-0 top-0 z-[4000] "
       >
         <div className="absolute top-0 right-0 mt-[3rem] mr-[3rem]">
           <StickyLink
