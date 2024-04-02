@@ -20,7 +20,7 @@ export default function Projects({ color }) {
         height: "30rem",
         width: "100vw",
         borderRadius: "1rem",
-        filter: "brightness(200%)",
+        filter: "brightness(220%)",
         scrollTrigger: {
           trigger: imageRef.current,
           start: "top top",
