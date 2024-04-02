@@ -17,7 +17,7 @@ export default function SceneHome() {
   }, []);
 
   return (
-    <div className={`w-screen h-screen -z-10`}>
+    <div className={`w-[100dvw] h-[100dvh] -z-10`}>
       <Canvas>
         <Model />
         <directionalLight />

@@ -28,16 +28,17 @@
 }
 
 html {
+  width: 100dvw;
   /* width: 100%; */
   /* width: calc(var(--vw, 1vw) * 100); */
-  height: -webkit-fill-available;
+  /* height: -webkit-fill-available; */
   /* scrollbar-gutter: stable;
   container-type: inline-size; */
 }
 
 body {
   height: 100dvh;
-  height: -webkit-fill-available;
+  /* height: -webkit-fill-available; */
 
   /* background-color: #03232d9c; */
   /* background-color: #a9cbce; */
