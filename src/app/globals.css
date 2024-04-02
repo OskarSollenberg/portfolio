@@ -27,8 +27,11 @@
   box-sizing: border-box;
 }
 
-html {
+html,
+body {
   width: 100dvw;
+  height: 100dvh;
+
   /* width: 100%; */
   /* width: calc(var(--vw, 1vw) * 100); */
   /* height: -webkit-fill-available; */
@@ -37,9 +40,7 @@ html {
 }
 
 body {
-  height: 100dvh;
   /* height: -webkit-fill-available; */
-
   /* background-color: #03232d9c; */
   /* background-color: #a9cbce; */
   /* background-color: #f3691f; */
