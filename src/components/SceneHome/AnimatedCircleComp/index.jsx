@@ -21,11 +21,11 @@ export default function AnimatedCircleComponent({ isHovered }) {
 
   const circleStyles = useSpring({
     color: "#F16721",
-    thickness: isHovered ? 0 : 0.2,
-    roughness: isHovered ? 0 : 0,
-    transmission: 1,
-    ior: isHovered ? 1 : 0.9,
-    chromaticAberration: isHovered ? 1 : 1,
+    thickness: isHovered ? 2 : 0.2,
+    roughness: isHovered ? 5 : 0,
+    transmission: isHovered ? 0 : 1,
+    ior: isHovered ? 1.3 : 0.9,
+    chromaticAberration: isHovered ? 0 : 1,
     backside: true,
     config: { tension: 50, friction: 10 },
   });
