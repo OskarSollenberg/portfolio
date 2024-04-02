@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
         <meta name="description" content={metadata.description} />
       </Head>
       <body className={` ${inter.className}`}>
-        <div className="flex justify-center items-center">
+        <div className="homePage flex justify-center items-center">
           {children}
           {/* <TopNav /> */}
         </div>
