@@ -23,7 +23,8 @@
 
 html {
   width: 100vw;
-  overflow-x: hidden;
+  height: 100vh;
+  overflow: hidden;
   margin: 0px;
   padding: 0px;
 }
