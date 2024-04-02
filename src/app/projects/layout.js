@@ -15,8 +15,10 @@ export default function Layout({ children }) {
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
       </Head>
-      {children}
-      <ProgressBar />
+      <div className="w-full h-full overflow-auto">
+        {children}
+        <ProgressBar />
+      </div>
     </>
   );
 }
