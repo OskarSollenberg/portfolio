@@ -36,7 +36,7 @@ html {
 }
 
 body {
-  height: 100vh;
+  height: 100dvh;
   height: -webkit-fill-available;
 
   /* background-color: #03232d9c; */
