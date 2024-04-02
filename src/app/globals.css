@@ -24,15 +24,17 @@
 html,
 body {
   box-sizing: border-box;
-  width: 100%;
-  /* min-height: 100vh; */
-  height: 100dvh;
-  /* min-height: -webkit-fill-available; */
+  /* width: 100%; */
+  width: calc(var(--vw, 1vw) * 100);
+  min-height: -webkit-fill-available;
   margin: 0;
   padding: 0;
+  scrollbar-gutter: stable;
+  container-type: inline-size;
 }
 
 body {
+  width: 100cqw;
   /* background-color: #03232d9c; */
   /* background-color: #a9cbce; */
   /* background-color: #f3691f; */
