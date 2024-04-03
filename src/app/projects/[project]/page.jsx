@@ -100,7 +100,7 @@ export default function Project() {
             </div>
           </div>
         </div>
-        <div className="flex justify-center items-center p-0  lg:w-full lg:mt-0 w-screen ">
+        <div className="flex justify-center items-center p-0 lg:w-full lg:mt-0 w-screen ">
           <video type="video/webm" loop autoPlay muted>
             <source src={videoWebm} type="video/webm" />
             <source src={videoMp4} type="video/mp4" />
