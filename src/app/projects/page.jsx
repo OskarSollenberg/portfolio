@@ -4,6 +4,7 @@ import SceneProjects from "@/src/components/SceneProjects";
 import ProjectLink from "@/src/components/ProjectLink";
 import Link from "next/link";
 import Arrow from "@/src/components/Arrow";
+import ProgressBar from "@/src/components/ProgressBar";
 
 export default function Projects() {
   return (
@@ -46,6 +47,7 @@ export default function Projects() {
           </div>
         </main>
       </section>
+      <ProgressBar />
     </>
   );
 }

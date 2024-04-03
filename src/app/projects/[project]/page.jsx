@@ -7,6 +7,7 @@ import { projects } from "@/src/data/projects";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import ReturnBtn from "./ReturnBtn";
 
 export default function Project() {
   const params = useParams();
@@ -37,11 +38,13 @@ export default function Project() {
 
   return (
     <section>
-      <div className="absolute z-[500] top-[2rem] left-[2rem] text-[1rem] rounded-lg  transition-all hover:scale-125 duration-200 bg-[#F3691F] text-white lg:text-black lg:bg-white cursor-pointer p-2 ">
+      {/* <div className="absolute z-[500] top-[2rem] left-[2rem] text-[1rem] rounded-lg  transition-all hover:scale-125 duration-200 bg-[#F3691F] text-white lg:text-black lg:bg-white cursor-pointer p-2 ">
         <Link href="/projects">
           <RiArrowGoBackFill />
         </Link>
-      </div>
+      </div> */}
+
+      <ReturnBtn />
       <div className="flex flex-col-reverse lg:grid items-center justify-center lg:grid-cols-2 text-center text-white lg:text-start">
         <div className="w-full flex justify-center item-center lg:items-center md:px-10 sm:mt-0 md:mt-0 bg-[#F3691F] lg:h-screen">
           <div className=" flex flex-col mt-[3rem] lg:justify-end gap-[2rem] ">
@@ -62,7 +65,7 @@ export default function Project() {
                   <li key={index}>{project.learning}</li>
                 ))}
               </ul>
-              <div className="flex justify-center gap-[8rem] mb-[3rem] mt-[2rem]">
+              <div className="flex justify-center lg:justify-start lg:ml-10 gap-[8rem] mb-[15rem] lg:mb-0 mt-[2rem]">
                 <a
                   href={github}
                   className="flex group flex-col gap-4 justify-center items-center ml-[3rem] sm:ml-0"
@@ -97,7 +100,7 @@ export default function Project() {
             </div>
           </div>
         </div>
-        <div className="flex justify-center items-center p-0 lg:p-8 lg:w-full mt-[6rem] lg:mt-0 w-screen ">
+        <div className="flex justify-center items-center p-0  lg:w-full lg:mt-0 w-screen ">
           <video type="video/webm" loop autoPlay muted>
             <source src={videoWebm} type="video/webm" />
             <source src={videoMp4} type="video/mp4" />
