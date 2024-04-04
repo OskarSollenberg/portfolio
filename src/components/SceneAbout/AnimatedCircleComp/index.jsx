@@ -8,7 +8,7 @@ import { useFrame } from "@react-three/fiber";
 import useLoading from "@/src/hooks/useLoading";
 
 const ROTATION_SPEED = 0.03;
-const MODEL_PATH = "/medias/torrus.glb";
+const MODEL_PATH = "/medias/torrus-comp.glb";
 
 const AnimatedMesh = animated(MeshTransmissionMaterial);
 

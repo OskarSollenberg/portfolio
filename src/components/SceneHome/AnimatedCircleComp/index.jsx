@@ -10,7 +10,7 @@ import useLoading from "@/src/hooks/useLoading";
 
 const ROTATION_SPEED_HOVERED = 0.03;
 const ROTATION_SPEED_NOT_HOVERED = 0.015;
-const MODEL_PATH = "/medias/torrus.glb";
+const MODEL_PATH = "/medias/torrus-comp.glb";
 
 const AnimatedMesh = animated(MeshTransmissionMaterial);
 
