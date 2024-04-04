@@ -46,7 +46,7 @@ export default function Projects({ color }) {
           style={{
             fontFamily: "Montreal",
             // backgroundImage: `url("/medias/studio.webp")`,
-            backgroundImage: `url("/medias/studio-dark.jpg")`,
+            backgroundImage: `url("/medias/studio-dark.webp")`,
           }}
         ></div>
 
