@@ -125,7 +125,7 @@ export const projects = [
     title: "Hangman",
     href: "hangman",
     subTitle: "Creating a classic",
-    imgSrc: "/medias/hangman.png",
+    imgSrc: "/medias/hangman.webp",
     videoWebm: "/medias/hangman.webm",
     videoMp4: "/medias/hangman.mp4",
     github: "https://github.com/OskarSollenberg/ITTT---Hangman-ver2",
