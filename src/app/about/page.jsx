@@ -59,9 +59,7 @@ export default function Projects({ color }) {
             Who am I?
           </p>
           <p className="text-center sm:max-w-[85vw] lg:max-w-[75vw]  max-w-[90vw]  text-[0.9rem] xl:text-[1.6rem] translate-y-[5rem] leading-0 leading-[1.4rem] sm:leading-8 md:leading-9 lg:leading-10 xl:leading-12 sm:text-[1.2rem] lg:text-[1.4rem]">
-            {`Hi there! I'm Oskar Sollenberg. My journey started in the creative world at the Royal College of Music in Stockholm, where I immersed myself in a program all about Music and Media Production. During my time at KMH I got to improve in a variety of activities, from filming and creating sound/music for pictures, to learning about marketing and being introduced to coding for the first time.
-			
-			Since then, I've applied all these skills in places like photo studios, music labels, and even on sets of feature films.`}
+            {`Hi there! I'm Oskar Sollenberg. My journey started in the creative world at the Royal College of Music in Stockholm, where I immersed myself in a program all about Music and Media Production. During my time at KMH I got to improve in a variety of activities, from filming and creating sound/music for pictures, to learning about marketing and being introduced to coding for the first time.`}
           </p>
           <p className="text-center sm:max-w-[85vw] lg:max-w-[75vw]  max-w-[90vw]  text-[0.9rem] xl:text-[1.6rem] translate-y-[5rem] leading-0 leading-[1.4rem] sm:leading-8 md:leading-9 lg:leading-10 xl:leading-12 sm:text-[1.2rem] lg:text-[1.4rem]">
             {
