@@ -45,14 +45,14 @@ export default function Project() {
       </div> */}
 
       <ReturnBtn />
-      <div className="flex flex-col-reverse lg:grid items-center justify-center lg:grid-cols-2 text-center text-white lg:text-start">
-        <div className="w-full flex justify-center item-center lg:items-center md:px-10 sm:mt-0 md:mt-0 bg-[#F3691F] lg:h-screen">
+      <div className="flex flex-col-reverse lg:grid items-center justify-center lg:grid-cols-2 text-center text-white lg:text-start ">
+        <div className="w-full flex justify-center item-center lg:items-center md:px-10 sm:mt-0 md:mt-0 bg-[#F3691F] lg:h-screen lg:w-[50vw]">
           <div className=" flex flex-col mt-[3rem] lg:justify-end gap-[2rem] ">
             <div className="px-[1rem]">
               <h2 className="text-3xl font-bold md:text-4xl lg:text-5xl">
                 {title}
               </h2>
-              <p className="mt-4 text-[.9rem] w-full leading-[1.5rem] p-4 lg:p-0">
+              <p className="mt-4 text-[.9rem] w-full leading-[1.5rem] p-4 lg:p-0 max-w-[40rem]">
                 {description}
               </p>
             </div>
@@ -65,7 +65,7 @@ export default function Project() {
                   <li key={index}>{project.learning}</li>
                 ))}
               </ul>
-              <div className="flex justify-center lg:justify-start lg:ml-10 gap-[8rem] mb-[15rem] lg:mb-0 mt-[2rem]">
+              <div className="flex justify-center lg:justify-start lg:ml-10 gap-[8rem] mb-[15rem] lg:mb-0 mt-[2rem] ">
                 <a
                   href={github}
                   className="flex group flex-col gap-4 justify-center items-center ml-[3rem] sm:ml-0"
@@ -100,11 +100,13 @@ export default function Project() {
             </div>
           </div>
         </div>
-        <div className="flex justify-center items-center p-0 lg:w-full lg:mt-0 w-screen ">
-          <video type="video/webm" loop autoPlay muted>
-            <source src={videoWebm} type="video/webm" />
-            <source src={videoMp4} type="video/mp4" />
-          </video>
+        <div className="flex justify-center items-center lg:w-full lg:mt-0 w-screen p-10 ">
+          <div className="max-w-[50rem]">
+            <video type="video/webm" loop autoPlay muted>
+              <source src={videoWebm} type="video/webm" />
+              <source src={videoMp4} type="video/mp4" />
+            </video>
+          </div>
         </div>
       </div>
     </section>
