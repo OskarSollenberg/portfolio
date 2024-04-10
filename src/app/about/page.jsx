@@ -19,7 +19,7 @@ export default function Projects({ color }) {
     gsap.from(chars, {
       opacity: 0,
       y: 20,
-      stagger: 0.01,
+      stagger: 0.007,
       ease: "back.out",
       scrollTrigger: {
         trigger: textRef.current,
