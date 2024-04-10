@@ -16,7 +16,6 @@ export default function AboutLayout({ children }) {
         <meta name="description" content={metadata.description} />
       </Head>
       <ProgressBar />
-
       <SiteNav isHomepage={false} />
       {children}
     </>

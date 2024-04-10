@@ -1,6 +1,7 @@
 import SceneAbout from "@/src/components/SceneAbout";
 import Arrow from "@/src/components/Arrow";
 import AboutText from "./AboutText";
+import Image from "next/image";
 
 export default function About() {
   return (
@@ -11,8 +12,18 @@ export default function About() {
       <div className="translate z-50">
         <SceneAbout />
       </div>
-      <main className="absolute w-screen h-screen  top-0 text-black">
-        <div className="w-screen h-screen bg-no-repeat bg-cover bg-left bg-aboutImg_lg"></div>
+      <main className="absolute w-screen h-screen top-0 text-black">
+        <div className="relative w-full h-full">
+          <Image
+            src="/medias/about-lg.webp"
+            alt="About Image"
+            layout="fill"
+            objectFit="cover"
+            objectPosition="left"
+            quality={100}
+            priority={true}
+          />
+        </div>
         <div className=" w-screen"></div>
         <AboutText />
         <div className="w-screen h-[20rem]"></div>

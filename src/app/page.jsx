@@ -1,8 +1,6 @@
 import dynamic from "next/dynamic";
 import SiteNav from "../components/SiteNav";
 
-// import InitLoading from "../components/InitLoading";
-
 const SceneHome = dynamic(() => import("@/src/components/SceneHome"), {
   ssr: true,
 });
