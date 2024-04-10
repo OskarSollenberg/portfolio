@@ -1,13 +1,12 @@
 "use client";
 import { FaGithub } from "react-icons/fa";
 import { BiLogoNetlify } from "react-icons/bi";
-import { RiArrowGoBackFill } from "react-icons/ri";
 import StickyLink from "@/src/components/StickyLink";
 import { projects } from "@/src/data/projects";
 import { useParams } from "next/navigation";
-import { useEffect, useState } from "react";
-import Link from "next/link";
 import ReturnBtn from "./ReturnBtn";
+import { useEffect, useState } from "react";
+import Image from "next/image";
 
 export default function Project() {
   const params = useParams();
@@ -38,12 +37,6 @@ export default function Project() {
 
   return (
     <section>
-      {/* <div className="absolute z-[500] top-[2rem] left-[2rem] text-[1rem] rounded-lg  transition-all hover:scale-125 duration-200 bg-[#F3691F] text-white lg:text-black lg:bg-white cursor-pointer p-2 ">
-        <Link href="/projects">
-          <RiArrowGoBackFill />
-        </Link>
-      </div> */}
-
       <ReturnBtn />
       <div className="flex flex-col-reverse lg:grid items-center justify-center lg:grid-cols-2 text-center text-white lg:text-start ">
         <div className="w-full flex justify-center item-center lg:items-center md:px-10 sm:mt-0 md:mt-0 bg-[#F3691F] lg:h-screen lg:w-[50vw]">
@@ -100,9 +93,9 @@ export default function Project() {
             </div>
           </div>
         </div>
-        <div className="flex justify-center items-center lg:w-full lg:mt-0 w-screen p-10 ">
+        <div className="flex justify-center items-center lg:w-full lg:mt-0 w-screen md:p-10 ">
           <div className="max-w-[50rem]">
-            <video type="video/webm" loop autoPlay muted>
+            <video type="video/webm" loop autoPlay muted playsInline>
               <source src={videoWebm} type="video/webm" />
               <source src={videoMp4} type="video/mp4" />
             </video>

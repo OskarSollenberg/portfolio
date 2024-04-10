@@ -32,12 +32,18 @@ export default function Nav() {
         className="w-screen h-screen bg-[#292929ee] fixed right-0 top-0 z-[4000] "
       >
         <div className="absolute top-0 right-0 mt-[3rem] mr-[3rem]">
-          <StickyLink
-            icon={<TiSocialLinkedinCircular />}
-            color={"#f3691f"}
-            size={50}
-            type={"socials"}
-          />
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href={"https://www.linkedin.com/in/oskar-sollenberg-12ab0b24b/"}
+          >
+            <StickyLink
+              icon={<TiSocialLinkedinCircular />}
+              color={"#f3691f"}
+              size={50}
+              type={"socials"}
+            />
+          </a>
         </div>
         <div className=" h-full flex flex-col items-center justify-center">
           <div

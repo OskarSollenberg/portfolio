@@ -9,7 +9,7 @@ export default function ReturnBtn() {
           className={`fixed flex items-center rounded-lg justify-start gap-[1rem] -translate-x-1/2 left-[50%] bottom-[2rem] text-[#FDF9EF] text-sm transition-all duration-100 ease-in-out `}
         >
           <div
-            className={`w-16 h-16 min-w-16 min-h-16 cursor-pointer flex items-center justify-content-center rounded-full justify-center transition-all duration-100 ease-in-out text-[white] shadow-2xl bg-[#00000085] hover:bg-black hover:scale-105 active:scale-100`}
+            className={`w-16 h-16 min-w-16 min-h-16 cursor-pointer flex items-center justify-content-center rounded-full justify-center transition-all duration-100 ease-in-out text-[white] shadow-2xl bg-[#000000af] hover:bg-black hover:scale-105 active:scale-100`}
           >
             <RiArrowGoBackFill />
           </div>
