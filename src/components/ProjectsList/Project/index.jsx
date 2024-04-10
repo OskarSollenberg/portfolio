@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import React from "react";
 
-const ProjectLink = ({ title, imgSrc, subTitle }) => {
+export default function Project({ title, imgSrc, subTitle }) {
   return (
     <div className="group">
       <motion.div
@@ -10,7 +10,7 @@ const ProjectLink = ({ title, imgSrc, subTitle }) => {
         className=" relative flex flex-col items-center justify-center text-[#F3691F] sm:justify-between gap-8 text-center sm:text-start sm:flex-row border-b-2 border-[#FEFCE1] bg-[#f3691f1d]  mb-[2rem] p-[2rem] sm:p-[4rem] transition-colors duration-500 hover:border-[#F3691F] hover:bg-[#f3691f] border-2 md:py-8 "
       >
         <div>
-          <motion.span
+          <motion.h2
             variants={{
               initial: { x: 0 },
               whileHover: { x: 30, scale: 1.1 },
@@ -23,10 +23,10 @@ const ProjectLink = ({ title, imgSrc, subTitle }) => {
             className="relative z-10 block text-4xl font-bold transition-colors duration-500 group-hover:text-[#FEFCE1] md:text-6xl hover:scale-110 "
           >
             {title}
-          </motion.span>
-          <span className="relative z-10 mt-2 block text-base  transition-colors duration-500 group-hover:text-[#FEFCE1] max-w-[20rem] sm:max-w-[50rem]">
+          </motion.h2>
+          <p className="relative z-10 mt-2 block text-base  transition-colors duration-500 group-hover:text-[#FEFCE1] max-w-[20rem] sm:max-w-[50rem]">
             {subTitle}
-          </span>
+          </p>
         </div>
         <motion.img
           transition={{ type: "spring" }}
@@ -37,6 +37,4 @@ const ProjectLink = ({ title, imgSrc, subTitle }) => {
       </motion.div>
     </div>
   );
-};
-
-export default ProjectLink;
+}

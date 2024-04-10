@@ -7,7 +7,7 @@ import NavLink from "./NavLink";
 import Curve from "./Curve";
 import Link from "next/link";
 import { navItems } from "@/src/data/navItems";
-// import NavFooter from "./NavFooter";
+import NavFooter from "./NavFooter";
 
 export const menuSlide = {
   initial: { x: "calc(100% + 100px)" },
@@ -55,7 +55,7 @@ export default function Nav() {
             }}
             className=" flex items-center sm:items-start leading-[6rem] flex-col text-[3.8rem] sm:text-[8rem] sm:leading-[9rem] md:text-[9rem] lg:text-[11rem] md:leading-[12rem]"
           >
-            <div className="hidden xl:flex text-[#f3691f] border-[#FEFCE1] border-b uppercase text-xs ">
+            <div className="text-[#f3691f] border-[#FEFCE1] border-b uppercase  sm:text-xs ">
               <p>Navigation</p>
             </div>
             {navItems.map((navItem, index) => {
@@ -69,7 +69,7 @@ export default function Nav() {
                 </Link>
               );
             })}
-            {/* <NavFooter /> */}
+            <NavFooter />
           </div>
         </div>
         <Curve />

@@ -1,6 +1,4 @@
 import Head from "next/head";
-import SiteNav from "@/src/components/SiteNav";
-import ProgressBar from "@/src/components/ProgressBar";
 
 const metadata = {
   title: "Oskar Herman Sollenberg - School Projects",

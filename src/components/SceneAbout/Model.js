@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from "react";
 import { useThree } from "@react-three/fiber";
 import AnimatedTextComponent from "./AnimatedText";
 import AnimatedCircleComponent from "./AnimatedCircleComp";

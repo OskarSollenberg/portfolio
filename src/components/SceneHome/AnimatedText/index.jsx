@@ -1,4 +1,3 @@
-import React from "react";
 import { animated, useSpring } from "react-spring";
 import { Text as DreiText } from "@react-three/drei";
 

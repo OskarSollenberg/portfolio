@@ -1,7 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
 import { useRef, useState } from "react";
-import { MdOutlineArrowUpward } from "react-icons/md";
 
 const StickyLink = ({ icon, color, size, type }) => {
   return (

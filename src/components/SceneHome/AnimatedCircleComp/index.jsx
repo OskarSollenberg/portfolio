@@ -1,6 +1,4 @@
-"use client";
-
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { animated, useSpring } from "react-spring";
 import { MeshTransmissionMaterial } from "@react-three/drei";

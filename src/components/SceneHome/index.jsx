@@ -2,7 +2,6 @@
 import { Canvas } from "@react-three/fiber";
 import Model from "./Model";
 import { Environment } from "@react-three/drei";
-
 import { useEffect } from "react";
 
 export default function SceneHome() {

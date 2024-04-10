@@ -1,36 +1,37 @@
 "use client";
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useEffect, useCallback } from "react";
 import { gsap } from "gsap";
 
-export default function ProgressBar({ isHomePage }) {
-  const [scrollPosition, setScrollPosition] = useState(0);
+export default function ProgressBar() {
   const progressBar = useRef(null);
 
-  useEffect(() => {
-    const updateScrollPosition = () => {
-      const scrollY = window.scrollY;
-      const fullHeight = document.body.scrollHeight - window.innerHeight;
-      const scrollPercent = scrollY / fullHeight;
-      gsap.to(progressBar.current, { width: `${scrollPercent * 100}%` });
-    };
+  const calculateScrollPercent = () => {
+    const scrollY = window.scrollY;
+    const fullHeight = document.body.scrollHeight - window.innerHeight;
+    return scrollY / fullHeight;
+  };
 
+  const updateScrollPosition = useCallback(() => {
+    const scrollPercent = calculateScrollPercent();
+    gsap.to(progressBar.current, { width: `${scrollPercent * 100}%` });
+  }, []);
+
+  useEffect(() => {
     window.addEventListener("scroll", updateScrollPosition);
 
     return () => {
       window.removeEventListener("scroll", updateScrollPosition);
     };
-  }, []);
+  }, [updateScrollPosition]);
 
   return (
-    <>
+    <div
+      className={`bottom-0 left-0 h-2 bg-[transparent] w-full fixed z-[5000] `}
+    >
       <div
-        className={`bottom-0 left-0 h-2 bg-[transparent] w-full fixed z-[5000] `}
-      >
-        <div
-          ref={progressBar}
-          className={`rounded-xl h-full w-0 bg-[#F3691F]`}
-        ></div>
-      </div>
-    </>
+        ref={progressBar}
+        className={`rounded-xl h-full w-0 bg-[#F3691F]`}
+      ></div>
+    </div>
   );
 }

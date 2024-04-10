@@ -22,10 +22,7 @@ export default function RootLayout({ children }) {
         />
       </Head>
       <body className={`${inter.className}`}>
-        <div className="flex justify-center items-center">
-          {children}
-          {/* <TopNav /> */}
-        </div>
+        <div className="flex justify-center items-center">{children}</div>
       </body>
     </html>
   );
