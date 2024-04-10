@@ -2,7 +2,7 @@ import React from "react";
 
 export default function NavFooter() {
   return (
-    <div className="flex mt-10 justify-between w-full text-xs text-[#F3691F] gap-10">
+    <div className=" hidden sm:flex mt-10 justify-between w-full text-xs text-[#F3691F] gap-10">
       <a
         href="https://www.instagram.com/oskar_sollenberg/"
         target="_blank"
