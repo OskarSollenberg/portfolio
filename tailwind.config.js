@@ -20,6 +20,11 @@ module.exports = {
           "100%": { transform: "translateX(100%)" },
         },
       },
+      backgroundImage: (theme) => ({
+        aboutImg_lg: "url('/medias/about-lg.webp')",
+        aboutImg_sm: "url('/medias/about-sm.jpg')",
+        aboutImg_light: "url('/medias/about-light.webp')",
+      }),
     },
   },
   variants: {
