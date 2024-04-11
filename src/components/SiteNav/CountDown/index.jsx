@@ -46,10 +46,10 @@ const CountDown = () => {
   };
 
   return (
-    <>
-      <div className="sticky flex justify-center items-center left-0 right-0 top-0 z-50 w-full h-[2rem] text-black px-2">
-        <div className="absolute -top-[1.7rem] left-[.6rem] ">
-          Internship starts in
+    <div className="translate-y-[.7rem] -translate-x-4">
+      <div className="sticky flex justify-center items-center left-0 right-0 z-50 w-full h-[2rem] text-black px-2">
+        <div className="absolute -top-[1.7rem] left-[.6rem] translate-y-2">
+          INTERNSHIP STARTS IN
         </div>
 
         <div className="mx-auto flex w-fit max-w-5xl flex-wrap items-center justify-center gap-x-4 text-xs md:text-sm">
@@ -59,7 +59,7 @@ const CountDown = () => {
           <CountdownItem num={remaining.seconds} text="seconds" />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
