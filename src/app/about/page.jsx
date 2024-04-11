@@ -15,7 +15,7 @@ export default function About() {
       <main className="absolute w-screen h-screen top-0 text-black">
         <div className="relative w-full h-full">
           <Image
-            src="/medias/studio-dark.webp"
+            src="/medias/about-light.webp"
             alt="About Image"
             layout="fill"
             objectFit="cover"
