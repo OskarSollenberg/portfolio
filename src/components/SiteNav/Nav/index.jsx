@@ -45,7 +45,7 @@ export default function Nav() {
             />
           </a>
         </div>
-        <div className=" h-full flex flex-col items-center justify-center">
+        <div className=" h-full flex flex-col items-center justify-start sm:justify-center py-[5rem] sm:py-0 ">
           <div
             style={{
               fontFamily: "Montreal",
@@ -53,9 +53,9 @@ export default function Nav() {
             onMouseLeave={() => {
               setSelectedIndicator(pathname);
             }}
-            className=" flex items-center sm:items-start leading-[6rem] flex-col text-[3.8rem] sm:text-[8rem] sm:leading-[9rem] md:text-[9rem] lg:text-[11rem] md:leading-[12rem]"
+            className=" flex items-center sm:items-start leading-[6rem] flex-col text-[3.8rem] sm:text-[8rem] sm:leading-[9rem] md:text-[9rem] lg:text-[11rem] lg:leading-[12rem]"
           >
-            <div className="text-[#f3691f] border-[#FEFCE1] border-b uppercase text-[3rem]  sm:text-xs ">
+            <div className="text-[#f3691f] border-[#FEFCE1] border-b uppercase text-[3rem] sm:text-xs ">
               <p>Navigation</p>
             </div>
             {navItems.map((navItem, index) => {
