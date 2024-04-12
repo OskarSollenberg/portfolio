@@ -44,7 +44,8 @@ const MagnetButton = ({ icon, color, size, type }) => {
       className={`group relative grid h-[40px] w-[40px] place-content-center rounded-full transition-colors duration-700 ease-out`}
     >
       <div
-        className={`absolute inset-0 z-0 scale-0 rounded-full bg-[${color}] transition-transform duration-700 ease-out group-hover:scale-100`}
+        className={`absolute inset-0 z-0 scale-0 rounded-full transition-transform duration-700 ease-out group-hover:scale-100
+        }`}
       />
       <div style={{ fontSize: `${size}px`, color }}>{icon}</div>
 

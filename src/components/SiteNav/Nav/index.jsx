@@ -3,6 +3,9 @@ import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import StickyLink from "../../StickyLink";
 import { TiSocialLinkedinCircular } from "react-icons/ti";
+
+import { MdEmail } from "react-icons/md";
+
 import NavLink from "./NavLink";
 import Curve from "./Curve";
 import Link from "next/link";
@@ -35,17 +38,17 @@ export default function Nav() {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href={"https://www.linkedin.com/in/oskar-sollenberg-12ab0b24b/"}
+            href="mailto:oskar@sollenberg.se"
           >
             <StickyLink
-              icon={<TiSocialLinkedinCircular />}
+              icon={<MdEmail />}
               color={"#f3691f"}
               size={50}
               type={"socials"}
             />
           </a>
         </div>
-        <div className=" h-full flex flex-col items-center justify-start sm:justify-center py-[5rem] sm:py-0 ">
+        <div className=" h-full flex flex-col items-center justify-start sm:justify-center py-[7rem] sm:py-0 ">
           <div
             style={{
               fontFamily: "Montreal",

@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import ProgressBar from "@/src/components/ProgressBar";
 
 const inter = Inter({ subsets: ["latin"] });
 
