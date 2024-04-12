@@ -50,7 +50,7 @@ export default function Project() {
             </div>
           </div>
         </div>
-        <div className="flex justify-center items-center lg:w-full lg:mt-0 w-screen md:p-10 ">
+        <div className="flex justify-center min-h-[10rem] items-center lg:w-full lg:mt-0 w-screen md:p-10 ">
           <div className="max-w-[50rem]">
             <video type="video/webm" loop autoPlay muted playsInline>
               <source src={videoWebm} type="video/webm" />
