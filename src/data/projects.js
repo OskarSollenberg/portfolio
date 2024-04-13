@@ -131,7 +131,7 @@ export const projects = [
     github: "https://github.com/OskarSollenberg/ITTT---Hangman-ver2",
     netlify: "https://hangmanversion2.netlify.app",
     description:
-      "This is a creative version of the classic hangman game. The player has 6 tries to guess the word correctly, otherwise they lose. It's done using only vanilla JavaScript, HTML, and CSS. This was my personal project during one of the first modules at Hyper Island.",
+      "This is a creative take on the classic game, Hangman . The player has 6 tries to guess the word correctly, otherwise they lose. It's done using only vanilla JavaScript, HTML, and CSS. This was my personal project during one of the first modules at Hyper Island.",
     learnings: [
       {
         learning: "JavaScript concepts such as variables, loops, functions.",
