@@ -3,22 +3,22 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "Montreal";
-  src: url("/fonts/PPNeueMontreal-Bold.otf") format("opentype");
+  font-family: 'Montreal';
+  src: url('/fonts/PPNeueMontreal-Bold.otf') format('opentype');
 }
 
 @font-face {
-  font-family: "Akhbar";
-  src: url("/fonts/AkhbarBold.ttf") format("truetype");
+  font-family: 'Akhbar';
+  src: url('/fonts/AkhbarBold.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: "Mortend";
-  src: url("/fonts/Mortend-Extra-Bold.otf") format("opentype");
+  font-family: 'Mortend';
+  src: url('/fonts/Mortend-Extra-Bold.otf') format('opentype');
 }
 @font-face {
-  font-family: "Grotesk";
-  src: url("/FamiljenGrotesk-SemiBold.otf") format("opentype");
+  font-family: 'Grotesk';
+  src: url('/FamiljenGrotesk-SemiBold.otf') format('opentype');
 }
 
 * {
