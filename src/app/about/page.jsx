@@ -17,7 +17,7 @@ export default function About() {
         <div className='relative w-screen h-screen hidden lg:block mb-[10rem]'>
           <Image
             className='w-screen h-screen'
-            src='/medias/studio-dark.webp'
+            src='/medias/studio-dark-light.webp'
             alt='About Image'
             layout='fill'
             objectFit='cover'
@@ -28,7 +28,7 @@ export default function About() {
         </div>
         {/* <div className=' w-screen'></div> */}
         <div className='w-[80vw] h-auto mx-auto rounded-lg overflow-hidden lg:hidden mb-[5rem]'>
-          <Image width={1920} height={1080} src='/medias/studio.webp' />
+          <Image width={1920} height={1080} src='/medias/studio-light.webp' />
         </div>
         <AboutText />
         <div className='w-screen h-[20rem]'></div>
