@@ -30,7 +30,7 @@ export default function Nav() {
         exit='exit'
         className='w-screen h-screen bg-[#292929ee] fixed right-0 top-0 z-[4000] '
       >
-        <div className=' h-full flex flex-col items-center justify-start sm:justify-center py-[8rem] sm:py-0 '>
+        <div className=' h-full flex flex-col items-center justify-start sm:justify-center py-[10rem] sm:py-0 '>
           <div
             style={{
               fontFamily: 'Montreal',
