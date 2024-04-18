@@ -1,10 +1,10 @@
-"use client";
-import { motion } from "framer-motion";
-import { useRef, useState } from "react";
+'use client';
+import { motion } from 'framer-motion';
+import { useRef, useState } from 'react';
 
 const StickyLink = ({ icon, color, size, type }) => {
   return (
-    <div className="flex w-auto justify-end ">
+    <div className='flex w-auto justify-end '>
       <MagnetButton icon={icon} color={color} size={size} type={type} />
     </div>
   );
@@ -40,7 +40,7 @@ const MagnetButton = ({ icon, color, size, type }) => {
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       animate={{ x, y }}
-      transition={{ type: "spring", stiffness: 200, damping: 20 }}
+      transition={{ type: 'spring', stiffness: 200, damping: 20 }}
       className={`group relative grid h-[40px] w-[40px] place-content-center rounded-full transition-colors duration-700 ease-out`}
     >
       <div
@@ -55,31 +55,31 @@ const MagnetButton = ({ icon, color, size, type }) => {
         transition={{
           duration: 25,
           repeat: Infinity,
-          repeatType: "loop",
-          ease: "linear",
+          repeatType: 'loop',
+          ease: 'linear',
         }}
         style={{
-          top: "50%",
-          left: "50%",
-          x: "-50%",
-          y: "-50%",
+          top: '50%',
+          left: '50%',
+          x: '-50%',
+          y: '-50%',
         }}
         width={size * 2}
         height={size * 2}
-        className="absolute z-10"
+        className='absolute z-10'
       >
-        <path id="circlePath" d={d} fill="none" />
+        <path id='circlePath' d={d} fill='none' />
         <text>
           <textPath
             fill={color}
-            href="#circlePath"
-            style={{ letterSpacing: "0.2em" }}
+            href='#circlePath'
+            style={{ letterSpacing: '0.2em' }}
             className={`fill-[${color}] text-[.75rem] font-light uppercase opacity-0 transition-opacity duration-700 ease-out group-hover:opacity-100 mr-5`}
           >
-            {type === "github" && "CHECK OUT THE CODE CHECK OUT THE CODE "}
-            {type === "socials" &&
-              "ME CONNECT WITH ME CONNECT WITH CONNECT WITH"}
-            {type === "netlify" && "LAUNCH THE WEBSITE LAUNCE THE WEBSITE"}
+            {type === 'github' && 'CHECK OUT THE CODE CHECK OUT THE CODE '}
+            {type === 'socials' &&
+              'ME CONNECT WITH ME CONNECT WITH CONNECT WITH'}
+            {type === 'netlify' && 'LAUNCH THE WEBSITE LAUNCE THE WEBSITE'}
           </textPath>
         </text>
       </motion.svg>

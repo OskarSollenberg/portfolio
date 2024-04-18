@@ -1,22 +1,18 @@
-import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion";
-import { usePathname } from "next/navigation";
-import StickyLink from "../../StickyLink";
-import { TiSocialLinkedinCircular } from "react-icons/ti";
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { usePathname } from 'next/navigation';
 
-import { MdEmail } from "react-icons/md";
-
-import NavLink from "./NavLink";
-import Curve from "./Curve";
-import Link from "next/link";
-import { navItems } from "@/src/data/navItems";
-import NavFooter from "./NavFooter";
+import NavLink from './NavLink';
+import Curve from './Curve';
+import Link from 'next/link';
+import { navItems } from '@/src/data/navItems';
+// import NavFooter from "./NavFooter";
 
 export const menuSlide = {
-  initial: { x: "calc(100% + 100px)" },
-  enter: { x: "0", transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1] } },
+  initial: { x: 'calc(100% + 100px)' },
+  enter: { x: '0', transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1] } },
   exit: {
-    x: "calc(100% + 100px)",
+    x: 'calc(100% + 100px)',
     transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1] },
   },
 };
@@ -29,36 +25,22 @@ export default function Nav() {
     <>
       <motion.div
         variants={menuSlide}
-        initial="initial"
-        animate="enter"
-        exit="exit"
-        className="w-screen h-screen bg-[#292929ee] fixed right-0 top-0 z-[4000] "
+        initial='initial'
+        animate='enter'
+        exit='exit'
+        className='w-screen h-screen bg-[#292929ee] fixed right-0 top-0 z-[4000] '
       >
-        <div className="absolute top-0 right-0 mt-[3rem] mr-[3rem]">
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="mailto:oskar@sollenberg.se"
-          >
-            <StickyLink
-              icon={<MdEmail />}
-              color={"#f3691f"}
-              size={50}
-              type={"socials"}
-            />
-          </a>
-        </div>
-        <div className=" h-full flex flex-col items-center justify-start sm:justify-center py-[7rem] sm:py-0 ">
+        <div className=' h-full flex flex-col items-center justify-start sm:justify-center py-[8rem] sm:py-0 '>
           <div
             style={{
-              fontFamily: "Montreal",
+              fontFamily: 'Montreal',
             }}
             onMouseLeave={() => {
               setSelectedIndicator(pathname);
             }}
-            className=" flex items-center sm:items-start leading-[6rem] flex-col text-[3.8rem] sm:text-[8rem] sm:leading-[9rem] md:text-[9rem] lg:text-[11rem] lg:leading-[12rem]"
+            className=' flex items-center sm:items-start leading-[6rem] flex-col text-[3.8rem] sm:text-[8rem] sm:leading-[9rem] md:text-[9rem] lg:text-[11rem] lg:leading-[12rem]'
           >
-            <div className="text-[#f3691f] border-[#FEFCE1] border-b uppercase text-[3rem] sm:text-xs ">
+            <div className='text-[#f3691f] border-[#FEFCE1] border-b uppercase text-[3rem] sm:text-xs '>
               <p>Navigation</p>
             </div>
             {navItems.map((navItem, index) => {
@@ -72,7 +54,7 @@ export default function Nav() {
                 </Link>
               );
             })}
-            <NavFooter />
+            {/* <NavFooter /> */}
           </div>
         </div>
         <Curve />
