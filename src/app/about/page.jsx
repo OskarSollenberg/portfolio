@@ -17,13 +17,15 @@ export default function About() {
         <div className='relative w-screen h-screen hidden lg:block mb-[10rem]'>
           <Image
             className='w-screen h-screen'
-            src='/medias/studio-dark-light.webp'
+            src='/medias/studio-dark.webp'
             alt='About Image'
             layout='fill'
             objectFit='cover'
             objectPosition='left'
             quality={100}
             priority={true}
+            placeholder='blur'
+            blurDataURL='/medias/studio-dark-preview.webp'
           />
         </div>
         {/* <div className=' w-screen'></div> */}
