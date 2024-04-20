@@ -48,7 +48,7 @@ export default function AboutText() {
         {`Programming and web development have been in the back of my mind
         ever since my time at KMH, and I have now spent a little over half a
         year learning everything I possibly can about web development at
-        Hyper Island. " I love working with visually appealing content, but
+        Hyper Island. I love working with visually appealing content, but
         I've also set a clear goal of achieving the skill set of a
         full-stack engineer. In a perfect world, I would be able to combine
         my creativity with my technical skills in coding to bring to life
