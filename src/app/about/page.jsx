@@ -15,22 +15,25 @@ export default function About() {
       <main className='absolute w-screen h-screen top-0 text-black'>
         <div className='h-screen lg:hidden'></div>
         <div className='relative w-screen h-screen hidden lg:block mb-[10rem]'>
-          <Image
+          {/* <Image
             className='w-screen h-screen'
             src='/medias/studio-dark.webp'
             alt='About Image'
             layout='fill'
             objectFit='cover'
             objectPosition='left'
-            quality={100}
+            quality={50}
             priority={true}
-            placeholder='blur'
-            blurDataURL='/medias/studio-dark-preview.webp'
-          />
+          /> */}
         </div>
         {/* <div className=' w-screen'></div> */}
-        <div className='w-[80vw] h-auto mx-auto rounded-lg overflow-hidden lg:hidden mb-[5rem]'>
-          <Image width={1920} height={1080} src='/medias/studio-light.webp' />
+        <div className='w-[90vw] lg:w-[80vw] h-auto mx-auto rounded-lg overflow-hidden  mb-[5rem]'>
+          <Image
+            quality={60}
+            width={1920}
+            height={1080}
+            src='/medias/studio.webp'
+          />
         </div>
         <AboutText />
         <div className='w-screen h-[20rem]'></div>
