@@ -17,8 +17,8 @@ export default function AboutText() {
 
     gsap.from(chars, {
       opacity: 0,
-      y: 20,
-      stagger: 0.007,
+      y: 30,
+      stagger: 0.005,
       ease: 'back.out',
       scrollTrigger: {
         trigger: textRef.current,
