@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import SiteNav from '@/src/components/SiteNav';
 import ProgressBar from '@/src/components/ProgressBar';
+import SiteHeader from '@/src/components/SiteHeader';
 
 const metadata = {
   title: 'Oskar Herman Sollenberg - About Me',
@@ -16,6 +17,7 @@ export default function AboutLayout({ children }) {
         <meta name='description' content={metadata.description} />
       </Head>
       <SiteNav isHomepage={false} />
+      <SiteHeader />
       {children}
     </>
   );
