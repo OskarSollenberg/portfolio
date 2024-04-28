@@ -12,26 +12,26 @@ export const projects = [
       'This is a collaboration project done together with UX-designer at Hyper Island where we got to build a landing page for the mental wellness company Mentatt. The website is built in Next.js, well documented with Storybook and have integrated language translation using the i18 nexus library.',
     learnings: [
       {
-        learning: 'Working with Agile methodologies',
+        learning: 'Working with Agile methodologies.',
       },
-      { learning: 'Building website from Wireframe/Prototype' },
+      { learning: 'Building website from Wireframe/Prototype.' },
       {
-        learning: 'Creating improved Versions based of user Feedback',
-      },
-      {
-        learning: 'Using Reusable components / reusable UI components,',
+        learning: 'Creating improved Versions based of user Feedback.',
       },
       {
-        learning: 'Finding and creating commonalities in design prototype',
+        learning: 'Using Reusable components / reusable UI components.',
       },
       {
-        learning: 'Storybook for component library',
+        learning: 'Finding and creating commonalities in design prototype.',
       },
       {
-        learning: 'Jest for testing',
+        learning: 'Storybook for component library.',
       },
       {
-        learning: 'i18 nexus for translations',
+        learning: 'Using Jest for code testing.',
+      },
+      {
+        learning: 'i18 nexus for translations.',
       },
     ],
   },
