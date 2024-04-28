@@ -9,7 +9,7 @@ export const projects = [
     github: '#',
     netlify: 'https://vercel.com/mentatt/mentatt',
     description:
-      'This is a collaboration project done together with UX-designer at Hyper Island where we got to build a landing page for the mental wellness company Mentatt. The website is built using Next.js, well documented using Storybook and have integrated language translation using the i18 nexus library.',
+      'This is a collaboration project done together with UX-designer at Hyper Island where we got to build a landing page for the mental wellness company Mentatt. The website is built in Next.js, well documented with Storybook and have integrated language translation using the i18 nexus library.',
     learnings: [
       {
         learning: 'Working with Agile methodologies',
