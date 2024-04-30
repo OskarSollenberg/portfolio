@@ -1,40 +1,40 @@
 export const projects = [
-  {
-    title: 'Mentatt',
-    href: 'Mentatt',
-    subTitle: 'Teamwork Makes The Dreamwork',
-    imgSrc: '/medias/mentatt.webp',
-    videoWebm: '/medias/mentatt.webm',
-    videoMp4: '/medias/mentatt.mp4',
-    github: '#',
-    netlify: 'https://vercel.com/mentatt/mentatt',
-    description:
-      'This is a collaboration project done together with UX-designer at Hyper Island where we got to build a landing page for the mental wellness company Mentatt. The website is built in Next.js, well documented with Storybook and have integrated language translation using the i18 nexus library.',
-    learnings: [
-      {
-        learning: 'Working with Agile methodologies.',
-      },
-      { learning: 'Building website from Wireframe/Prototype.' },
-      {
-        learning: 'Creating improved Versions based of user Feedback.',
-      },
-      {
-        learning: 'Using Reusable components / reusable UI components.',
-      },
-      {
-        learning: 'Finding and creating commonalities in design prototype.',
-      },
-      {
-        learning: 'Storybook for component library.',
-      },
-      {
-        learning: 'Using Jest for code testing.',
-      },
-      {
-        learning: 'i18 nexus for translations.',
-      },
-    ],
-  },
+  //   {
+  //     title: 'Mentatt',
+  //     href: 'Mentatt',
+  //     subTitle: 'Teamwork Makes The Dreamwork',
+  //     imgSrc: '/medias/mentatt.webp',
+  //     videoWebm: '/medias/mentatt.webm',
+  //     videoMp4: '/medias/mentatt.mp4',
+  //     github: '#',
+  //     netlify: 'https://vercel.com/mentatt/mentatt',
+  //     description:
+  //       'This is a collaboration project done together with UX-designer at Hyper Island where we got to build a landing page for the mental wellness company Mentatt. The website is built in Next.js, well documented with Storybook and have integrated language translation using the i18 nexus library.',
+  //     learnings: [
+  //       {
+  //         learning: 'Working with Agile methodologies.',
+  //       },
+  //       { learning: 'Building website from Wireframe/Prototype.' },
+  //       {
+  //         learning: 'Creating improved Versions based of user Feedback.',
+  //       },
+  //       {
+  //         learning: 'Using Reusable components / reusable UI components.',
+  //       },
+  //       {
+  //         learning: 'Finding and creating commonalities in design prototype.',
+  //       },
+  //       {
+  //         learning: 'Storybook for component library.',
+  //       },
+  //       {
+  //         learning: 'Using Jest for code testing.',
+  //       },
+  //       {
+  //         learning: 'i18 nexus for translations.',
+  //       },
+  //     ],
+  //   },
   {
     title: 'Hinder',
     href: 'hinder',
