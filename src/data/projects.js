@@ -38,7 +38,7 @@ export const projects = [
   {
     title: 'Centi-Do-List',
     href: 'centidolist',
-    subTitle: 'Teamwork Makes The Dreamwork',
+    subTitle: 'Going Fullstack',
     imgSrc: '/medias/centidolist.webp',
     videoWebm: '',
     videoMp4: '',
