@@ -1,40 +1,64 @@
 export const projects = [
-  //   {
-  //     title: 'Mentatt',
-  //     href: 'Mentatt',
-  //     subTitle: 'Teamwork Makes The Dreamwork',
-  //     imgSrc: '/medias/mentatt.webp',
-  //     videoWebm: '/medias/mentatt.webm',
-  //     videoMp4: '/medias/mentatt.mp4',
-  //     github: '#',
-  //     netlify: 'https://vercel.com/mentatt/mentatt',
-  //     description:
-  //       'This is a collaboration project done together with UX-designer at Hyper Island where we got to build a landing page for the mental wellness company Mentatt. The website is built in Next.js, well documented with Storybook and have integrated language translation using the i18 nexus library.',
-  //     learnings: [
-  //       {
-  //         learning: 'Working with Agile methodologies.',
-  //       },
-  //       { learning: 'Building website from Wireframe/Prototype.' },
-  //       {
-  //         learning: 'Creating improved Versions based of user Feedback.',
-  //       },
-  //       {
-  //         learning: 'Using Reusable components / reusable UI components.',
-  //       },
-  //       {
-  //         learning: 'Finding and creating commonalities in design prototype.',
-  //       },
-  //       {
-  //         learning: 'Storybook for component library.',
-  //       },
-  //       {
-  //         learning: 'Using Jest for code testing.',
-  //       },
-  //       {
-  //         learning: 'i18 nexus for translations.',
-  //       },
-  //     ],
-  //   },
+  {
+    title: 'Mentatt',
+    href: 'mentatt',
+    subTitle: 'Teamwork Makes The Dreamwork',
+    imgSrc: '/medias/mentatt.webp',
+    videoWebm: '/medias/mentatt.webm',
+    videoMp4: '/medias/mentatt.mp4',
+    github: '#',
+    netlify: 'https://vercel.com/mentatt/mentatt',
+    description:
+      'This is a collaboration project done together with UX-designer at Hyper Island where we got to build a landing page for the mental wellness company Mentatt. The website is built in Next.js, well documented with Storybook and have integrated language translation using the i18 nexus library.',
+    learnings: [
+      {
+        learning: 'Working with Agile methodologies.',
+      },
+      { learning: 'Building website from Wireframe/Prototype.' },
+      {
+        learning: 'Creating improved Versions based of user Feedback.',
+      },
+      {
+        learning: 'Using Reusable components / reusable UI components.',
+      },
+      {
+        learning: 'Finding and creating commonalities in design prototype.',
+      },
+      {
+        learning: 'Storybook for component library.',
+      },
+      {
+        learning: 'Using Jest for code testing.',
+      },
+      {
+        learning: 'i18 nexus for translations.',
+      },
+    ],
+  },
+  {
+    title: 'Centi-Do-List',
+    href: 'centidolist',
+    subTitle: 'Teamwork Makes The Dreamwork',
+    imgSrc: '/medias/centidolist.webp',
+    videoWebm: '',
+    videoMp4: '',
+    github: '#',
+    netlify: '#',
+    description:
+      'This is a fullstack application me and 4 other students created In a backend focused module at Hyper Island, we were tasked to create a to-do list website and we decided to create a creative and fun to-do list that is a centipede that grows with each task you add. The application is built with React, Node.js, and Express.js, and uses Postgres as a database.',
+    learnings: [
+      {
+        learning: 'Learning backend development with Node.js and Express.js.',
+      },
+      { learning: 'Learning SQL' },
+      {
+        learning: 'Understanding the full stack development process.',
+      },
+      {
+        learning: 'Error handling and debugging in the backend.',
+      },
+    ],
+  },
   {
     title: 'Hinder',
     href: 'hinder',
