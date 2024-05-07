@@ -79,7 +79,7 @@ const MagnetButton = ({ icon, color, size, type }) => {
             {type === 'github' && 'CHECK OUT THE CODE CHECK OUT THE CODE '}
             {type === 'socials' &&
               'ME CONNECT WITH ME CONNECT WITH CONNECT WITH'}
-            {type === 'netlify' && 'LAUNCH THE WEBSITE LAUNCE THE WEBSITE'}
+            {type === 'netlify' && 'LAUNCH THE WEBSITE LAUNCH THE WEBSITE'}
           </textPath>
         </text>
       </motion.svg>
