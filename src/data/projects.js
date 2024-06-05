@@ -1,5 +1,33 @@
 export const projects = [
   {
+    title: 'RubberDuck Debugging',
+    href: 'rubberduck.png',
+    subTitle: 'Art is the elimination of the unnecessary',
+    imgSrc: '/medias/rubberduck.png',
+    videoWebm: '"',
+    videoMp4: '/medias/rubberduck.mp4',
+    github: 'https://github.com/exploing-code/rubberduck-debugging',
+    netlify: 'https://rubberduck-debugging.vercel.app/',
+    description:
+      'This is a collaboration project done together with 3 other people at Hyper Island where we got to build a creative webpage page using 3d models and Gsap animations. We build a website using storytelling trying to have a strong concept using few but well thought through elements and colors. The website is built in React',
+    learnings: [
+      {
+        learning: 'Learning Gsap animations.',
+      },
+      { learning: 'Combine Audio with interactivity on the web' },
+      {
+        learning: 'Concept planning, wireframes, and prototyping.',
+      },
+      {
+        learning: 'Bulding animations using Three.js for 3D models.',
+      },
+      {
+        learning:
+          'Coming up with good Storytelling through web design and copy.',
+      },
+    ],
+  },
+  {
     title: 'Mentatt',
     href: 'mentatt',
     subTitle: 'Teamwork Makes The Dreamwork',
