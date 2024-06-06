@@ -9,7 +9,7 @@ export const projects = [
     github: 'https://github.com/exploing-code/rubberduck-debugging',
     netlify: 'https://rubberduck-debugging.vercel.app/',
     description:
-      'This is a collaboration project done together with 3 other people at Hyper Island where we got to build a creative webpage page using 3d models and Gsap animations. We build a website using storytelling trying to have a strong concept using few but well thought through elements and colors. The website is built in React',
+      'This project is a collaboration between me and three other colleagues at Hyper Island. We built a creative webpage using 3D models and GSAP animations. The website, developed in React, utilizes storytelling to present a strong concept with carefully selected elements and colors. Our goal was to create an engaging and visually appealing experience using minimal yet impactful design choices.',
     learnings: [
       {
         learning: 'Learning Gsap animations.',
