@@ -2,7 +2,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
 
 // NOTE: Change this date to whatever date you want to countdown to :)
-const COUNTDOWN_FROM = '2024-09-01';
+const COUNTDOWN_FROM = '2024-09-23';
 
 const SECOND = 1000;
 const MINUTE = SECOND * 60;
