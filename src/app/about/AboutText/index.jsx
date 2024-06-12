@@ -51,7 +51,7 @@ export default function AboutText() {
         Hyper Island. I love working with visually appealing content, but
         I've also set a clear goal of achieving the skill set of a
         full-stack engineer. In a perfect world, I would be able to combine
-        my creativity with my technical skills in coding to bring to life
+        my creativity with my technical skills in coding to bring forth
         visually stunning and functional websites.`}
       </p>
     </div>
