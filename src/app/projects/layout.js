@@ -5,6 +5,7 @@ const metadata = {
   description:
     'A showcase of my school projects, demonstrating my skills and knowledge in web development.',
 };
+//
 
 export default function Layout({ children }) {
   return (
