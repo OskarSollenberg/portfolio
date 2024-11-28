@@ -2,28 +2,28 @@ export const projects = [
   {
     title: 'Portfolio Webiste',
     href: 'rubberduck.png',
-    subTitle: 'Art is the elimination of the unnecessary',
+    subTitle: 'Music is the universal language',
     imgSrc: '/medias/lukas.png',
     videoWebm: '"',
-    videoMp4: '/medias/rubberduck.mp4',
-    github: 'https://github.com/exploing-code/rubberduck-debugging',
+    videoMp4: '/medias/lukas.webm',
+    github: 'https://github.com/OskarSollenberg/indiv_project',
     netlify: 'https://indiv-project.vercel.app/',
     description:
-      'This project is a collaboration between me and four other colleagues at Hyper Island. We built a creative webpage using 3D models and GSAP animations. The website, developed in React, utilizes storytelling to present a strong concept with carefully selected elements and colors. Our goal was to create an engaging and visually appealing experience using minimal yet impactful design choices.',
+      'This is a personal portfolio website I designed and developed for a friend who works as a music producer. Built with Next.js, the site leverages GSAP and Framer Motion to deliver an exciting visual experience. The design prioritizes minimalism and focuses heavily on visuals, offering a digital showcase of the producer’s work rather than emphasizing conventional user-friendliness. The goal was to create an interactive exhibition that highlights the music producer’s artistry.',
     learnings: [
       {
-        learning: 'Learning Gsap animations.',
+        learning: 'Learning Gsap and Framer Motion animations.',
       },
       { learning: 'Combine Audio with interactivity on the web' },
       {
-        learning: 'Concept planning, wireframes, and prototyping.',
+        learning: 'Creating and designing ',
       },
       {
         learning: 'Bulding animations using Three.js for 3D models.',
       },
       {
         learning:
-          'Coming up with good Storytelling through web design and copy.',
+          'Contentful CMS',
       },
     ],
   },
