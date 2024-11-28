@@ -1,8 +1,8 @@
-'use client';
-import { Canvas } from '@react-three/fiber';
-import Model from './Model';
-import { Environment } from '@react-three/drei';
-import { PerspectiveCamera } from '@react-three/drei';
+"use client";
+import { Canvas } from "@react-three/fiber";
+import Model from "./Model";
+import { Environment } from "@react-three/drei";
+import { PerspectiveCamera } from "@react-three/drei";
 
 export default function SceneAbout() {
   return (
@@ -10,7 +10,7 @@ export default function SceneAbout() {
       <Canvas>
         <Model />
         <directionalLight />
-        <Environment preset='city' />
+        <Environment preset="city" />
         <PerspectiveCamera makeDefault position={[0, 0, 10]} />
       </Canvas>
     </div>

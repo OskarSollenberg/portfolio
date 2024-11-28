@@ -3,7 +3,7 @@ import SiteNav from "../components/SiteNav";
 import SiteHeader from "../components/SiteHeader";
 
 const SceneHome = dynamic(() => import("@/src/components/SceneHome"), {
-  ssr: true,
+  ssr: false,
 });
 
 export default function Home() {

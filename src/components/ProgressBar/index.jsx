@@ -1,6 +1,6 @@
-'use client';
-import React, { useRef, useEffect } from 'react';
-import { gsap } from 'gsap';
+"use client";
+import React, { useRef, useEffect } from "react";
+import { gsap } from "gsap";
 
 export default function ProgressBar() {
   const progressBar = useRef(null);
@@ -17,12 +17,12 @@ export default function ProgressBar() {
       gsap.to(progressBar.current, { width: `${scrollPercent * 100}%` });
     };
 
-    window.addEventListener('scroll', updateScrollPosition);
+    window.addEventListener("scroll", updateScrollPosition);
 
     return () => {
-      window.removeEventListener('scroll', updateScrollPosition);
+      window.removeEventListener("scroll", updateScrollPosition);
     };
-  }, []);
+  }, [progressBar]);
 
   return (
     <div

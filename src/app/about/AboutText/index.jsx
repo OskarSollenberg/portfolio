@@ -1,9 +1,9 @@
-'use client';
-import { useRef, useEffect, useState } from 'react';
+"use client";
+import { useRef, useEffect, useState } from "react";
 
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import SplitType from 'split-type';
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import SplitType from "split-type";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function AboutText() {
@@ -11,7 +11,7 @@ export default function AboutText() {
 
   useEffect(() => {
     const split = new SplitType(textRef.current, {
-      type: 'lines,words,chars',
+      type: "lines,words,chars",
     });
     const chars = split.chars;
 
@@ -19,20 +19,20 @@ export default function AboutText() {
       opacity: 0,
       y: 30,
       stagger: 0.005,
-      ease: 'back.out',
+      ease: "back.out",
       scrollTrigger: {
         trigger: textRef.current,
-        start: 'top center',
+        start: "top center",
       },
     });
   }, []);
   return (
     <div
       ref={textRef}
-      style={{ fontFamily: 'Montreal' }}
-      className='flex flex-col gap-10 text-center mx-auto sm:max-w-[85vw] lg:max-w-[75vw] max-w-[90vw] xl:text-[1.6rem] leading-[1.8rem] md:leading-9 lg:leading-10 xl:leading-[3rem] sm:text-[1.2rem] lg:text-[1.4rem]'
+      style={{ fontFamily: "Montreal" }}
+      className="flex flex-col gap-10 text-center mx-auto sm:max-w-[85vw] lg:max-w-[75vw] max-w-[90vw] xl:text-[1.6rem] leading-[1.8rem] md:leading-9 lg:leading-10 xl:leading-[3rem] sm:text-[1.2rem] lg:text-[1.4rem]"
     >
-      <p className='text-[1.3rem] sm:text-[1.5rem] md:text-[1.9rem] text-[#F3691F]'>
+      <p className="text-[1.3rem] sm:text-[1.5rem] md:text-[1.9rem] text-[#F3691F]">
         Who am I?
       </p>
       <p>{`Hi there! I'm Oskar Sollenberg.`}</p>

@@ -3,7 +3,6 @@ import { useThree } from "@react-three/fiber";
 import AnimatedTextComponent from "./AnimatedText";
 import AnimatedCircleComponent from "./AnimatedCircleComp";
 import useLoading from "@/src/hooks/useLoading";
-import { color } from "framer-motion";
 
 export default function Model() {
   const { viewport } = useThree();
@@ -24,8 +23,8 @@ export default function Model() {
     window.innerWidth < 600
       ? viewport.width / 2.8
       : window.innerWidth < 1000
-      ? viewport.width / 2.8
-      : viewport.width / 3.5;
+        ? viewport.width / 2.8
+        : viewport.width / 3.5;
 
   const isSmallScreen = window.innerWidth < 1000;
 
