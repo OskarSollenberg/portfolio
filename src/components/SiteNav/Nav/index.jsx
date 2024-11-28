@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { usePathname } from 'next/navigation';
-
 import NavLink from './NavLink';
 import Curve from './Curve';
 import Link from 'next/link';
 import { navItems } from '@/src/data/navItems';
-// import NavFooter from "./NavFooter";
 
 export const menuSlide = {
   initial: { x: 'calc(100% + 100px)' },
@@ -54,7 +52,6 @@ export default function Nav() {
                 </Link>
               );
             })}
-            {/* <NavFooter /> */}
           </div>
         </div>
         <Curve />
