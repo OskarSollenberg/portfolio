@@ -3,22 +3,8 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'Montreal';
-  src: url('/fonts/PPNeueMontreal-Bold.otf') format('opentype');
-}
-
-@font-face {
-  font-family: 'Akhbar';
-  src: url('/fonts/AkhbarBold.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Mortend';
-  src: url('/fonts/Mortend-Extra-Bold.otf') format('opentype');
-}
-@font-face {
-  font-family: 'Grotesk';
-  src: url('/FamiljenGrotesk-SemiBold.otf') format('opentype');
+  font-family: "Montreal";
+  src: url("/fonts/PPNeueMontreal-Bold.otf") format("opentype");
 }
 
 * {
@@ -31,12 +17,6 @@ html,
 body {
   width: 100dvw;
   height: 100dvh;
-
-  /* width: 100%; */
-  /* width: calc(var(--vw, 1vw) * 100); */
-  /* height: -webkit-fill-available; */
-  /* scrollbar-gutter: stable;
-  container-type: inline-size; */
 }
 
 body {
@@ -47,7 +27,6 @@ body {
   /* background-color: #5ea163; */
   /* background-color: #ffa04d; */
   /* background: #15151e; */
-  background: #fefce1;
   /* background: #fdf9ef; */
   /* background: #e43b13; */
   /* background: #ff4613; */
@@ -58,6 +37,7 @@ body {
   /* background-color: #e3e4dd; */
   /* background-color: #ffacdf; */
   /* background-color: #1e1e1e; */
+  background: #fefce1;
 
   -webkit-touch-callout: none;
   -webkit-user-select: none;

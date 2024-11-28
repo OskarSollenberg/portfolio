@@ -16,25 +16,12 @@ export default function About() {
           <SceneAbout />
         </div>
         <main className='absolute w-screen h-screen text-black'>
-          {/* <div className='h-screen lg:hidden'></div>
-        <div className='relative w-screen h-screen hidden lg:block mb-[10rem]'>
-          <Image
-            className='w-screen h-screen'
-            src='/medias/studio-dark.webp'
-            alt='About Image'
-            layout='fill'
-            objectFit='cover'
-            objectPosition='left'
-            quality={50}
-            priority={true}
-          />
-        </div> */}
-          {/* <div className=' w-screen'></div> */}
           <div className='w-[90vw] lg:w-[80vw] h-auto mx-auto rounded-lg overflow-hidden  mb-[5rem]'>
             <Image
               quality={60}
               width={1920}
               height={1080}
+              alt='Oskar and his co-composer working in their music studio'
               src='/medias/studio.webp'
             />
           </div>

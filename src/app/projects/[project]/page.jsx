@@ -24,7 +24,6 @@ export default function Project() {
 
   const {
     title,
-    subTitle,
     imgSrc,
     videoWebm,
     videoMp4,
